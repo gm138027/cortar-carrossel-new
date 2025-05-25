@@ -811,18 +811,18 @@ const Home: NextPage = () => {
         <header className="bg-white/80 backdrop-blur-xl p-4 border-b border-gray-200 sticky top-0 z-50 shadow-sm" key={i18n.language}>
           <div className="container mx-auto flex justify-between items-center">
             <div className="flex items-center">
-              <div className="h-10 w-10 relative mr-3 cursor-pointer" onClick={(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }}>
+              <div className="h-8 w-8 flex items-center justify-center">
                 <Image 
-                  src="/logo.png" 
-                  alt={t('site_name') + ' Logo'} 
-                  fill 
-                  className="object-contain" 
+                  src="/logo.png"
+                  alt="Cortar Carrossel Logo"
+                  width={32}
+                  height={32}
                   priority
                 />
               </div>
-              <h1 className="text-xl font-bold text-black cursor-pointer" onClick={(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }}>
+              <div className="text-xl font-bold text-black cursor-pointer" onClick={(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }}>
                 {t('site_name')}
-              </h1>
+              </div>
             </div>
             
             {/* 主导航 */}
