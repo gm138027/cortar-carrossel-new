@@ -15,7 +15,7 @@ const ImageSplitterOnline: NextPage = () => {
           name="description"
           content={t("pages.image_splitter.meta_description")}
         />
-        <link rel="canonical" href="https://seusite.com/image-splitter-online" />
+        <link rel="canonical" href="https://cortarcarrossel.com/image-splitter-online" />
         
         {/* Schema.org structured data for SEO */}
         <script

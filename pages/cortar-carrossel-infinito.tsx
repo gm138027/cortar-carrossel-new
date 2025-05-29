@@ -16,7 +16,7 @@ const CortarCarrosselInfinito: NextPage = () => {
           name="description"
           content={t("pages.infinite_carousel.meta_description")}
         />
-        <link rel="canonical" href="https://seusite.com/cortar-carrossel-infinito" />
+        <link rel="canonical" href="https://cortarcarrossel.com/cortar-carrossel-infinito" />
         
         {/* Estrutura de dados Schema.org para SEO */}
         <script

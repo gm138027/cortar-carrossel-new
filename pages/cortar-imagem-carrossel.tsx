@@ -15,7 +15,7 @@ const CortarImagemCarrossel: NextPage = () => {
           name="description"
           content={t("pages.carousel_image.meta_description")}
         />
-        <link rel="canonical" href="https://seusite.com/cortar-imagem-carrossel" />
+        <link rel="canonical" href="https://cortarcarrossel.com/cortar-imagem-carrossel" />
         
         {/* Estrutura de dados Schema.org para SEO */}
         <script

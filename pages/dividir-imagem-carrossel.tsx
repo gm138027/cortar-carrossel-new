@@ -15,7 +15,7 @@ const DividirImagemCarrossel: NextPage = () => {
           name="description"
           content={t("pages.divide_carousel.meta_description")}
         />
-        <link rel="canonical" href="https://seusite.com/dividir-imagem-carrossel" />
+        <link rel="canonical" href="https://cortarcarrossel.com/dividir-imagem-carrossel" />
         
         {/* Schema.org structured data for SEO */}
         <script
