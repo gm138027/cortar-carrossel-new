@@ -13,6 +13,204 @@
   "platforms": "Plataformas",
   "customShape": "Forma Personalizada",
   "language": "Idioma",
+  "related_tools": "Ferramentas Relacionadas",
+  "tools": {
+    "carousel_infinite": "Cortar Carrossel Infinito",
+    "carousel_image": "Cortar Imagem Carrossel",
+    "image_splitter": "ImageSplitter Online",
+    "divide_carousel": "Dividir Imagem para Carrossel"
+  },
+  "pages": {
+    "infinite_carousel": {
+      "title": "Cortar Carrossel Infinito | Ferramenta Online Gratuita",
+      "meta_description": "Ferramenta gratuita para cortar carrossel infinito. Divida suas imagens facilmente para criar efeitos perfeitos de carrossel rotativo.",
+      "h1": "Cortar Carrossel Infinito",
+      "what_is_title": "O que é um Carrossel Infinito?",
+      "what_is_text": "Um carrossel infinito é uma apresentação de imagens que roda continuamente, criando uma experiência visual sem interrupções. Nossa ferramenta permite cortar imagens precisamente para criar este efeito profissional.",
+      "how_to_title": "Como Usar Nossa Ferramenta de Cortar Carrossel",
+      "how_to_steps": {
+        "step1": "Faça upload da sua imagem usando nosso seletor de arquivos",
+        "step2": "Escolha o número de linhas e colunas para dividir sua imagem",
+        "step3": "Utilize o modo de visualização para verificar o resultado",
+        "step4": "Baixe suas imagens cortadas para usar em seu carrossel"
+      },
+      "try_now": "Experimentar Agora",
+      "advantages_title": "Vantagens do Carrossel Infinito",
+      "advantages": {
+        "engagement": {
+          "title": "Engajamento Visual",
+          "text": "Carrosséis infinitos capturam a atenção dos visitantes por mais tempo, aumentando o engajamento."
+        },
+        "professional": {
+          "title": "Apresentação Profissional",
+          "text": "Crie apresentações de produtos ou portfólios com aparência profissional."
+        },
+        "continuous": {
+          "title": "Experiência Contínua",
+          "text": "Ofereça uma experiência visual contínua sem interrupções abruptas."
+        },
+        "control": {
+          "title": "Controle Total",
+          "text": "Nossa ferramenta de cortar carrossel infinito oferece controle total sobre o resultado final."
+        }
+      }
+    },
+    "carousel_image": {
+      "title": "Cortar Imagem Carrossel | Editor de Imagens Online",
+      "meta_description": "Ferramenta especializada para cortar imagem carrossel. Divida fotos para criar carrosséis perfeitos para seu site ou apresentação.",
+      "h1": "Cortar Imagem Carrossel",
+      "tool_title": "Ferramenta para Cortar Imagens de Carrossel",
+      "tool_description": "Nossa ferramenta online gratuita permite cortar imagens com precisão para uso em carrosséis de websites, apresentações e galerias de fotos. Divida uma única imagem em várias partes iguais com apenas alguns cliques.",
+      "how_to_title": "Como Cortar uma Imagem para Carrossel",
+      "how_to_steps": {
+        "step1": "Selecione e faça upload da sua imagem",
+        "step2": "Defina o número de divisões horizontais e verticais",
+        "step3": "Ajuste as configurações de acordo com sua necessidade",
+        "step4": "Baixe as imagens cortadas individualmente ou em conjunto"
+      },
+      "try_now": "Cortar Minha Imagem Agora",
+      "applications_title": "Aplicações para Imagens Cortadas em Carrossel",
+      "applications": {
+        "websites": {
+          "title": "Sites e E-commerce",
+          "text": "Crie carrosséis atrativos para destaque de produtos ou serviços no seu site."
+        },
+        "social_media": {
+          "title": "Redes Sociais",
+          "text": "Divida imagens para criar posts deslizantes no Instagram, Facebook e outras plataformas."
+        },
+        "presentations": {
+          "title": "Apresentações Profissionais",
+          "text": "Melhore suas apresentações com imagens sequenciais cortadas perfeitamente."
+        }
+      },
+      "why_use_title": "Por que Usar Nossa Ferramenta para Cortar Imagem Carrossel?",
+      "benefits": {
+        "easy": {
+          "title": "Fácil de Usar",
+          "text": "Interface intuitiva que não requer conhecimentos técnicos avançados."
+        },
+        "professional": {
+          "title": "Resultado Profissional",
+          "text": "Cortes precisos que garantem um carrossel com transições perfeitas."
+        },
+        "online": {
+          "title": "Totalmente Online",
+          "text": "Sem necessidade de instalar software - funciona no seu navegador."
+        },
+        "free": {
+          "title": "Gratuito",
+          "text": "Acesso completo à ferramenta para cortar imagem carrossel sem custos."
+        }
+      }
+    },
+    "divide_carousel": {
+      "title": "Dividir e Cortar Imagem Carrossel | Ferramenta Gratuita",
+      "meta_description": "Cortar imagem carrossel online e grátis. Divida suas fotos em partes iguais para criar carrosséis impressionantes.",
+      "h1": "Cortar Imagem Carrossel",
+      "subtitle": "Divida Imagens para Seu Carrossel",
+      "description": "Precisa cortar imagem para carrossel? Nossa ferramenta permite dividir fotos em várias partes para criar carrosséis perfeitos para redes sociais, sites e apresentações.",
+      "how_to_title": "Tutorial: Como Cortar Imagem para Carrossel",
+      "how_to_steps": {
+        "step1": "Carregue sua imagem através do nosso uploader simples",
+        "step2": "Escolha quantas partes você quer dividir (linhas e colunas)",
+        "step3": "Visualize o resultado em tempo real",
+        "step4": "Faça o download das imagens cortadas"
+      },
+      "try_now": "Dividir Minha Imagem",
+      "benefits_title": "Benefícios de Cortar Imagem para Carrossel",
+      "benefits": {
+        "engagement": {
+          "title": "Mais Engajamento",
+          "text": "Carrosséis com imagens bem cortadas geram mais interações nas redes sociais."
+        },
+        "storytelling": {
+          "title": "Narrativa Visual",
+          "text": "Crie histórias visuais sequenciais que prendem a atenção do seu público."
+        },
+        "reach": {
+          "title": "Maior Alcance",
+          "text": "Posts de carrossel geralmente alcançam mais pessoas nas redes sociais."
+        },
+        "creativity": {
+          "title": "Criatividade Sem Limites",
+          "text": "Expresse sua criatividade com composições visuais inovadoras através de imagens divididas."
+        }
+      },
+      "platforms_title": "Onde Usar Imagens Cortadas para Carrossel",
+      "platforms": {
+        "instagram": {
+          "title": "Instagram",
+          "text": "Perfeito para criar posts de carrossel no Instagram que contam uma história completa."
+        },
+        "facebook": {
+          "title": "Facebook",
+          "text": "Aumente o engajamento com carrosséis de imagens cortadas profissionalmente."
+        },
+        "linkedin": {
+          "title": "LinkedIn",
+          "text": "Destaque seu conteúdo profissional com carrosséis impactantes para sua rede."
+        },
+        "twitter": {
+          "title": "Twitter",
+          "text": "Crie threads visuais com imagens divididas que se complementam."
+        }
+      }
+    },
+    "image_splitter": {
+      "title": "ImageSplitter Online | Divida Imagens Gratuitamente",
+      "meta_description": "Ferramenta online gratuita ImageSplitter. Divida facilmente imagens em grade ou seções personalizadas para carrosséis, redes sociais e muito mais.",
+      "h1": "ImageSplitter Online",
+      "tool_title": "Ferramenta Gratuita para Dividir Imagens Online",
+      "tool_description": "Nossa ferramenta ImageSplitter online permite dividir facilmente qualquer imagem em várias partes iguais. Perfeito para criar carrosséis de imagens, galerias de mídia social, quebra-cabeças ou layouts em grade.",
+      "how_to_title": "Como Dividir Sua Imagem Online",
+      "how_to_steps": {
+        "step1": "Faça upload da sua imagem usando nosso uploader simples",
+        "step2": "Selecione quantas linhas e colunas você deseja dividir sua imagem",
+        "step3": "Visualize os resultados com nosso recurso de pré-visualização em tempo real",
+        "step4": "Baixe todas as fatias como imagens individuais ou como um pacote zip"
+      },
+      "try_now": "Experimente o ImageSplitter Agora",
+      "features_title": "Recursos do Nosso ImageSplitter Online",
+      "features": {
+        "grid": {
+          "title": "Divisão em Grade Personalizada",
+          "text": "Divida sua imagem em qualquer tamanho de grade que você precise, de 2x2 a grades muito maiores."
+        },
+        "quality": {
+          "title": "Saída de Alta Qualidade",
+          "text": "Mantenha a qualidade original da imagem em todas as suas seções divididas."
+        },
+        "preview": {
+          "title": "Pré-visualização em Tempo Real",
+          "text": "Veja como sua imagem dividida ficará antes de baixá-la."
+        },
+        "puzzle": {
+          "title": "Modo Quebra-cabeça",
+          "text": "Crie quebra-cabeças interativos com nosso recurso especial de quebra-cabeça."
+        }
+      },
+      "why_use_title": "Por Que Escolher Nossa Ferramenta ImageSplitter Online?",
+      "benefits": {
+        "no_install": {
+          "title": "Sem Necessidade de Instalação",
+          "text": "Nosso ImageSplitter funciona diretamente no seu navegador - sem necessidade de instalar software."
+        },
+        "privacy": {
+          "title": "Privacidade Protegida",
+          "text": "Suas imagens são processadas localmente no seu dispositivo e nunca são enviadas para nossos servidores."
+        },
+        "free": {
+          "title": "Gratuito para Usar",
+          "text": "Nossa ferramenta ImageSplitter online é completamente gratuita, sem custos ocultos ou recursos premium."
+        },
+        "compatible": {
+          "title": "Funciona com Todos os Tipos de Imagem",
+          "text": "Compatível com JPG, PNG, WebP e outros formatos comuns de imagem."
+        }
+      }
+    }
+  },
   "steps": {
     "step1": "Carregue sua imagem (suporta formatos JPG, PNG, GIF e WEBP)",
     "step2": "Escolha o número de linhas e colunas para dividir sua imagem",

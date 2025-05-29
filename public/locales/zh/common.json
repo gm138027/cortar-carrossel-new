@@ -13,6 +13,204 @@
   "platforms": "平台",
   "customShape": "自定义形状",
   "language": "语言",
+  "related_tools": "相关工具",
+  "tools": {
+    "carousel_infinite": "无限轮播切割工具",
+    "carousel_image": "轮播图片切割工具",
+    "image_splitter": "在线图片分割器",
+    "divide_carousel": "轮播图片分割工具"
+  },
+  "pages": {
+    "infinite_carousel": {
+      "title": "无限轮播切割工具 | 免费在线工具",
+      "meta_description": "免费无限轮播图片切割工具。轻松分割图片，创建完美的循环轮播效果。",
+      "h1": "无限轮播切割工具",
+      "what_is_title": "什么是无限轮播？",
+      "what_is_text": "无限轮播是一种连续旋转的图片展示方式，创造无缝视觉体验。我们的工具允许您精确切割图片以创建这种专业效果。",
+      "how_to_title": "如何使用我们的轮播切割工具",
+      "how_to_steps": {
+        "step1": "使用我们的文件选择器上传您的图片",
+        "step2": "选择行数和列数来分割您的图片",
+        "step3": "使用预览模式检查结果",
+        "step4": "下载切割好的图片用于您的轮播展示"
+      },
+      "try_now": "立即尝试",
+      "advantages_title": "无限轮播的优势",
+      "advantages": {
+        "engagement": {
+          "title": "视觉吸引力",
+          "text": "无限轮播能更长时间地吸引访问者的注意力，提高用户参与度。"
+        },
+        "professional": {
+          "title": "专业展示",
+          "text": "创建外观专业的产品展示或作品集。"
+        },
+        "continuous": {
+          "title": "无缝体验",
+          "text": "提供没有突兀中断的连续视觉体验。"
+        },
+        "control": {
+          "title": "完全控制",
+          "text": "我们的无限轮播切割工具让您对最终结果拥有完全控制权。"
+        }
+      }
+    },
+    "carousel_image": {
+      "title": "轮播图片切割工具 | 在线图像编辑器",
+      "meta_description": "专业轮播图片切割工具。分割照片，为您的网站或演示文稿创建完美轮播。",
+      "h1": "轮播图片切割工具",
+      "tool_title": "轮播图片切割工具",
+      "tool_description": "我们的免费在线工具可让您精确切割图片，用于网站轮播、演示文稿和照片库。只需几次点击，即可将单个图像分割成多个相等部分。",
+      "how_to_title": "如何切割轮播图片",
+      "how_to_steps": {
+        "step1": "选择并上传您的图片",
+        "step2": "定义水平和垂直分割数量",
+        "step3": "根据需要调整设置",
+        "step4": "单独或成组下载切割好的图片"
+      },
+      "try_now": "立即切割我的图片",
+      "applications_title": "轮播切割图片的应用场景",
+      "applications": {
+        "websites": {
+          "title": "网站和电子商务",
+          "text": "创建吸引人的轮播展示，突出您网站上的产品或服务。"
+        },
+        "social_media": {
+          "title": "社交媒体",
+          "text": "分割图片，在Instagram、Facebook和其他平台上创建滑动帖子。"
+        },
+        "presentations": {
+          "title": "专业演示文稿",
+          "text": "用完美切割的连续图像增强您的演示效果。"
+        }
+      },
+      "why_use_title": "为什么使用我们的轮播图片切割工具？",
+      "benefits": {
+        "easy": {
+          "title": "易于使用",
+          "text": "直观的界面，不需要高级技术知识。"
+        },
+        "professional": {
+          "title": "专业效果",
+          "text": "精确切割，确保轮播有完美的过渡。"
+        },
+        "online": {
+          "title": "完全在线",
+          "text": "无需安装软件 - 在浏览器中即可使用。"
+        },
+        "free": {
+          "title": "免费使用",
+          "text": "免费完整访问轮播图片切割工具。"
+        }
+      }
+    },
+    "divide_carousel": {
+      "title": "轮播图片分割工具 | 免费在线工具",
+      "meta_description": "免费在线切割轮播图片。将照片分割成相等部分，创建精美的轮播展示。",
+      "h1": "轮播图片切割工具",
+      "subtitle": "为您的轮播分割图片",
+      "description": "需要为轮播切割图片？我们的工具允许您将照片分割成多个部分，为社交媒体、网站和演示文稿创建完美的轮播展示。",
+      "how_to_title": "教程：如何为轮播切割图片",
+      "how_to_steps": {
+        "step1": "通过我们简单的上传工具上传您的图片",
+        "step2": "选择要分割的部分数量（行和列）",
+        "step3": "实时查看结果",
+        "step4": "下载切割好的图片"
+      },
+      "try_now": "分割我的图片",
+      "benefits_title": "为轮播切割图片的好处",
+      "benefits": {
+        "engagement": {
+          "title": "更多互动",
+          "text": "切割良好的轮播图片在社交媒体上产生更多互动。"
+        },
+        "storytelling": {
+          "title": "视觉叙事",
+          "text": "创建吸引观众注意力的顺序视觉故事。"
+        },
+        "reach": {
+          "title": "更广泛的覆盖",
+          "text": "轮播帖子通常在社交媒体上获得更多的浏览量。"
+        },
+        "creativity": {
+          "title": "无限创意",
+          "text": "通过分割图像创新视觉构图，表达您的创意。"
+        }
+      },
+      "platforms_title": "在哪里使用轮播切割图片",
+      "platforms": {
+        "instagram": {
+          "title": "Instagram",
+          "text": "非常适合创建讲述完整故事的Instagram轮播帖子。"
+        },
+        "facebook": {
+          "title": "Facebook",
+          "text": "通过专业切割的图片轮播增加用户互动。"
+        },
+        "linkedin": {
+          "title": "LinkedIn",
+          "text": "用有影响力的轮播展示为您的专业网络突出内容。"
+        },
+        "twitter": {
+          "title": "Twitter",
+          "text": "创建由互补分割图像组成的视觉主题。"
+        }
+      }
+    },
+    "image_splitter": {
+      "title": "在线图片分割器 | 免费分割图片",
+      "meta_description": "免费在线图片分割工具。轻松将图片分割成网格或自定义部分，用于轮播图、社交媒体等。",
+      "h1": "在线图片分割器",
+      "tool_title": "免费在线图片分割工具",
+      "tool_description": "我们的在线图片分割工具可以让您轻松地将任何图片分割成多个相等的部分。非常适合创建图片轮播、社交媒体图库、拼图或网格布局。",
+      "how_to_title": "如何在线分割您的图片",
+      "how_to_steps": {
+        "step1": "使用我们简单的上传工具上传您的图片",
+        "step2": "选择您想要将图片分割成的行数和列数",
+        "step3": "使用我们的实时预览功能查看结果",
+        "step4": "将所有切片作为单独的图片或zip包下载"
+      },
+      "try_now": "立即试用图片分割器",
+      "features_title": "我们的在线图片分割器功能",
+      "features": {
+        "grid": {
+          "title": "自定义网格分割",
+          "text": "将您的图片分割成任何您需要的网格大小，从2x2到更大的网格。"
+        },
+        "quality": {
+          "title": "高质量输出",
+          "text": "在所有分割部分中保持原始图片质量。"
+        },
+        "preview": {
+          "title": "实时预览",
+          "text": "在下载前查看您的分割图片效果。"
+        },
+        "puzzle": {
+          "title": "拼图模式",
+          "text": "使用我们特殊的拼图功能创建互动拼图。"
+        }
+      },
+      "why_use_title": "为什么选择我们的在线图片分割工具？",
+      "benefits": {
+        "no_install": {
+          "title": "无需安装",
+          "text": "我们的图片分割器直接在您的浏览器中运行 - 无需安装软件。"
+        },
+        "privacy": {
+          "title": "隐私保护",
+          "text": "您的图片在本地设备上处理，永远不会上传到我们的服务器。"
+        },
+        "free": {
+          "title": "免费使用",
+          "text": "我们的在线图片分割工具完全免费，没有隐藏费用或高级功能限制。"
+        },
+        "compatible": {
+          "title": "适用于所有图片类型",
+          "text": "兼容JPG、PNG、WebP和其他常见图片格式。"
+        }
+      }
+    }
+  },
   "steps": {
     "step1": "上传您的图片（支持JPG、PNG、GIF和WEBP格式）",
     "step2": "选择分割图片的行数和列数",

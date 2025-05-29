@@ -803,12 +803,13 @@ const Home: NextPage = () => {
         />
       </Head>
       
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #eef0ff 0%, #ecebfc 100%)', fontFamily: 'Inter, sans-serif' }} className="text-black relative">
+      {/* 使用flex布局的主容器，确保最小高度为屏幕高度 */}
+      <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#eef0ff] to-[#ecebfc] font-[Inter,sans-serif] text-black">
         {/* 背景模糊效果 */}
         <div className="absolute inset-0 backdrop-blur-[100px] pointer-events-none"></div>
         
         {/* 头部 */}
-        <header className="bg-white/80 backdrop-blur-xl p-4 border-b border-gray-200 sticky top-0 z-50 shadow-sm" key={i18n.language}>
+        <header className="relative bg-white/80 backdrop-blur-xl p-4 border-b border-gray-200 sticky top-0 z-50 shadow-sm" key={i18n.language}>
           <div className="container mx-auto flex justify-between items-center">
             <div className="flex items-center">
               <div className="h-8 w-8 flex items-center justify-center">
@@ -860,428 +861,464 @@ const Home: NextPage = () => {
           </div>
         </header>
         
-        <main className="container mx-auto p-4 py-10 relative z-10 flex justify-center">
-          <div style={{width: '90%', maxWidth: '1200px'}} className="mx-auto">
-            {/* 添加工具界面标题 - 多语言版本 */}
-            <h1 className="text-3xl font-bold mb-6 text-center text-gray-900">
-              Cortar Carrossel | {t('app_title')}
-            </h1>
-            
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-              {/* 左侧面板：统一的控制面板 */}
-              <div className="md:col-span-5">
-                <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-6 h-full shadow border border-gray-200">
-                  <h2 className="text-xl font-bold mb-6 text-center border-b border-gray-200 pb-3 text-black">
-                    {t('settings')}
-                  </h2>
-                  
-                  {/* 上传区域 */}
-                  <div className="mb-8">
-                    <div 
-                      {...getRootProps()} 
-                      className={`border-2 border-dashed ${
-                        isDragActive ? 'border-indigo-400 bg-white/80' : 'border-gray-300'
-                      } rounded-xl p-4 text-center cursor-pointer h-[104px] flex items-center justify-center transition-all duration-300 hover:border-indigo-500 hover:bg-white/90 backdrop-blur-md bg-white/60`}
-                    >
-                      <input {...getInputProps()} />
-                      <p className="text-base font-bold text-gray-700 flex flex-col items-center">
-                        <span className="text-lg mb-1">{t('upload')}</span>
-                        <span className="text-xs text-gray-500">{t('dropzone')}</span>
-                      </p>
-                    </div>
-                  </div>
-                  
-                  {/* 分割线 */}
-                  <div className="my-6 border-t border-gray-200"></div>
-                  
-                  {/* 设置区域 */}
-                  <div className="mb-8">
-                    {/* 行列设置 - 高级专业UI */}
-                    <div className="space-y-6">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-black">
-                          {t('rows')}
-                        </span>
-                        <div className="flex items-center bg-gray-100 rounded-full overflow-hidden border border-gray-200">
-                          <button 
-                            className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
-                            onClick={() => handleRowsChange(Math.max(1, rows - 1))}
-                          >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-                            </svg>
-                          </button>
-                          <div className="w-10 h-8 flex items-center justify-center font-medium bg-indigo-100 text-black">
-                            {rows}
-                          </div>
-                          <button 
-                            className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
-                            onClick={() => handleRowsChange(Math.min(10, rows + 1))}
-                          >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center justify-between mt-6">
-                        <span className="text-sm font-medium text-black">
-                          {t('columns')}
-                        </span>
-                        <div className="flex items-center bg-gray-100 rounded-full overflow-hidden border border-gray-200">
-                          <button 
-                            className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
-                            onClick={() => handleColumnsChange(Math.max(1, columns - 1))}
-                          >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-                            </svg>
-                          </button>
-                          <div className="w-10 h-8 flex items-center justify-center font-medium bg-indigo-100 text-black">
-                            {columns}
-                          </div>
-                          <button 
-                            className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
-                            onClick={() => handleColumnsChange(Math.min(10, columns + 1))}
-                          >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                            </svg>
-                          </button>
-                        </div>
+        {/* 内容容器 - 使用flex-grow确保占据所有可用空间 */}
+        <div className="flex-grow flex flex-col">
+          {/* 主内容部分 */}
+          <main className="flex-grow container mx-auto p-4 py-10 relative z-10 flex justify-center">
+            <div style={{width: '90%', maxWidth: '1200px'}} className="mx-auto">
+              {/* 添加工具界面标题 - 多语言版本 */}
+              <h1 className="text-3xl font-bold mb-6 text-center text-gray-900">
+                Cortar Carrossel | {t('app_title')}
+              </h1>
+              
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+                {/* 左侧面板：统一的控制面板 */}
+                <div className="md:col-span-5">
+                  <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-6 h-full shadow border border-gray-200">
+                    <h2 className="text-xl font-bold mb-6 text-center border-b border-gray-200 pb-3 text-black">
+                      {t('settings')}
+                    </h2>
+                    
+                    {/* 上传区域 */}
+                    <div className="mb-8">
+                      <div 
+                        {...getRootProps()} 
+                        className={`border-2 border-dashed ${
+                          isDragActive ? 'border-indigo-400 bg-white/80' : 'border-gray-300'
+                        } rounded-xl p-4 text-center cursor-pointer h-[104px] flex items-center justify-center transition-all duration-300 hover:border-indigo-500 hover:bg-white/90 backdrop-blur-md bg-white/60`}
+                      >
+                        <input {...getInputProps()} />
+                        <p className="text-base font-bold text-gray-700 flex flex-col items-center">
+                          <span className="text-lg mb-1">{t('upload')}</span>
+                          <span className="text-xs text-gray-500">{t('dropzone')}</span>
+                        </p>
                       </div>
                     </div>
-                  </div>
-                  
-                  {/* 分割线 */}
-                  <div className="my-6 border-t border-gray-200"></div>
-                  
-                  {/* 操作按钮区 */}
-                  <div className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4 mt-4">
-                      <button
-                        className="h-12 rounded-xl flex items-center justify-center text-base font-semibold border-0 shadow-md bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 text-white hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-all duration-300"
-                        onClick={sliceImage}
-                        disabled={!image || isProcessing}
-                      >
-                        {isProcessing ? t('processing') : t('preview')}
-                      </button>
-                      <button
-                        className="h-12 rounded-xl flex items-center justify-center text-base font-semibold border-2 border-indigo-200 bg-indigo-50 text-indigo-700 shadow hover:bg-indigo-100 hover:border-indigo-400 transition-all duration-300"
-                        onClick={downloadSlices}
-                        disabled={!slicedImages.length || isProcessing}
-                      >
-                        {t('download')}
-                      </button>
-                      <button
-                        className="h-12 rounded-xl flex items-center justify-center text-base font-semibold border-2 border-gray-200 bg-gray-50 text-gray-700 shadow hover:bg-gray-100 hover:border-indigo-300 transition-all duration-300"
-                        onClick={togglePuzzleMode}
-                        disabled={isProcessing}
-                      >
-                        {puzzleMode ? t('exit_puzzle_mode', { ns: 'common' }) : t('enter_puzzle_mode', { ns: 'common' })}
-                      </button>
-                      <button
-                        className="h-12 rounded-xl flex items-center justify-center text-base font-semibold border-2 border-gray-200 bg-gray-50 text-gray-700 shadow hover:bg-gray-100 hover:border-indigo-300 transition-all duration-300"
-                        onClick={resetSlicePositions}
-                        disabled={isProcessing}
-                      >
-                        {t('reset_position', { ns: 'common' })}
-                      </button>
+                    
+                    {/* 分割线 */}
+                    <div className="my-6 border-t border-gray-200"></div>
+                    
+                    {/* 设置区域 */}
+                    <div className="mb-8">
+                      {/* 行列设置 - 高级专业UI */}
+                      <div className="space-y-6">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm font-medium text-black">
+                            {t('rows')}
+                          </span>
+                          <div className="flex items-center bg-gray-100 rounded-full overflow-hidden border border-gray-200">
+                            <button 
+                              className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
+                              onClick={() => handleRowsChange(Math.max(1, rows - 1))}
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                              </svg>
+                            </button>
+                            <div className="w-10 h-8 flex items-center justify-center font-medium bg-indigo-100 text-black">
+                              {rows}
+                            </div>
+                            <button 
+                              className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
+                              onClick={() => handleRowsChange(Math.min(10, rows + 1))}
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center justify-between mt-6">
+                          <span className="text-sm font-medium text-black">
+                            {t('columns')}
+                          </span>
+                          <div className="flex items-center bg-gray-100 rounded-full overflow-hidden border border-gray-200">
+                            <button 
+                              className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
+                              onClick={() => handleColumnsChange(Math.max(1, columns - 1))}
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                              </svg>
+                            </button>
+                            <div className="w-10 h-8 flex items-center justify-center font-medium bg-indigo-100 text-black">
+                              {columns}
+                            </div>
+                            <button 
+                              className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
+                              onClick={() => handleColumnsChange(Math.min(10, columns + 1))}
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* 分割线 */}
+                    <div className="my-6 border-t border-gray-200"></div>
+                    
+                    {/* 操作按钮区 */}
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-2 gap-4 mt-4">
+                        <button
+                          className="h-12 rounded-xl flex items-center justify-center text-base font-semibold border-0 shadow-md bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 text-white hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-all duration-300"
+                          onClick={sliceImage}
+                          disabled={!image || isProcessing}
+                        >
+                          {isProcessing ? t('processing') : t('preview')}
+                        </button>
+                        <button
+                          className="h-12 rounded-xl flex items-center justify-center text-base font-semibold border-2 border-indigo-200 bg-indigo-50 text-indigo-700 shadow hover:bg-indigo-100 hover:border-indigo-400 transition-all duration-300"
+                          onClick={downloadSlices}
+                          disabled={!slicedImages.length || isProcessing}
+                        >
+                          {t('download')}
+                        </button>
+                        <button
+                          className="h-12 rounded-xl flex items-center justify-center text-base font-semibold border-2 border-gray-200 bg-gray-50 text-gray-700 shadow hover:bg-gray-100 hover:border-indigo-300 transition-all duration-300"
+                          onClick={togglePuzzleMode}
+                          disabled={isProcessing}
+                        >
+                          {puzzleMode ? t('exit_puzzle_mode', { ns: 'common' }) : t('enter_puzzle_mode', { ns: 'common' })}
+                        </button>
+                        <button
+                          className="h-12 rounded-xl flex items-center justify-center text-base font-semibold border-2 border-gray-200 bg-gray-50 text-gray-700 shadow hover:bg-gray-100 hover:border-indigo-300 transition-all duration-300"
+                          onClick={resetSlicePositions}
+                          disabled={isProcessing}
+                        >
+                          {t('reset_position', { ns: 'common' })}
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              {/* 右侧面板：图片预览区 */}
-              <div className="md:col-span-7" key={i18n.language}>
-                <div className="bg-white/95 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 h-full flex flex-col shadow">
-                  <div className="flex justify-center items-center mb-6">
-                    <h2 className="text-xl font-bold text-black">
-                      {t('preview_area', { ns: 'common' })}
-                    </h2>
-                  </div>
-                  
-                  {/* 隐藏的画布用于处理图片 */}
-                  <canvas ref={canvasRef} className="hidden"></canvas>
-                  
-                  {/* 图片显示区域 - 固定高度 */}
-                  <div className="flex-grow flex flex-col justify-start overflow-hidden">
-                    {slicedImages.length > 0 && showGridPreview ? (
-                      <div 
-                        ref={containerRef}
-                        className={`border-2 border-dashed rounded-xl p-2 relative ${image ? 'border-indigo-300 hover:border-indigo-400' : 'border-gray-300'}`}
-                        style={{
-                          width: '100%', 
-                          height: '400px', 
-                          overflow: 'auto', 
-                          marginTop: '0px',
-                          cursor: puzzleMode && activeSlice !== null ? 'grabbing' : 'default'
-                        }}
-                        onMouseMove={handleMouseMove}
-                        onMouseUp={handleMouseUp}
-                        onMouseLeave={handleMouseUp}
-                      >
-                        {!puzzleMode ? (
-                          // 普通网格显示模式
-                          <div style={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                            <div
-                              style={{
-                                width: image ? image.width : 'auto',
-                                height: image ? image.height : 'auto',
-                                display: 'grid',
-                                gridTemplateColumns: image && slicedImages.length === rows * columns ? slicedImages.slice(0, columns).map(s => `${s.width}px`).join(' ') : undefined,
-                                gridTemplateRows: image && slicedImages.length === rows * columns ? Array.from({length: rows}, (_, y) => `${slicedImages[y * columns].height}px`).join(' ') : undefined,
-                                transform: image ? `scale(${Math.min(1, 400 / image.height, 1, (window.innerWidth-100) / image.width)})` : 'none',
-                                transformOrigin: 'center center',
-                                gap: '1px',
-                                backgroundColor: 'rgba(99, 102, 241, 0.6)', // 更淡的分割线颜色
-                              }}
-                            >
-                              {slicedImages.map((slice, index) => {
-                                // 使用gridPosition来显示切片
-                                return (
-                                  <img
-                                    key={index}
-                                    src={slice.url}
-                                    alt={`Slice ${index + 1} (R${slice.gridPosition.row+1}C${slice.gridPosition.col+1})`}
-                                    style={{
-                                      width: `${slice.width}px`,
-                                      height: `${slice.height}px`,
-                                      display: 'block',
-                                      gridRow: slice.gridPosition.row + 1,
-                                      gridColumn: slice.gridPosition.col + 1,
-                                      border: '1px solid transparent', // 预留边框空间但不显示
-                                      boxSizing: 'border-box',
-                                      backgroundColor: 'white', // 确保切片背景是白色
-                                    }}
-                                  />
-                                );
-                              })}
-                            </div>
-                          </div>
-                        ) : (
-                          // 拼图模式
-                          <div className="w-full h-full flex items-center justify-center">
-                            <div
-                              style={{
-                                width: image ? image.width : 'auto',
-                                height: image ? image.height : 'auto',
-                                position: 'relative',
-                                transform: image ? `scale(${Math.min(1, 400 / image.height, 1, (window.innerWidth-100) / image.width)})` : 'none',
-                                transformOrigin: 'center center',
-                                backgroundColor: 'rgba(79, 70, 229, 0.1)', // 更改背景为浅蓝紫色
-                              }}
-                            >
-                              {/* 首先渲染网格底图作为参考 */}
+                
+                {/* 右侧面板：图片预览区 */}
+                <div className="md:col-span-7" key={i18n.language}>
+                  <div className="bg-white/95 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 h-full flex flex-col shadow">
+                    <div className="flex justify-center items-center mb-6">
+                      <h2 className="text-xl font-bold text-black">
+                        {t('preview_area', { ns: 'common' })}
+                      </h2>
+                    </div>
+                    
+                    {/* 隐藏的画布用于处理图片 */}
+                    <canvas ref={canvasRef} className="hidden"></canvas>
+                    
+                    {/* 图片显示区域 - 固定高度 */}
+                    <div className="flex-grow flex flex-col justify-start overflow-hidden">
+                      {slicedImages.length > 0 && showGridPreview ? (
+                        <div 
+                          ref={containerRef}
+                          className={`border-2 border-dashed rounded-xl p-2 relative ${image ? 'border-indigo-300 hover:border-indigo-400' : 'border-gray-300'}`}
+                          style={{
+                            width: '100%', 
+                            height: '400px', 
+                            overflow: 'auto', 
+                            marginTop: '0px',
+                            cursor: puzzleMode && activeSlice !== null ? 'grabbing' : 'default'
+                          }}
+                          onMouseMove={handleMouseMove}
+                          onMouseUp={handleMouseUp}
+                          onMouseLeave={handleMouseUp}
+                        >
+                          {!puzzleMode ? (
+                            // 普通网格显示模式
+                            <div style={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                               <div
                                 style={{
-                                  position: 'absolute',
-                                  top: 0,
-                                  left: 0,
-                                  width: '100%',
-                                  height: '100%',
+                                  width: image ? image.width : 'auto',
+                                  height: image ? image.height : 'auto',
                                   display: 'grid',
-                                  gridTemplateColumns: `repeat(${columns}, 1fr)`,
-                                  gridTemplateRows: `repeat(${rows}, 1fr)`,
+                                  gridTemplateColumns: image && slicedImages.length === rows * columns ? slicedImages.slice(0, columns).map(s => `${s.width}px`).join(' ') : undefined,
+                                  gridTemplateRows: image && slicedImages.length === rows * columns ? Array.from({length: rows}, (_, y) => `${slicedImages[y * columns].height}px`).join(' ') : undefined,
+                                  transform: image ? `scale(${Math.min(1, 400 / image.height, 1, (window.innerWidth-100) / image.width)})` : 'none',
+                                  transformOrigin: 'center center',
                                   gap: '1px',
-                                  pointerEvents: 'none',
-                                  zIndex: 0
+                                  backgroundColor: 'rgba(99, 102, 241, 0.6)', // 更淡的分割线颜色
                                 }}
                               >
-                                {Array.from({ length: rows * columns }).map((_, i) => (
-                                  <div
-                                    key={`grid-${i}`}
-                                    style={{
-                                      border: '1px dashed rgba(99, 102, 241, 0.4)', // 更改网格线颜色为浅蓝紫色
-                                      backgroundColor: 'rgba(79, 70, 229, 0.05)' // 更改网格背景为浅蓝紫色
-                                    }}
-                                  />
-                                ))}
+                                {slicedImages.map((slice, index) => {
+                                  // 使用gridPosition来显示切片
+                                  return (
+                                    <img
+                                      key={index}
+                                      src={slice.url}
+                                      alt={`Slice ${index + 1} (R${slice.gridPosition.row+1}C${slice.gridPosition.col+1})`}
+                                      style={{
+                                        width: `${slice.width}px`,
+                                        height: `${slice.height}px`,
+                                        display: 'block',
+                                        gridRow: slice.gridPosition.row + 1,
+                                        gridColumn: slice.gridPosition.col + 1,
+                                        border: '1px solid transparent', // 预留边框空间但不显示
+                                        boxSizing: 'border-box',
+                                        backgroundColor: 'white', // 确保切片背景是白色
+                                      }}
+                                    />
+                                  );
+                                })}
                               </div>
-                              
-                              {/* 渲染可拖动的切片 */}
-                              {slicedImages.map((slice, index) => (
-                                <div 
-                                  key={index}
+                            </div>
+                          ) : (
+                            // 拼图模式
+                            <div className="w-full h-full flex items-center justify-center">
+                              <div
+                                style={{
+                                  width: image ? image.width : 'auto',
+                                  height: image ? image.height : 'auto',
+                                  position: 'relative',
+                                  transform: image ? `scale(${Math.min(1, 400 / image.height, 1, (window.innerWidth-100) / image.width)})` : 'none',
+                                  transformOrigin: 'center center',
+                                  backgroundColor: 'rgba(79, 70, 229, 0.1)', // 更改背景为浅蓝紫色
+                                }}
+                              >
+                                {/* 首先渲染网格底图作为参考 */}
+                                <div
                                   style={{
                                     position: 'absolute',
-                                    left: `${slice.position ? slice.position.x : slice.originalX || 0}px`,
-                                    top: `${slice.position ? slice.position.y : slice.originalY || 0}px`,
-                                    width: `${slice.width}px`,
-                                    height: `${slice.height}px`,
-                                    zIndex: slice.zIndex || 1,
-                                    transform: activeSlice === index ? 'scale(1.05)' : 'scale(1)',
-                                    boxShadow: activeSlice === index 
-                                      ? '0 0 15px rgba(79, 70, 229, 0.8)' 
-                                      : slice.highlighted 
-                                        ? '0 0 15px rgba(250, 204, 21, 0.8)'
-                                        : 'none',
-                                    transition: activeSlice === index ? 'none' : 'all 0.2s ease',
-                                    outline: slice.highlighted ? '3px solid rgba(250, 204, 21, 0.8)' : 'none',
+                                    top: 0,
+                                    left: 0,
+                                    width: '100%',
+                                    height: '100%',
+                                    display: 'grid',
+                                    gridTemplateColumns: `repeat(${columns}, 1fr)`,
+                                    gridTemplateRows: `repeat(${rows}, 1fr)`,
+                                    gap: '1px',
+                                    pointerEvents: 'none',
+                                    zIndex: 0
                                   }}
-                                  onMouseDown={(e) => handleMouseDown(e, index)}
                                 >
-                                  <img
-                                    src={slice.url}
-                                    alt={`Slice ${index + 1}`}
-                                    style={{
-                                      width: '100%',
-                                      height: '100%',
-                                      display: 'block',
-                                      cursor: puzzleMode ? 'grab' : 'default',
-                                      border: activeSlice === index 
-                                        ? '2px solid rgba(79, 70, 229, 0.8)' 
-                                        : slice.highlighted
-                                          ? '2px solid rgba(250, 204, 21, 0.8)'
-                                          : '1px solid rgba(255,255,255,0.3)',
-                                      boxSizing: 'border-box',
-                                      userSelect: 'none',
-                                      pointerEvents: 'none',
-                                      opacity: slice.highlighted ? 0.8 : 1
-                                    }}
-                                    draggable={false}
-                                  />
+                                  {Array.from({ length: rows * columns }).map((_, i) => (
+                                    <div
+                                      key={`grid-${i}`}
+                                      style={{
+                                        border: '1px dashed rgba(99, 102, 241, 0.4)', // 更改网格线颜色为浅蓝紫色
+                                        backgroundColor: 'rgba(79, 70, 229, 0.05)' // 更改网格背景为浅蓝紫色
+                                      }}
+                                    />
+                                  ))}
+                                </div>
+                                
+                                {/* 渲染可拖动的切片 */}
+                                {slicedImages.map((slice, index) => (
                                   <div 
+                                    key={index}
                                     style={{
                                       position: 'absolute',
-                                      top: '2px',
-                                      left: '2px',
-                                      background: slice.highlighted 
-                                        ? 'rgba(250, 204, 21, 0.8)'
-                                        : 'rgba(79, 70, 229, 0.8)',
-                                      color: 'white',
-                                      padding: '2px 5px',
-                                      fontSize: '11px',
-                                      borderRadius: '2px',
-                                      pointerEvents: 'none',
+                                      left: `${slice.position ? slice.position.x : slice.originalX || 0}px`,
+                                      top: `${slice.position ? slice.position.y : slice.originalY || 0}px`,
+                                      width: `${slice.width}px`,
+                                      height: `${slice.height}px`,
+                                      zIndex: slice.zIndex || 1,
+                                      transform: activeSlice === index ? 'scale(1.05)' : 'scale(1)',
+                                      boxShadow: activeSlice === index 
+                                        ? '0 0 15px rgba(79, 70, 229, 0.8)' 
+                                        : slice.highlighted 
+                                          ? '0 0 15px rgba(250, 204, 21, 0.8)'
+                                          : 'none',
+                                      transition: activeSlice === index ? 'none' : 'all 0.2s ease',
+                                      outline: slice.highlighted ? '3px solid rgba(250, 204, 21, 0.8)' : 'none',
                                     }}
+                                    onMouseDown={(e) => handleMouseDown(e, index)}
                                   >
-                                    {index + 1}
+                                    <img
+                                      src={slice.url}
+                                      alt={`Slice ${index + 1}`}
+                                      style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        display: 'block',
+                                        cursor: puzzleMode ? 'grab' : 'default',
+                                        border: activeSlice === index 
+                                          ? '2px solid rgba(79, 70, 229, 0.8)' 
+                                          : slice.highlighted
+                                            ? '2px solid rgba(250, 204, 21, 0.8)'
+                                            : '1px solid rgba(255,255,255,0.3)',
+                                        boxSizing: 'border-box',
+                                        userSelect: 'none',
+                                        pointerEvents: 'none',
+                                        opacity: slice.highlighted ? 0.8 : 1
+                                      }}
+                                      draggable={false}
+                                    />
+                                    <div 
+                                      style={{
+                                        position: 'absolute',
+                                        top: '2px',
+                                        left: '2px',
+                                        background: slice.highlighted 
+                                          ? 'rgba(250, 204, 21, 0.8)'
+                                          : 'rgba(79, 70, 229, 0.8)',
+                                        color: 'white',
+                                        padding: '2px 5px',
+                                        fontSize: '11px',
+                                        borderRadius: '2px',
+                                        pointerEvents: 'none',
+                                      }}
+                                    >
+                                      {index + 1}
+                                    </div>
                                   </div>
-                                </div>
-                              ))}
+                                ))}
+                              </div>
                             </div>
-                          </div>
-                        )}
-                      </div>
-                    ) : image ? (
-                      /* 切片预览 - 显示原图和网格线 */
-                      <div className="border-2 border-dashed border-indigo-300 hover:border-indigo-400 rounded-xl p-2 flex items-center justify-center" style={{width: '100%', height: '400px', overflow: 'auto', marginTop: '0px'}}>
-                        {/* 显示原始图片 */}
-                        <img
-                          src={image.src}
-                          alt={t('original_image')}
-                          style={{
-                            maxWidth: '100%',
-                            maxHeight: '100%',
-                            width: 'auto',
-                            height: 'auto',
-                            display: 'block',
-                            margin: 'auto'
-                          }}
-                        />
-                      </div>
-                    ) : (
-                      <div className="border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-gray-500 bg-white/60 backdrop-blur-xl" style={{height: '400px', marginTop: '0px'}}>
-                        {t('uploadImageFirst')}
-                      </div>
-                    )}
+                          )}
+                        </div>
+                      ) : image ? (
+                        /* 切片预览 - 显示原图和网格线 */
+                        <div className="border-2 border-dashed border-indigo-300 hover:border-indigo-400 rounded-xl p-2 flex items-center justify-center" style={{width: '100%', height: '400px', overflow: 'auto', marginTop: '0px'}}>
+                          {/* 显示原始图片 */}
+                          <img
+                            src={image.src}
+                            alt={t('original_image')}
+                            style={{
+                              maxWidth: '100%',
+                              maxHeight: '100%',
+                              width: 'auto',
+                              height: 'auto',
+                              display: 'block',
+                              margin: 'auto'
+                            }}
+                          />
+                        </div>
+                      ) : (
+                        <div className="border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-gray-500 bg-white/60 backdrop-blur-xl" style={{height: '400px', marginTop: '0px'}}>
+                          {t('uploadImageFirst')}
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </main>
-        
-        {/* SEO文案部分 - 添加在工具界面下方 */}
-        <section className="container mx-auto px-4 py-12 relative z-10">
-          <div style={{width: '90%', maxWidth: '1200px'}} className="mx-auto">
-            
-            <div className="prose prose-lg max-w-none text-gray-700 px-4 md:px-8" style={{ textAlign: 'justify' }}>
-              <h2 className="text-2xl font-bold mt-0 mb-4 text-gray-800">{t('seo.faq.what_is')}</h2>
-              <p className="mb-4">
-                {t('seo.faq.what_is_answer')}
-              </p>
+          </main>
+          
+          {/* SEO文案部分 */}
+          <section className="container mx-auto px-4 py-6 relative z-10">
+            <div style={{width: '90%', maxWidth: '1200px'}} className="mx-auto">
               
-              <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">{t('seo.why_choose')}</h2>
-              <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>{t('seo.benefits.free')}</li>
-                <li>{t('seo.benefits.custom_grid')}</li>
-                <li>{t('seo.benefits.puzzle_mode')}</li>
-                <li>{t('seo.benefits.compatible')}</li>
-                <li>{t('seo.benefits.no_registration')}</li>
-              </ul>
+              <div className="prose prose-lg max-w-none text-gray-700 px-4 md:px-8" style={{ textAlign: 'justify' }}>
+                <h2 className="text-2xl font-bold mt-0 mb-4 text-gray-800">{t('seo.faq.what_is')}</h2>
+                <p className="mb-4">
+                  {t('seo.faq.what_is_answer')}
+                </p>
+                
+                <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">{t('seo.why_choose')}</h2>
+                <ul className="list-disc pl-6 mb-6 space-y-2">
+                  <li>{t('seo.benefits.free')}</li>
+                  <li>{t('seo.benefits.custom_grid')}</li>
+                  <li>{t('seo.benefits.puzzle_mode')}</li>
+                  <li>{t('seo.benefits.compatible')}</li>
+                  <li>{t('seo.benefits.no_registration')}</li>
+                </ul>
 
-              <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">{t('seo.how_works')}</h2>
-              <p className="mb-4">
-                {t('seo.using_tool')} <strong>{t('seo.tool_name')}</strong> {t('seo.is_simple')}
-              </p>
-              <ol className="list-decimal pl-6 mb-6 space-y-2">
-                <li>{t('steps.step1')}</li>
-                <li>{t('steps.step2')}</li>
-                <li>{t('steps.step3')}</li>
-                <li>{t('steps.step4')}</li>
-              </ol>
+                <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">{t('seo.how_works')}</h2>
+                <p className="mb-4">
+                  {t('seo.using_tool')} <strong>{t('seo.tool_name')}</strong> {t('seo.is_simple')}
+                </p>
+                <ol className="list-decimal pl-6 mb-6 space-y-2">
+                  <li>{t('steps.step1')}</li>
+                  <li>{t('steps.step2')}</li>
+                  <li>{t('steps.step3')}</li>
+                  <li>{t('steps.step4')}</li>
+                </ol>
 
-              <h2 id="faq" className="text-2xl font-bold mt-8 mb-4 text-gray-800">{t('faq')}</h2>
-              
-              <div className="space-y-6 mt-4">
-                <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.safe_images')}</h3>
-                  <p className="text-gray-700">{t('seo.faq.safe_images_answer')}</p>
-                </div>
+                <h2 id="faq" className="text-2xl font-bold mt-8 mb-4 text-gray-800">{t('faq')}</h2>
+                
+                <div className="space-y-6 mt-4">
+                  <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.safe_images')}</h3>
+                    <p className="text-gray-700">{t('seo.faq.safe_images_answer')}</p>
+                  </div>
 
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.file_formats')}</h3>
-                  <p className="text-gray-700">{t('seo.faq.file_formats_answer')}</p>
-                </div>
+                  <div className="bg-white p-4 rounded-lg border border-gray-200">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.file_formats')}</h3>
+                    <p className="text-gray-700">{t('seo.faq.file_formats_answer')}</p>
+                  </div>
 
-                <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.size_limit')}</h3>
-                  <p className="text-gray-700">{t('seo.faq.size_limit_answer')}</p>
-                </div>
+                  <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.size_limit')}</h3>
+                    <p className="text-gray-700">{t('seo.faq.size_limit_answer')}</p>
+                  </div>
 
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.registration')}</h3>
-                  <p className="text-gray-700">{t('seo.faq.registration_answer')}</p>
-                </div>
+                  <div className="bg-white p-4 rounded-lg border border-gray-200">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.registration')}</h3>
+                    <p className="text-gray-700">{t('seo.faq.registration_answer')}</p>
+                  </div>
 
-                <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.watermarks')}</h3>
-                  <p className="text-gray-700">{t('seo.faq.watermarks_answer')}</p>
-                </div>
+                  <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.watermarks')}</h3>
+                    <p className="text-gray-700">{t('seo.faq.watermarks_answer')}</p>
+                  </div>
 
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.mobile_use')}</h3>
-                  <p className="text-gray-700">{t('seo.faq.mobile_use_answer')}</p>
-                </div>
+                  <div className="bg-white p-4 rounded-lg border border-gray-200">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.mobile_use')}</h3>
+                    <p className="text-gray-700">{t('seo.faq.mobile_use_answer')}</p>
+                  </div>
 
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.which_platforms')}</h3>
-                  <p className="text-gray-700">{t('seo.faq.which_platforms_answer')}</p>
-                </div>
+                  <div className="bg-white p-4 rounded-lg border border-gray-200">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.which_platforms')}</h3>
+                    <p className="text-gray-700">{t('seo.faq.which_platforms_answer')}</p>
+                  </div>
 
-                <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.best_dimensions')}</h3>
-                  <p className="text-gray-700">{t('seo.faq.best_dimensions_answer')}</p>
-                </div>
+                  <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.best_dimensions')}</h3>
+                    <p className="text-gray-700">{t('seo.faq.best_dimensions_answer')}</p>
+                  </div>
 
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.puzzle_post')}</h3>
-                  <p className="text-gray-700">{t('seo.faq.puzzle_post_answer')}</p>
-                </div>
+                  <div className="bg-white p-4 rounded-lg border border-gray-200">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.puzzle_post')}</h3>
+                    <p className="text-gray-700">{t('seo.faq.puzzle_post_answer')}</p>
+                  </div>
 
-                <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.marketing')}</h3>
-                  <p className="text-gray-700">{t('seo.faq.marketing_answer')}</p>
+                  <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
+                    <h3 className="font-bold text-lg text-gray-800 mb-2">{t('seo.faq.marketing')}</h3>
+                    <p className="text-gray-700">{t('seo.faq.marketing_answer')}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
         
-        <footer className="p-6 text-center text-gray-500 sm:p-10 relative z-10 border-t border-gray-200 bg-white/80 backdrop-blur-xl mt-10">
+        {/* 关键词链接区域 - 移到页脚上方 */}
+        <div className="w-full max-w-7xl mx-auto px-4 py-6">
+          <div className="mx-auto" style={{width: '90%', maxWidth: '1200px'}}>
+            <h2 className="text-2xl font-bold mb-4 text-gray-800">{t('related_tools')}</h2>
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
+                <li>
+                  <Link href="/cortar-carrossel-infinito" className="text-blue-600 hover:underline">
+                    {t('tools.carousel_infinite')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cortar-imagem-carrossel" className="text-blue-600 hover:underline">
+                    {t('tools.carousel_image')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/image-splitter-online" className="text-blue-600 hover:underline">
+                    {t('tools.image_splitter')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/dividir-imagem-carrossel" className="text-blue-600 hover:underline">
+                    {t('tools.divide_carousel')}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        {/* 页脚部分 - 不伸缩，固定在底部 */}
+        <footer className="w-full p-6 text-center text-gray-500 sm:p-8 relative z-10 border-t border-gray-200 bg-white/80 backdrop-blur-xl mt-auto">
           <div className="max-w-6xl mx-auto">
             {/* Logo和版权部分 */}
             <div className="flex justify-center items-center mb-6">

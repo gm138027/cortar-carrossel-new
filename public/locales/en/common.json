@@ -13,6 +13,204 @@
   "platforms": "Platforms",
   "customShape": "Custom Shape",
   "language": "Language",
+  "related_tools": "Related Tools",
+  "tools": {
+    "carousel_infinite": "Infinite Carousel Cutter",
+    "carousel_image": "Carousel Image Cutter",
+    "image_splitter": "ImageSplitter Online",
+    "divide_carousel": "Divide Images for Carousel"
+  },
+  "pages": {
+    "infinite_carousel": {
+      "title": "Infinite Carousel Cutter | Free Online Tool",
+      "meta_description": "Free tool to cut infinite carousel images. Easily divide your images to create perfect rotating carousel effects.",
+      "h1": "Infinite Carousel Cutter",
+      "what_is_title": "What is an Infinite Carousel?",
+      "what_is_text": "An infinite carousel is an image presentation that continuously rotates, creating a seamless visual experience. Our tool allows you to precisely cut images to create this professional effect.",
+      "how_to_title": "How to Use Our Carousel Cutting Tool",
+      "how_to_steps": {
+        "step1": "Upload your image using our file selector",
+        "step2": "Choose the number of rows and columns to divide your image",
+        "step3": "Use the preview mode to check the result",
+        "step4": "Download your cut images to use in your carousel"
+      },
+      "try_now": "Try It Now",
+      "advantages_title": "Advantages of Infinite Carousel",
+      "advantages": {
+        "engagement": {
+          "title": "Visual Engagement",
+          "text": "Infinite carousels capture visitors' attention for longer, increasing engagement."
+        },
+        "professional": {
+          "title": "Professional Presentation",
+          "text": "Create professional-looking product presentations or portfolios."
+        },
+        "continuous": {
+          "title": "Seamless Experience",
+          "text": "Offer a continuous visual experience without abrupt interruptions."
+        },
+        "control": {
+          "title": "Complete Control",
+          "text": "Our infinite carousel cutting tool gives you complete control over the final result."
+        }
+      }
+    },
+    "carousel_image": {
+      "title": "Carousel Image Cutter | Online Image Editor",
+      "meta_description": "Specialized tool for cutting carousel images. Split photos to create perfect carousels for your website or presentation.",
+      "h1": "Carousel Image Cutter",
+      "tool_title": "Tool for Cutting Carousel Images",
+      "tool_description": "Our free online tool allows you to precisely cut images for use in website carousels, presentations, and photo galleries. Split a single image into multiple equal parts with just a few clicks.",
+      "how_to_title": "How to Cut an Image for Carousel",
+      "how_to_steps": {
+        "step1": "Select and upload your image",
+        "step2": "Define the number of horizontal and vertical divisions",
+        "step3": "Adjust settings according to your needs",
+        "step4": "Download the cut images individually or as a set"
+      },
+      "try_now": "Cut My Image Now",
+      "applications_title": "Applications for Cut Carousel Images",
+      "applications": {
+        "websites": {
+          "title": "Websites and E-commerce",
+          "text": "Create attractive carousels to highlight products or services on your website."
+        },
+        "social_media": {
+          "title": "Social Media",
+          "text": "Split images to create sliding posts on Instagram, Facebook, and other platforms."
+        },
+        "presentations": {
+          "title": "Professional Presentations",
+          "text": "Enhance your presentations with perfectly cut sequential images."
+        }
+      },
+      "why_use_title": "Why Use Our Carousel Image Cutting Tool?",
+      "benefits": {
+        "easy": {
+          "title": "Easy to Use",
+          "text": "Intuitive interface that doesn't require advanced technical knowledge."
+        },
+        "professional": {
+          "title": "Professional Results",
+          "text": "Precise cuts that ensure a carousel with perfect transitions."
+        },
+        "online": {
+          "title": "Completely Online",
+          "text": "No need to install software - works in your browser."
+        },
+        "free": {
+          "title": "Free",
+          "text": "Complete access to the carousel image cutting tool at no cost."
+        }
+      }
+    },
+    "divide_carousel": {
+      "title": "Divide and Cut Carousel Images | Free Tool",
+      "meta_description": "Cut carousel images online for free. Split your photos into equal parts to create stunning carousels.",
+      "h1": "Carousel Image Cutter",
+      "subtitle": "Divide Images for Your Carousel",
+      "description": "Need to cut images for carousel? Our tool allows you to split photos into multiple parts to create perfect carousels for social media, websites, and presentations.",
+      "how_to_title": "Tutorial: How to Cut Images for Carousel",
+      "how_to_steps": {
+        "step1": "Upload your image through our simple uploader",
+        "step2": "Choose how many parts you want to divide (rows and columns)",
+        "step3": "View the result in real-time",
+        "step4": "Download the cut images"
+      },
+      "try_now": "Divide My Image",
+      "benefits_title": "Benefits of Cutting Images for Carousel",
+      "benefits": {
+        "engagement": {
+          "title": "More Engagement",
+          "text": "Carousels with well-cut images generate more interactions on social media."
+        },
+        "storytelling": {
+          "title": "Visual Storytelling",
+          "text": "Create sequential visual stories that capture your audience's attention."
+        },
+        "reach": {
+          "title": "Greater Reach",
+          "text": "Carousel posts typically reach more people on social media."
+        },
+        "creativity": {
+          "title": "Unlimited Creativity",
+          "text": "Express your creativity with innovative visual compositions through divided images."
+        }
+      },
+      "platforms_title": "Where to Use Cut Carousel Images",
+      "platforms": {
+        "instagram": {
+          "title": "Instagram",
+          "text": "Perfect for creating Instagram carousel posts that tell a complete story."
+        },
+        "facebook": {
+          "title": "Facebook",
+          "text": "Increase engagement with professionally cut image carousels."
+        },
+        "linkedin": {
+          "title": "LinkedIn",
+          "text": "Highlight your professional content with impactful carousels for your network."
+        },
+        "twitter": {
+          "title": "Twitter",
+          "text": "Create visual threads with complementary divided images."
+        }
+      }
+    },
+    "image_splitter": {
+      "title": "ImageSplitter Online | Split Images for Free",
+      "meta_description": "Free online ImageSplitter tool. Easily split images into a grid or custom sections for carousels, social media, and more.",
+      "h1": "ImageSplitter Online",
+      "tool_title": "Free Online Image Splitting Tool",
+      "tool_description": "Our ImageSplitter online tool allows you to easily divide any image into multiple equal parts. Perfect for creating image carousels, social media galleries, puzzles, or grid layouts.",
+      "how_to_title": "How to Split Your Image Online",
+      "how_to_steps": {
+        "step1": "Upload your image using our simple uploader",
+        "step2": "Select how many rows and columns you want to split your image into",
+        "step3": "Preview the results with our real-time preview feature",
+        "step4": "Download all slices as individual images or as a zip package"
+      },
+      "try_now": "Try ImageSplitter Now",
+      "features_title": "Features of Our ImageSplitter Online",
+      "features": {
+        "grid": {
+          "title": "Custom Grid Splitting",
+          "text": "Split your image into any grid size you need, from 2x2 to much larger grids."
+        },
+        "quality": {
+          "title": "High Quality Output",
+          "text": "Maintain the original image quality in all your split sections."
+        },
+        "preview": {
+          "title": "Real-time Preview",
+          "text": "See how your split image will look before downloading."
+        },
+        "puzzle": {
+          "title": "Puzzle Mode",
+          "text": "Create interactive puzzles with our special puzzle feature."
+        }
+      },
+      "why_use_title": "Why Choose Our ImageSplitter Online Tool?",
+      "benefits": {
+        "no_install": {
+          "title": "No Installation Required",
+          "text": "Our ImageSplitter works directly in your browser - no software installation needed."
+        },
+        "privacy": {
+          "title": "Privacy Protected",
+          "text": "Your images are processed locally on your device and never uploaded to our servers."
+        },
+        "free": {
+          "title": "Free to Use",
+          "text": "Our ImageSplitter online tool is completely free with no hidden costs or premium features."
+        },
+        "compatible": {
+          "title": "Works with All Image Types",
+          "text": "Compatible with JPG, PNG, WebP, and other common image formats."
+        }
+      }
+    }
+  },
   "steps": {
     "step1": "Upload your image (supports JPG, PNG, GIF, and WEBP formats)",
     "step2": "Choose the number of rows and columns to divide your image",
