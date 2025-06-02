@@ -1,3 +1,44 @@
 {
-  "buildCommand": "npm install --save-dev next-sitemap && npm install && npm run build"
+  "buildCommand": "npm install --save-dev next-sitemap && npm install && npm run build",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options", 
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.cortarcarrossel.com"
+        }
+      ],
+      "destination": "https://cortarcarrossel.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "http://:path*",
+      "destination": "https://cortarcarrossel.com/:path*",
+      "permanent": true
+    }
+  ]
 }

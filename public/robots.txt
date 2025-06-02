@@ -1,3 +1,47 @@
+# cortarcarrossel.com robots.txt
+# 最后更新: 2025-06-02
+
+# 对所有搜索引擎设置
 User-agent: *
 Allow: /
+
+# 禁止索引HTTP版本(强制使用HTTPS)
+Disallow: http://cortarcarrossel.com/
+Disallow: http://www.cortarcarrossel.com/
+
+# 禁止索引带有营销参数的URL
+Disallow: /*?ref=*
+Disallow: /*?utm_source=*
+Disallow: /*?utm_medium=*
+Disallow: /*?utm_campaign=*
+Disallow: /*?utm_content=*
+Disallow: /*?utm_term=*
+
+# 禁止索引开发环境URL
+Disallow: /api/
+Disallow: /debug
+
+# Google搜索引擎特定规则
+User-agent: Googlebot
+Allow: /
+Disallow: /*?*
+Allow: /*.js$
+Allow: /*.css$
+
+# 谷歌图片搜索引擎特定规则
+User-agent: Googlebot-Image
+Allow: /
+Allow: /public/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+
+# Bing搜索引擎特定规则
+User-agent: Bingbot
+Allow: /
+Disallow: /*?*
+
+# 网站地图
 Sitemap: https://cortarcarrossel.com/sitemap.xml 
