@@ -22,18 +22,5 @@
         }
       ]
     }
-  ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.cortarcarrossel.com"
-        }
-      ],
-      "destination": "https://cortarcarrossel.com/:path*",
-      "permanent": true
-    }
   ]
 }
