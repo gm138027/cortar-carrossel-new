@@ -21,12 +21,20 @@ Disallow: /*?utm_term=*
 Disallow: /api/
 Disallow: /debug
 
+# 禁止索引i18n资源目录，防止404目录被抓取
+Disallow: /public/locales
+Disallow: /public/locales/
+Disallow: /public/locales/*
+
 # Google搜索引擎特定规则
 User-agent: Googlebot
 Allow: /
 Disallow: /*?*
 Allow: /*.js$
 Allow: /*.css$
+Disallow: /public/locales
+Disallow: /public/locales/
+Disallow: /public/locales/*
 
 # 谷歌图片搜索引擎特定规则
 User-agent: Googlebot-Image
@@ -37,11 +45,17 @@ Allow: /*.jpeg$
 Allow: /*.png$
 Allow: /*.gif$
 Allow: /*.webp$
+Disallow: /public/locales
+Disallow: /public/locales/
+Disallow: /public/locales/*
 
 # Bing搜索引擎特定规则
 User-agent: Bingbot
 Allow: /
 Disallow: /*?*
+Disallow: /public/locales
+Disallow: /public/locales/
+Disallow: /public/locales/*
 
 # 网站地图
 Sitemap: https://cortarcarrossel.com/sitemap.xml 
