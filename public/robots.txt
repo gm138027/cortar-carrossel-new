@@ -1,61 +1,21 @@
-# cortarcarrossel.com robots.txt
-# 最后更新: 2025-06-02
-
-# 对所有搜索引擎设置
+# *
 User-agent: *
 Allow: /
 
-# 禁止索引HTTP版本(强制使用HTTPS)
-Disallow: http://cortarcarrossel.com/
-Disallow: http://www.cortarcarrossel.com/
-
-# 禁止索引带有营销参数的URL
-Disallow: /*?ref=*
-Disallow: /*?utm_source=*
-Disallow: /*?utm_medium=*
-Disallow: /*?utm_campaign=*
-Disallow: /*?utm_content=*
-Disallow: /*?utm_term=*
-
-# 禁止索引开发环境URL
-Disallow: /api/
-Disallow: /debug
-
-# 禁止索引i18n资源目录，防止404目录被抓取
-Disallow: /public/locales
-Disallow: /public/locales/
-Disallow: /public/locales/*
-
-# Google搜索引擎特定规则
+# Googlebot
 User-agent: Googlebot
 Allow: /
-Disallow: /*?*
-Allow: /*.js$
-Allow: /*.css$
-Disallow: /public/locales
-Disallow: /public/locales/
-Disallow: /public/locales/*
 
-# 谷歌图片搜索引擎特定规则
+# Googlebot-Image
 User-agent: Googlebot-Image
 Allow: /
-Allow: /public/
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.gif$
-Allow: /*.webp$
-Disallow: /public/locales
-Disallow: /public/locales/
-Disallow: /public/locales/*
 
-# Bing搜索引擎特定规则
-User-agent: Bingbot
-Allow: /
+# *
+User-agent: *
 Disallow: /*?*
-Disallow: /public/locales
-Disallow: /public/locales/
-Disallow: /public/locales/*
 
-# 网站地图
-Sitemap: https://cortarcarrossel.com/sitemap.xml 
+# Host
+Host: https://cortarcarrossel.com
+
+# Sitemaps
+Sitemap: https://cortarcarrossel.com/sitemap.xml

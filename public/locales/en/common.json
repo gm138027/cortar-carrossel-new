@@ -1,24 +1,33 @@
 {
-  "title": "Advanced Carousel Cutter",
-  "subtitle": "A powerful tool for cutting images into carousel posts",
-  "site_name": "Cortar Carrossel",
-  "page_title": "Cortar Carrossel | Professional Carousel Image Cutting Tool",
-  "app_title": "Professional Carousel Image Cutting Tool",
+  "title": "Split Image Online | Free Image Splitter Tool",
+  "subtitle": "Split your images into perfect grids for social media carousels",
+  "site_name": "Split Image Tool - Cortar Carrossel",
+  "page_title": "Split Image Online Free | Image Splitter for Instagram & Social Media",
+  "app_title": "Free Online Image Splitter & Grid Maker",
   "upload": "Upload Image",
   "settings": "Control Panel",
   "rows": "Rows",
   "columns": "Columns",
   "preview": "Split Image",
-  "download": "Download Images",
+  "download": "Download Split Images",
   "platforms": "Platforms",
   "customShape": "Custom Shape",
   "language": "Language",
-  "related_tools": "Related Tools",
+  "related_tools": "Split Image Tools & Related Services",
+  "split_tools_popular": "Popular Split Image Tools",
+  "split_tools_description": "Split images online with our professional image splitter tools. Whether you need to split image into grids for Instagram carousels, create social media content, or design puzzle posts, our free image splitter provides high-quality results. Split image 2x2, 3x3, or custom sizes - perfect for all your creative projects.",
+  "split_tool_desc_short": "Premium image splitter tool",
+  "instagram_tool_desc": "Split images for Instagram carousels",
+  "advanced_features_desc": "Advanced grid splitting features", 
+  "coming_soon": "Coming Soon",
+  "image_grid_maker": "Image Grid Maker",
   "tools": {
     "carousel_infinite": "Infinite Carousel Cutter",
     "carousel_image": "Carousel Image Cutter",
     "image_splitter": "ImageSplitter Online",
-    "divide_carousel": "Divide Images for Carousel"
+    "image_splitter_online": "ImageSplitter Online",
+    "divide_carousel": "Divide Images for Carousel",
+    "carousel_and_image_tools": "Carousel & Image Tools"
   },
   "pages": {
     "infinite_carousel": {
@@ -239,11 +248,19 @@
     "platforms_title": "Create Carousels for All Platforms"
   },
   "seo": {
-    "meta_title": "Free Carousel Image Splitter for Instagram & Facebook | Cut Images Online - Cortar Carrossel",
-    "meta_description": "Easily split images for Instagram and Facebook carousels! Free online tool to cut, create, and download perfect carousel posts. No signup required, 100% secure. Try Cortar Carrossel now!",
-    "keywords": "cortar carrossel, image carousel cutter, instagram carousel tool, image splitter, carousel maker, carousel editor, social media carousel, image grid divider, puzzle posts, slideshow maker",
-    "schema_description": "A powerful free tool for cutting images into carousel posts for Instagram, Facebook, TikTok, and other social media platforms",
-    "feature_list": "Image Splitting, Grid Customization, Carousel Creation, Puzzle Mode, Multi-platform Support",
+    "meta_title": "Split Image Online Free | Image Splitter for Instagram & Social Media - Split Image Tool",
+    "meta_description": "Free online image splitter tool to split images into grids. Perfect for Instagram carousels, social media posts, and image puzzles. Split image into 2x2, 3x3, or custom grids instantly!",
+    "keywords": "split image, image splitter, split image online, image grid maker, instagram carousel maker, split image tool, divide image, cut image grid, image slicer, social media image splitter",
+    "schema_description": "Professional online tool to split images into multiple parts for social media carousels, Instagram posts, and creative presentations. Free image splitter with custom grid options.",
+    "feature_list": [
+      "Split images into custom grids",
+      "Free online image splitter",
+      "Instagram carousel maker",
+      "High-quality image splitting",
+      "No watermarks or registration",
+      "Works on all devices",
+      "Multiple export formats"
+    ],
     "faq": {
       "what_is": "What is Cortar Carrossel?",
       "what_is_answer": "Cortar Carrossel is a free online tool that allows you to split images into multiple parts to create carousel posts for Instagram, Facebook, TikTok, and other social media platforms.",
@@ -284,5 +301,135 @@
     "using_tool": "Using our",
     "tool_name": "image carousel cutter",
     "is_simple": "is extremely simple:"
+  },
+  "split_image": {
+    "page_title": "Split Image Online Free | Image Splitter Tool - No Registration Required",
+    "meta_description": "Free online tool to split images into grids. Split image into 2x2, 3x3, 4x4 or custom sizes for Instagram carousels, social media posts, and puzzles. Fast, secure, and easy to use.",
+    "meta_keywords": "split image, split image online, image splitter, split images free, image grid maker, divide image, cut image into pieces, instagram carousel tool",
+    "hero": {
+      "title": "Split Image Online",
+      "title_free": "Free",
+      "subtitle": "Professional image splitter tool to split images into perfect grids. Create Instagram carousels, social media posts, and image puzzles in seconds.",
+      "feature_1": "✓ Split Image into Any Grid",
+      "feature_2": "✓ No Registration", 
+      "feature_3": "✓ High Quality Output",
+      "cta": "Split My Image Now →"
+    },
+    "how_to": {
+      "title": "How to Split Image Online",
+      "step1_title": "Upload Image",
+      "step1_desc": "Upload any JPG, PNG, GIF, or WebP image to split",
+      "step2_title": "Choose Grid Size",
+      "step2_desc": "Select 2x2, 3x3, 4x4, or custom grid to split image",
+      "step3_title": "Preview Split", 
+      "step3_desc": "See how your split image will look before downloading",
+      "step4_title": "Download Pieces",
+      "step4_desc": "Get all split image pieces ready for social media"
+    },
+    "sizes": {
+      "title": "Popular Image Split Sizes",
+      "size_2x2": "Split Image 2x2",
+      "size_2x2_desc": "Perfect for Instagram carousel posts. Split image into 4 equal parts for storytelling.",
+      "size_3x3": "Split Image 3x3", 
+      "size_3x3_desc": "Instagram puzzle posts. Split image into 9 pieces for engaging grid layouts.",
+      "size_custom": "Custom Split",
+      "size_custom_desc": "Split image into any grid size. Create unique layouts for your content."
+    },
+    "benefits": {
+      "title": "Why Choose Our Image Splitter?",
+      "instant_title": "🚀 Instant Image Splitting",
+      "instant_desc": "Split images instantly in your browser. No waiting, no processing delays. Get your split image pieces in seconds.",
+      "private_title": "🔒 100% Private & Secure",
+      "private_desc": "Images are processed locally in your browser. We never see or store your images. Complete privacy guaranteed.",
+      "quality_title": "💎 High Quality Output",
+      "quality_desc": "Maintain original image quality when splitting. No compression or quality loss in the split pieces.",
+      "devices_title": "📱 Works on All Devices",
+      "devices_desc": "Split images on desktop, tablet, or mobile. Responsive design works perfectly on any screen size."
+    },
+    "use_cases": {
+      "title": "Split Image Use Cases",
+      "carousel_title": "📸 Instagram Carousel Posts",
+      "carousel_desc": "Split images to create swipeable Instagram carousels. Perfect for product showcases, before/after comparisons, and storytelling posts.",
+      "puzzle_title": "🧩 Instagram Puzzle Feed",
+      "puzzle_desc": "Create stunning puzzle feeds by splitting large images into 3x3 grids. Post in reverse order for amazing profile layouts.",
+      "education_title": "📚 Educational Content",
+      "education_desc": "Split infographics and educational materials into digestible pieces for better social media engagement.",
+      "creative_title": "🎨 Creative Projects",
+      "creative_desc": "Split artwork, photography, and designs for creative presentations and portfolio displays across multiple posts."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How do I split an image online for free?",
+      "a1": "Simply upload your image, choose your preferred grid size (like 2x2 or 3x3), and click \"Split Image\". You can then download all the individual pieces for free.",
+      "q2": "What's the best size to split images for Instagram?",
+      "a2": "For Instagram carousels, split images into 2x2 or 3x3 grids. For puzzle feeds, 3x3 (9 pieces) works best. Each piece should be 1080x1080 pixels for optimal quality.",
+      "q3": "Can I split images without losing quality?",
+      "a3": "Yes! Our image splitter maintains the original quality and resolution of your image. Each split piece preserves the exact pixel data from the original.",
+      "q4": "Is there a limit to image size I can split?",
+      "a4": "You can split images up to 20MB. For best performance, we recommend images under 10MB. Larger images may take longer to process depending on your device."
+    },
+    "final_cta": {
+      "title": "Ready to Split Your Images?",
+      "subtitle": "Join thousands of users who trust our free image splitter for their social media content.",
+      "button": "Start Splitting Images Now →"
+    }
+  },
+  "split_image_instagram": {
+    "page_title": "Split Image for Instagram | Free Instagram Carousel Maker & Image Splitter",
+    "meta_description": "Split images for Instagram carousels and puzzle posts. Free tool to split images into 2x2, 3x3 grids perfect for Instagram. Create engaging carousel posts and puzzle feeds easily.",
+    "meta_keywords": "split image for instagram, instagram carousel maker, split image instagram, instagram puzzle posts, split images for social media, instagram grid maker",
+    "hero": {
+      "title": "Split Image for",
+      "title_instagram": "Instagram", 
+      "subtitle": "Free tool to split images for Instagram carousels and puzzle posts. Create engaging social media content that gets more likes and shares.",
+      "feature_1": "📸 Perfect for Instagram",
+      "feature_2": "🧩 Puzzle Posts",
+      "feature_3": "📱 1080x1080 Perfect Size",
+      "cta": "Split Image for Instagram →"
+    },
+    "features": {
+      "title": "Instagram Image Splitting Features",
+      "carousel_title": "📸 Instagram Carousel",
+      "carousel_desc": "Split images into perfect carousel posts. Upload one image, get multiple slides for your Instagram carousel.",
+      "puzzle_title": "🧩 Puzzle Posts",
+      "puzzle_desc": "Create stunning puzzle grid posts. Split into 3x3 and post in reverse order for amazing profile layouts.",
+      "sizing_title": "📐 Perfect Sizing",
+      "sizing_desc": "Automatically sized for Instagram's 1080x1080 format. No need to worry about image dimensions."
+    },
+    "guide": {
+      "title": "How to Create Instagram Carousel Posts",
+      "step1_title": "Upload Your Image",
+      "step1_desc": "Choose a high-quality image that tells a story. Landscape images work best for carousel posts.",
+      "step2_title": "Choose Split Layout",
+      "step2_desc": "Select 2x2 (4 images), 2x3 (6 images), or 3x3 (9 images) depending on your content strategy.",
+      "step3_title": "Download Split Images",
+      "step3_desc": "Get all your split images ready for upload. Each piece is perfectly sized for Instagram.",
+      "step4_title": "Post to Instagram",
+      "step4_desc": "Upload all images to Instagram in order. Your audience can swipe through the complete story!"
+    },
+    "tips": {
+      "title": "Instagram Growth Tips with Split Images",
+      "engagement_title": "🚀 Increase Engagement", 
+      "engagement_desc": "Instagram carousel posts get 3x more engagement than single images. Users spend more time viewing your content.",
+      "reach_title": "📈 Boost Reach",
+      "reach_desc": "Split images create anticipation. Followers will swipe to see the complete picture, increasing time spent on your post.",
+      "storytelling_title": "🎯 Tell Stories",
+      "storytelling_desc": "Use carousel splits to create step-by-step tutorials, before/after reveals, or product showcases.",
+      "puzzle_title": "🧩 Puzzle Feeds",
+      "puzzle_desc": "Create a stunning grid layout on your profile by posting puzzle pieces in reverse order."
+    },
+    "best_practices": {
+      "title": "Instagram Carousel Best Practices",
+      "quality": "Use high-quality images: Instagram favors crisp, clear images in the algorithm",
+      "impact": "Start with impact: Make your first image compelling to encourage swiping",
+      "cta": "Include call-to-action: Tell followers to swipe for more in your caption",
+      "consistency": "Maintain consistency: Keep the same visual style across all split images",
+      "hashtags": "Use relevant hashtags: Include #carousel #splitimage #instagramtips"
+    },
+    "final_cta": {
+      "title": "Ready to Boost Your Instagram?",
+      "subtitle": "Join thousands of Instagram creators using our free image splitter to create viral carousel content.",
+      "button": "Start Creating Instagram Carousels →"
+    }
   }
 } 

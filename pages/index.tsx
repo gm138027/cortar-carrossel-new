@@ -866,10 +866,13 @@ const Home: NextPage = () => {
           {/* 主内容部分 */}
           <main className="flex-grow container mx-auto p-4 py-10 relative z-10 flex justify-center">
             <div style={{width: '90%', maxWidth: '1200px'}} className="mx-auto">
-              {/* 添加工具界面标题 - 多语言版本 */}
+              {/* 添加工具界面标题 - 优化split image关键词 */}
               <h1 className="text-3xl font-bold mb-6 text-center text-gray-900">
-                Cortar Carrossel | {t('app_title')}
+                {t('app_title')}
               </h1>
+              <p className="text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto">
+                {t('subtitle')}
+              </p>
               
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
                 {/* 左侧面板：统一的控制面板 */}
@@ -1016,6 +1019,7 @@ const Home: NextPage = () => {
                           ref={containerRef}
                           className={`border-2 border-dashed rounded-xl p-2 relative ${image ? 'border-indigo-300 hover:border-indigo-400' : 'border-gray-300'}`}
                           style={{
+                            backgroundColor: '#f8f9fa',
                             width: '100%', 
                             height: '400px', 
                             overflow: 'auto', 
@@ -1038,8 +1042,8 @@ const Home: NextPage = () => {
                                   gridTemplateRows: image && slicedImages.length === rows * columns ? Array.from({length: rows}, (_, y) => `${slicedImages[y * columns].height}px`).join(' ') : undefined,
                                   transform: image ? `scale(${Math.min(1, 400 / image.height, 1, (window.innerWidth-100) / image.width)})` : 'none',
                                   transformOrigin: 'center center',
-                                  gap: '1px',
-                                  backgroundColor: 'rgba(99, 102, 241, 0.6)', // 更淡的分割线颜色
+                                  gap: '3px',
+                                  backgroundColor: '#ffffff', // 改为白色分割线，更明显
                                 }}
                               >
                                 {slicedImages.map((slice, index) => {
@@ -1055,7 +1059,7 @@ const Home: NextPage = () => {
                                         display: 'block',
                                         gridRow: slice.gridPosition.row + 1,
                                         gridColumn: slice.gridPosition.col + 1,
-                                        border: '1px solid transparent', // 预留边框空间但不显示
+                                        border: '1px solid #ffffff', // 白色边框
                                         boxSizing: 'border-box',
                                         backgroundColor: 'white', // 确保切片背景是白色
                                       }}
@@ -1286,33 +1290,60 @@ const Home: NextPage = () => {
           </section>
         </div>
         
-        {/* 关键词链接区域 - 移到页脚上方 */}
+        {/* 关键词链接区域 - 移到页脚上方，优化split image链接 */}
         <div className="w-full max-w-7xl mx-auto px-4 py-6">
           <div className="mx-auto" style={{width: '90%', maxWidth: '1200px'}}>
             <h2 className="text-2xl font-bold mb-4 text-gray-800">{t('related_tools')}</h2>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
-                <li>
-                  <Link href="/cortar-carrossel-infinito" className="text-blue-600 hover:underline">
-                    {t('tools.carousel_infinite')}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              
+              {/* 主要Split Image工具 */}
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold mb-3 text-gray-700">🔥 {t('tools.image_splitter')}</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <Link href="/split-image" className="bg-blue-50 border border-blue-200 p-3 rounded-lg hover:bg-blue-100 transition-colors block">
+                                          <span className="text-blue-700 font-medium">{t('split_image.hero.title')} {t('split_image.hero.title_free')}</span>
+                                          <p className="text-sm text-gray-600 mt-1">{t('split_tool_desc_short')}</p>
                   </Link>
-                </li>
-                <li>
-                  <Link href="/cortar-imagem-carrossel" className="text-blue-600 hover:underline">
-                    {t('tools.carousel_image')}
+                  <Link href="/image-splitter-online" className="bg-green-50 border border-green-200 p-3 rounded-lg hover:bg-green-100 transition-colors block">
+                    <span className="text-green-700 font-medium">{t('tools.image_splitter_online')}</span>
+                    <p className="text-sm text-gray-600 mt-1">{t('advanced_features_desc')}</p>
                   </Link>
-                </li>
-                <li>
-                  <Link href="/image-splitter-online" className="text-blue-600 hover:underline">
-                    {t('tools.image_splitter')}
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/dividir-imagem-carrossel" className="text-blue-600 hover:underline">
-                    {t('tools.divide_carousel')}
-                  </Link>
-                </li>
-              </ul>
+                </div>
+              </div>
+
+              {/* 其他相关工具 */}
+              <div>
+                <h3 className="text-lg font-semibold mb-3 text-gray-700">📸 {t('tools.carousel_and_image_tools')}</h3>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
+                  <li>
+                    <Link href="/cortar-carrossel-infinito" className="text-blue-600 hover:underline inline-flex items-center">
+                      <span className="mr-2">🔄</span> {t('tools.carousel_infinite')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/cortar-imagem-carrossel" className="text-blue-600 hover:underline inline-flex items-center">
+                      <span className="mr-2">✂️</span> {t('tools.carousel_image')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/dividir-imagem-carrossel" className="text-blue-600 hover:underline inline-flex items-center">
+                      <span className="mr-2">📱</span> {t('tools.divide_carousel')}
+                    </Link>
+                  </li>
+                  <li>
+                    <span className="text-gray-500 inline-flex items-center">
+                      <span className="mr-2">🧩</span> {t('image_grid_maker')} ({t('coming_soon')})
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* SEO关键词文本 */}
+              <div className="mt-6 pt-4 border-t border-gray-200">
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {t('split_tools_description')}
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -1418,7 +1449,7 @@ export default Home;
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale || 'en', ['common'])),
+      ...(await serverSideTranslations(locale || 'pt', ['common'])),
     },
   };
 }
