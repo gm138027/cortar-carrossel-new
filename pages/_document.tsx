@@ -30,6 +30,7 @@ class MyDocument extends Document {
           {/* DNS预取和预连接，优化加载速度 */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           
           {/* 更新为网站正确的基本信息 */}
@@ -59,19 +60,6 @@ class MyDocument extends Document {
           
           {/* 安全和兼容性头部 */}
           <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-          
-          {/* Google Analytics */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-F41WJR47SH"></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-F41WJR47SH');
-              `,
-            }}
-          />
         </Head>
         <body className="bg-black antialiased">
           <Main />
