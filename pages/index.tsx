@@ -9,6 +9,7 @@ import { useDropzone } from 'react-dropzone';
 import { saveAs } from 'file-saver';
 import Bridge from "../components/Icons/Bridge";
 import Link from 'next/link';
+import { useAnalytics } from '../hooks/useAnalytics';
 
 interface SlicePosition {
   x: number;
@@ -46,6 +47,7 @@ interface DragState {
 const Home: NextPage = () => {
   const router = useRouter();
   const { t, i18n } = useTranslation('common');
+  const analytics = useAnalytics();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [image, setImage] = useState<HTMLImageElement | null>(null);
   const [rows, setRows] = useState(2);
@@ -63,6 +65,14 @@ const Home: NextPage = () => {
   
   // 语言切换功能
   const changeLanguage = (locale: string) => {
+    const currentLocale = router.locale || 'pt';
+    
+    // 追踪语言切换事件
+    analytics.trackLanguageChange({
+      from_language: currentLocale,
+      to_language: locale,
+    });
+    
     router.push(router.pathname, router.asPath, { locale });
   };
   
@@ -79,6 +89,14 @@ const Home: NextPage = () => {
   const onDrop = useCallback((acceptedFiles: File[]) => {
     if (acceptedFiles && acceptedFiles.length > 0) {
       const file = acceptedFiles[0];
+      
+      // 追踪图片上传事件
+      analytics.trackImageUpload({
+        file_size: file.size,
+        file_type: file.type,
+        file_name: file.name,
+      });
+      
       const reader = new FileReader();
       
       reader.onload = function(e) {
@@ -93,7 +111,7 @@ const Home: NextPage = () => {
       
       reader.readAsDataURL(file);
     }
-  }, []);
+  }, [analytics]);
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ 
     onDrop,
@@ -454,6 +472,14 @@ const Home: NextPage = () => {
 
   // 切换拼图模式
   const togglePuzzleMode = () => {
+    const newPuzzleMode = !puzzleMode;
+    
+    // 追踪拼图模式切换事件
+    analytics.trackPuzzleMode({
+      enabled: newPuzzleMode,
+      grid_size: `${rows}x${columns}`,
+    });
+    
     if (puzzleMode) {
       // 退出拼图模式，重置图片顺序
       setPuzzleMode(false);
@@ -567,6 +593,16 @@ const Home: NextPage = () => {
     }
     
     console.log(`总共生成了 ${slices.length} 个切片`);
+    
+    // 追踪图片分割事件
+    analytics.trackImageSplit({
+      rows,
+      columns,
+      total_slices: slices.length,
+      image_width: originalWidth,
+      image_height: originalHeight,
+    });
+    
     setSlicedImages(slices);
     setIsProcessing(false);
     setPuzzleMode(false);
@@ -574,6 +610,12 @@ const Home: NextPage = () => {
 
   // 下载所有切片
   const downloadSlices = () => {
+    // 追踪下载事件
+    analytics.trackDownload({
+      slice_count: slicedImages.length,
+      download_type: 'batch',
+    });
+    
     slicedImages.forEach((slice, index) => {
       const fileName = `carousel-${index + 1}.png`;
       saveAs(slice.url, fileName);
