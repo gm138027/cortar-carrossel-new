@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
-import { useNavigation } from '../../hooks/useNavigation';
+import { useNavigation } from '../../hooks/navigation/useNavigation';
 
 interface HeaderProps {
   onLanguageChange: (lang: string) => void;

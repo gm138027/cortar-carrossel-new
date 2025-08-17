@@ -9,7 +9,7 @@ import { useDropzone } from 'react-dropzone';
 import { saveAs } from 'file-saver';
 import Bridge from "../components/Icons/Bridge";
 import Link from 'next/link';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { useAnalytics } from '../hooks/business/useAnalytics';
 
 interface SlicePosition {
   x: number;
