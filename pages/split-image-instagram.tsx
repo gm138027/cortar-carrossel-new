@@ -13,9 +13,9 @@ const SplitImageInstagram: NextPage = () => {
         <title>{t('split_image_instagram.page_title')}</title>
         <meta
           name="description"
-          content={t('split_image_instagram.meta_description')}
+          content={t('split_image_instagram.meta_description') as string}
         />
-        <meta name="keywords" content={t('split_image_instagram.meta_keywords')} />
+        <meta name="keywords" content={t('split_image_instagram.meta_keywords') as string} />
         <link rel="canonical" href="https://cortarcarrossel.com/split-image-instagram" />
         
         {/* Schema for Instagram-specific tool */}

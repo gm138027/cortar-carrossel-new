@@ -14,7 +14,7 @@ const CortarCarrosselInfinito: NextPage = () => {
         <title>{t("pages.infinite_carousel.title")}</title>
         <meta
           name="description"
-          content={t("pages.infinite_carousel.meta_description")}
+          content={t("pages.infinite_carousel.meta_description") as string}
         />
         <link rel="canonical" href="https://cortarcarrossel.com/cortar-carrossel-infinito" />
         

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { useRef, useState } from "react";
 import useKeypress from "react-use-keypress";
-import type { ImageProps } from "../utils/types";
+import type { ImageProps } from "../../utils/types";
 import SharedModal from "./SharedModal";
 
 export default function Modal({
@@ -13,7 +13,7 @@ export default function Modal({
   images: ImageProps[];
   onClose?: () => void;
 }) {
-  let overlayRef = useRef();
+  let overlayRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   const { photoId } = router.query;
@@ -24,7 +24,7 @@ export default function Modal({
 
   function handleClose() {
     router.push("/", undefined, { shallow: true });
-    onClose();
+    onClose?.();
   }
 
   function changePhotoId(newVal: number) {

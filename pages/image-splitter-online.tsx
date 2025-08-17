@@ -13,7 +13,7 @@ const ImageSplitterOnline: NextPage = () => {
         <title>{t("pages.image_splitter.title")}</title>
         <meta
           name="description"
-          content={t("pages.image_splitter.meta_description")}
+          content={t("pages.image_splitter.meta_description") as string}
         />
         <link rel="canonical" href="https://cortarcarrossel.com/image-splitter-online" />
         

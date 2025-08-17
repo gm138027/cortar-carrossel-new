@@ -1,8 +1,8 @@
 import type { AppProps } from "next/app";
 import "../styles/index.css";
 import { appWithTranslation } from 'next-i18next';
-import Analytics from '../components/Analytics';
-import FontLoader from '../components/FontLoader';
+import Analytics from '../components/Shared/Analytics';
+import FontLoader from '../components/Shared/FontLoader';
 import Layout from '../components/Layout/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {

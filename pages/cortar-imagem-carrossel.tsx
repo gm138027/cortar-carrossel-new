@@ -13,7 +13,7 @@ const CortarImagemCarrossel: NextPage = () => {
         <title>{t("pages.carousel_image.title")}</title>
         <meta
           name="description"
-          content={t("pages.carousel_image.meta_description")}
+          content={t("pages.carousel_image.meta_description") as string}
         />
         <link rel="canonical" href="https://cortarcarrossel.com/cortar-imagem-carrossel" />
         

@@ -13,9 +13,9 @@ const SplitImage: NextPage = () => {
         <title>{t('split_image.page_title')}</title>
         <meta
           name="description"
-          content={t('split_image.meta_description')}
+          content={t('split_image.meta_description') as string}
         />
-        <meta name="keywords" content={t('split_image.meta_keywords')} />
+        <meta name="keywords" content={t('split_image.meta_keywords') as string} />
         <link rel="canonical" href="https://cortarcarrossel.com/split-image" />
         
         {/* Enhanced Schema.org structured data for SEO */}

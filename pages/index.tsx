@@ -643,7 +643,7 @@ const Home: NextPage = () => {
       <Head>
         <title>{t('seo.meta_title')}</title>
         
-        <meta name="description" content={t('seo.meta_description')} />
+        <meta name="description" content={t('seo.meta_description') as string} />
         
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         
@@ -651,20 +651,20 @@ const Home: NextPage = () => {
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
         <meta name="author" content="Cortar Carrossel" />
-        <meta name="keywords" content={t('seo.keywords')} />
-        
+        <meta name="keywords" content={t('seo.keywords') as string} />
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://cortarcarrossel.com/${i18n.language !== 'pt' ? i18n.language + '/' : ''}`} />
-        <meta property="og:title" content={t('seo.meta_title')} />
-        <meta property="og:description" content={t('seo.meta_description')} />
+        <meta property="og:title" content={t('seo.meta_title') as string} />
+        <meta property="og:description" content={t('seo.meta_description') as string} />
         <meta property="og:image" content="https://cortarcarrossel.com/og-image.png" />
-        
+
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`https://cortarcarrossel.com/${i18n.language !== 'pt' ? i18n.language + '/' : ''}`} />
-        <meta property="twitter:title" content={t('seo.meta_title')} />
-        <meta property="twitter:description" content={t('seo.meta_description')} />
+        <meta property="twitter:title" content={t('seo.meta_title') as string} />
+        <meta property="twitter:description" content={t('seo.meta_description') as string} />
         <meta property="twitter:image" content="https://cortarcarrossel.com/og-image.png" />
         
         {/* 多语言支持 */}
@@ -1160,7 +1160,7 @@ const Home: NextPage = () => {
                           {/* 显示原始图片 */}
                           <img
                             src={image.src}
-                            alt={t('original_image')}
+                            alt={t('original_image') as string}
                             style={{
                               maxWidth: '100%',
                               maxHeight: '100%',

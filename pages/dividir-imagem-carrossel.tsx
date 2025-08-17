@@ -13,7 +13,7 @@ const DividirImagemCarrossel: NextPage = () => {
         <title>{t("pages.divide_carousel.title")}</title>
         <meta
           name="description"
-          content={t("pages.divide_carousel.meta_description")}
+          content={t("pages.divide_carousel.meta_description") as string}
         />
         <link rel="canonical" href="https://cortarcarrossel.com/dividir-imagem-carrossel" />
         
