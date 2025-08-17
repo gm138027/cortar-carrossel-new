@@ -2,10 +2,10 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Carousel from "../../components/Tools/Carousel";
-import getResults from "../../utils/cachedImages";
-import cloudinary from "../../utils/cloudinary";
-import getBase64ImageUrl from "../../utils/generateBlurPlaceholder";
-import type { ImageProps } from "../../utils/types";
+import getResults from "../../utils/image/cachedImages";
+import cloudinary from "../../utils/image/cloudinary";
+import getBase64ImageUrl from "../../utils/image/generateBlurPlaceholder";
+import type { ImageProps } from "../../utils/core/types";
 
 interface Props {
   currentPhoto: ImageProps;
