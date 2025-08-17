@@ -1,21 +1,54 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /debug*
+Disallow: /test-*
+Disallow: /p/*
+Disallow: /*debug*
+Disallow: /*test*
+Disallow: /api/*
+Disallow: /_next/*
+Disallow: /404
+Disallow: /500
+Disallow: /*?*utm*
+Disallow: /*?*ref*
+Crawl-delay: 1
 
 # Googlebot
 User-agent: Googlebot
 Allow: /
+Disallow: /debug*
+Disallow: /test-*
+Disallow: /p/*
+Disallow: /api/*
+Disallow: /_next/*
 
-# Googlebot-Image
-User-agent: Googlebot-Image
+# Bingbot
+User-agent: Bingbot
 Allow: /
-
-# *
-User-agent: *
-Disallow: /*?*
+Disallow: /debug*
+Disallow: /test-*
+Disallow: /p/*
+Disallow: /api/*
+Disallow: /_next/*
+Crawl-delay: 1
 
 # Host
 Host: https://cortarcarrossel.com
 
 # Sitemaps
 Sitemap: https://cortarcarrossel.com/sitemap.xml
+
+# Additional sitemap location
+Sitemap: https://cortarcarrossel.com/sitemap.xml
+
+# Website description for search engines
+# This site provides free image splitting and carousel creation tools
+# All tool pages are welcome to be indexed by search engines
+
+# Recommended crawl frequency guidelines
+# Homepage and main tool pages: daily check
+# Multi-language pages: weekly check
+# Other pages: monthly check
+
+# Last updated: August 2025

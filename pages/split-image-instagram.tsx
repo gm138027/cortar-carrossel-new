@@ -45,7 +45,7 @@ const SplitImageInstagram: NextPage = () => {
         />
       </Head>
 
-      <main className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#eef0ff] to-[#ecebfc] min-h-screen">
+      <main className="flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 min-h-screen">
         
         {/* Hero Section */}
         <div className="text-center mb-12 max-w-4xl">
