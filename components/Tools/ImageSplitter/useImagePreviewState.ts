@@ -125,8 +125,8 @@ export const useImagePreviewState = (gridConfig?: { rows: number; columns: numbe
     };
 
     // 根据显示状态决定是否使用网格配置 / Decide whether to use grid config based on display state
-    // 网格模式和拼图模式都需要网格配置来计算切片尺寸
-    const shouldUseGrid = displayState === 'grid' || displayState === 'puzzle';
+    // 网格模式需要网格配置来计算切片尺寸
+    const shouldUseGrid = displayState === 'grid';
     const currentGridConfig = shouldUseGrid && gridConfig ? gridConfig : undefined;
 
     return calculateImageDisplaySize(

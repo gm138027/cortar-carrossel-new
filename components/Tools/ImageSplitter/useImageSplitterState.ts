@@ -2,16 +2,6 @@ import { useState, useRef, useCallback } from 'react';
 import type { SliceData, DragState } from './types';
 import { useAnalytics } from '../../../hooks/business/useAnalytics';
 import { sliceImageToData, downloadAllSlices } from './imageSplitterAlgorithm';
-import { 
-  createMouseDownHandler, 
-  createMouseMoveHandler, 
-  createMouseUpHandler,
-  createResetHighlights,
-  createResetDragState,
-  createResetSliceToGridPosition,
-  createSwapSlicesAndPositions,
-  createResetSlicePositions
-} from './puzzleDragHandlers';
 
 export const useImageSplitterState = () => {
   // 基础状态
