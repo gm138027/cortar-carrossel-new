@@ -8,6 +8,8 @@
   "settings": "Control Panel",
   "rows": "Rows",
   "columns": "Columns",
+  "quick_presets": "Quick Select",
+  "custom_settings": "Custom",
   "preview": "Split Image",
   "download": "Download Split Images",
   "platforms": "Platforms",

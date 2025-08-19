@@ -8,6 +8,8 @@
   "settings": "控制面板",
   "rows": "行数",
   "columns": "列数",
+  "quick_presets": "快速选择",
+  "custom_settings": "自定义",
   "preview": "分割图片",
   "download": "下载分割图片",
   "platforms": "平台",
@@ -166,6 +168,7 @@
   "enter_puzzle_mode": "进入拼图模式",
   "exit_puzzle_mode": "退出拼图模式",
   "reset_position": "重置位置",
+  "shuffle_slices": "打乱切片",
   "suitablePlatforms": "兼容社交媒体平台",
   "platformDescription": "图片分割工具帮助您为所有主要社交媒体平台创建完美的轮播和拼图内容。",
   "steps": {

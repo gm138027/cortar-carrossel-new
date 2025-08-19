@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+import { useAnalytics } from '../../hooks/business/useAnalytics';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -12,8 +13,17 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, showHeaderFooter = true }) => {
   const router = useRouter();
   const { i18n } = useTranslation();
+  const analytics = useAnalytics();
 
   const handleLanguageChange = (newLanguage: string) => {
+    const currentLanguage = router.locale || 'pt';
+
+    // 追踪语言切换事件
+    analytics.trackLanguageChange({
+      from_language: currentLanguage,
+      to_language: newLanguage,
+    });
+
     const { pathname, asPath, query } = router;
     router.push({ pathname, query }, asPath, { locale: newLanguage });
   };
