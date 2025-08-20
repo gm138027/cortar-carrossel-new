@@ -53,7 +53,7 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageUpload }) => {
           isDragActive ? 'border-indigo-400 bg-white/80' : 'border-gray-300'
         } rounded-xl p-4 text-center cursor-pointer h-[104px] flex items-center justify-center transition-all duration-300 hover:border-indigo-500 hover:bg-white/90 backdrop-blur-md bg-white/60`}
       >
-        <input {...getInputProps()} />
+        <input {...getInputProps()} aria-label={t('upload')} />
         <p className="text-base font-bold text-gray-700 flex flex-col items-center">
           <span className="text-lg mb-1">{t('upload')}</span>
           <span className="text-xs text-gray-500">{t('dropzone')}</span>
