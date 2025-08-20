@@ -44,7 +44,6 @@ export const useImageSplitterState = () => {
         total_slices: slices.length,
         image_width: image.width,
         image_height: image.height,
-        processing_mode: 'async',
       });
 
       // 通过回调返回结果
