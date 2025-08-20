@@ -11,56 +11,19 @@ const nextConfig = {
   // 优化代码分割，减少主线程阻塞时间
   webpack: (config, { isServer }) => {
     if (!isServer) {
-      // 优化客户端代码分割
+      // 简化代码分割，优化移动端性能
       config.optimization.splitChunks = {
         chunks: 'all',
-        maxInitialRequests: 25,
-        maxAsyncRequests: 25,
+        maxInitialRequests: 6,  // 减少初始请求数
+        maxAsyncRequests: 10,   // 减少异步请求数
         cacheGroups: {
-          // 将React相关库单独打包
-          react: {
-            name: 'react',
-            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-            chunks: 'all',
-            priority: 20,
-          },
-          // 将大型UI库单独打包
-          ui: {
-            name: 'ui-libs',
-            test: /[\\/]node_modules[\\/](@headlessui|@heroicons|framer-motion)[\\/]/,
-            chunks: 'all',
-            priority: 15,
-          },
-          // 将工具库单独打包
-          utils: {
-            name: 'utils',
-            test: /[\\/]node_modules[\\/](file-saver|react-dropzone|react-use-keypress)[\\/]/,
-            chunks: 'all',
-            priority: 10,
-          },
-          // 分割ImageSplitter相关组件
-          imageSplitter: {
-            name: 'image-splitter',
-            test: /[\\/]components[\\/]Tools[\\/]ImageSplitter[\\/]/,
-            chunks: 'all',
-            priority: 8,
-            minSize: 0,
-          },
-          // 分割其他组件
-          components: {
-            name: 'components',
-            test: /[\\/]components[\\/]/,
-            chunks: 'all',
-            priority: 6,
-            minSize: 20000,
-          },
-          // 默认vendor包
+          // 只保留最重要的分割：vendor包
           vendor: {
             name: 'vendor',
             test: /[\\/]node_modules[\\/]/,
             chunks: 'all',
-            priority: 5,
-            minChunks: 2,
+            priority: 10,
+            minSize: 30000,  // 增加最小大小，避免过小的chunk
           },
         },
       };
