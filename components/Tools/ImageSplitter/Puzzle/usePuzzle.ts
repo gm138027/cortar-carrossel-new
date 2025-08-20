@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 
 // 常量定义
 const DRAG_OPACITY = 0.5;
@@ -30,6 +30,9 @@ export const usePuzzle = ({ slices }: UsePuzzleProps) => {
     dragIndex: number;
   } | null>(null);
 
+  // 使用ref来防止频繁的状态更新
+  const pendingUpdateRef = useRef<NodeJS.Timeout | null>(null);
+
   // 初始化拼图切片
   useEffect(() => {
     // 处理空数据情况
@@ -50,45 +53,54 @@ export const usePuzzle = ({ slices }: UsePuzzleProps) => {
     setPuzzleSlices(initialSlices);
   }, [slices]);
 
-  // 交换两个切片的位置
+  // 交换两个切片的位置（优化版本，使用批量更新）
   const swapSlices = useCallback((fromIndex: number, toIndex: number) => {
     if (fromIndex === toIndex) return;
 
-    setPuzzleSlices(prev => {
-      // 验证索引有效性
-      if (fromIndex < 0 || fromIndex >= prev.length ||
-          toIndex < 0 || toIndex >= prev.length) {
-        console.warn('Invalid swap indices:', { fromIndex, toIndex, length: prev.length });
-        return prev;
-      }
+    // 清除之前的待处理更新
+    if (pendingUpdateRef.current) {
+      clearTimeout(pendingUpdateRef.current);
+    }
 
-      const newSlices = [...prev];
+    // 使用requestAnimationFrame批量处理状态更新
+    pendingUpdateRef.current = setTimeout(() => {
+      setPuzzleSlices(prev => {
+        // 验证索引有效性
+        if (fromIndex < 0 || fromIndex >= prev.length ||
+            toIndex < 0 || toIndex >= prev.length) {
+          console.warn('Invalid swap indices:', { fromIndex, toIndex, length: prev.length });
+          return prev;
+        }
 
-      // 获取两个切片的当前位置
-      const fromSlice = newSlices[fromIndex];
-      const toSlice = newSlices[toIndex];
+        const newSlices = [...prev];
 
-      if (fromSlice && toSlice) {
-        // 创建新对象而不是修改现有对象（确保React检测到变化）
-        const tempRow = fromSlice.currentRow;
-        const tempCol = fromSlice.currentCol;
+        // 获取两个切片的当前位置
+        const fromSlice = newSlices[fromIndex];
+        const toSlice = newSlices[toIndex];
 
-        // 创建新的切片对象
-        newSlices[fromIndex] = {
-          ...fromSlice,
-          currentRow: toSlice.currentRow,
-          currentCol: toSlice.currentCol,
-        };
+        if (fromSlice && toSlice) {
+          // 创建新对象而不是修改现有对象（确保React检测到变化）
+          const tempRow = fromSlice.currentRow;
+          const tempCol = fromSlice.currentCol;
 
-        newSlices[toIndex] = {
-          ...toSlice,
-          currentRow: tempRow,
-          currentCol: tempCol,
-        };
-      }
+          // 创建新的切片对象
+          newSlices[fromIndex] = {
+            ...fromSlice,
+            currentRow: toSlice.currentRow,
+            currentCol: toSlice.currentCol,
+          };
 
-      return newSlices;
-    });
+          newSlices[toIndex] = {
+            ...toSlice,
+            currentRow: tempRow,
+            currentCol: tempCol,
+          };
+        }
+
+        return newSlices;
+      });
+      pendingUpdateRef.current = null;
+    }, 0); // 使用0延迟来批量处理
   }, []);
 
   // 重置所有位置到初始状态

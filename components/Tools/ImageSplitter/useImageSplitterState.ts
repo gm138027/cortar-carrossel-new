@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback } from 'react';
 import type { SliceData, DragState } from './types';
 import { useAnalytics } from '../../../hooks/business/useAnalytics';
-import { sliceImageToData, downloadAllSlices } from './imageSplitterAlgorithm';
+import { sliceImageToData, sliceImageToDataAsync, downloadAllSlices } from './imageSplitterAlgorithm';
 
 export const useImageSplitterState = () => {
   // 基础状态
@@ -22,30 +22,43 @@ export const useImageSplitterState = () => {
     // 暂时保留空实现
   }, []);
 
-  // 切割图片 - 现在接受图片参数并返回结果
-  const sliceImage = useCallback((image: HTMLImageElement | null, onResult?: (slices: any[]) => void) => {
+  // 切割图片 - 使用异步处理改善INP性能
+  const sliceImage = useCallback(async (image: HTMLImageElement | null, onResult?: (slices: any[]) => void) => {
     if (!image || !canvasRef.current) return;
+
     setIsProcessing(true);
 
-    const slices = sliceImageToData(image, canvasRef.current, rows, columns);
+    try {
+      // 使用异步处理改善INP性能（如需回滚，改为 sliceImageToData）
+      const slices = await sliceImageToDataAsync(
+        image,
+        canvasRef.current,
+        rows,
+        columns
+      );
 
-    // 追踪图片分割事件
-    analytics.trackImageSplit({
-      rows,
-      columns,
-      total_slices: slices.length,
-      image_width: image.width,
-      image_height: image.height,
-    });
+      // 追踪图片分割事件
+      analytics.trackImageSplit({
+        rows,
+        columns,
+        total_slices: slices.length,
+        image_width: image.width,
+        image_height: image.height,
+        processing_mode: 'async',
+      });
 
-    setIsProcessing(false);
+      // 通过回调返回结果
+      if (onResult) {
+        onResult(slices);
+      }
 
-    // 通过回调返回结果
-    if (onResult) {
-      onResult(slices);
+      return slices;
+    } catch (error) {
+      console.error('图片分割失败:', error);
+      return [];
+    } finally {
+      setIsProcessing(false);
     }
-
-    return slices;
   }, [rows, columns, analytics]);
 
   // 下载所有切片 - 现在接受切片数据参数
