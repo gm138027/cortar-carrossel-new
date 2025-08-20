@@ -1,4 +1,4 @@
-import { useState, useRef, useMemo, useEffect } from 'react';
+import { useState, useRef, useMemo, useEffect, startTransition } from 'react';
 import { calculateImageDisplaySize, type ImageDisplaySize } from '../../../utils/image/displaySizeCalculator';
 
 // 原始图片状态管理
@@ -41,11 +41,17 @@ const useSlicedImageState = () => {
   const [showGridPreview, setShowGridPreview] = useState(false);
 
   const updateSlicedImages = (slices: typeof slicedImages) => {
-    setSlicedImages(slices);
+    // 🚀 性能优化：使用startTransition降低渲染优先级
+    startTransition(() => {
+      setSlicedImages(slices);
+    });
   };
 
   const setGridPreview = (show: boolean) => {
-    setShowGridPreview(show);
+    // 🚀 性能优化：使用startTransition降低渲染优先级
+    startTransition(() => {
+      setShowGridPreview(show);
+    });
   };
 
   const clearSlicedImages = () => {

@@ -1,6 +1,42 @@
-import React, { memo } from 'react';
+import React, { memo, useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
 import type { ImageDisplaySize } from '../../../utils/image/displaySizeCalculator';
+
+// 🚀 性能优化：高性能切片组件
+const SliceImage = memo<{
+  slice: {
+    url: string;
+    width: number;
+    height: number;
+    row: number;
+    col: number;
+  };
+  displaySize: ImageDisplaySize;
+  index: number;
+}>(({ slice, displaySize, index }) => {
+  const style = useMemo(() => ({
+    width: `${displaySize.sliceWidth}px`,
+    height: `${displaySize.sliceHeight}px`,
+    display: 'block' as const,
+    gridRow: slice.row + 1,
+    gridColumn: slice.col + 1,
+    backgroundColor: 'white',
+    border: '1.5px solid #ffffff',
+    boxSizing: 'border-box' as const,
+    willChange: 'auto' as const,
+    transform: 'translateZ(0)',
+  }), [displaySize.sliceWidth, displaySize.sliceHeight, slice.row, slice.col]);
+
+  return (
+    <img
+      src={slice.url}
+      alt={`Slice ${index + 1}`}
+      loading="eager"
+      decoding="sync"
+      style={style}
+    />
+  );
+});
 
 interface ImagePreviewProps {
   displayState: 'empty' | 'original' | 'grid' | 'puzzle'; // 添加拼图状态 / Add puzzle state
@@ -124,23 +160,17 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
                     gridTemplateColumns: `repeat(${currentGridConfig?.columns || gridConfig.columns}, 1fr)`,
                     gridTemplateRows: `repeat(${currentGridConfig?.rows || gridConfig.rows}, 1fr)`,
                     backgroundColor: '#ffffff',
+                    willChange: 'contents',
+                    transform: 'translateZ(0)',
+                    contain: 'layout style paint',
                   }}
                 >
                   {slicesData.map((slice, index) => (
-                    <img
-                      key={index}
-                      src={slice.url}
-                      alt={`Slice ${index + 1}`}
-                      style={{
-                        width: `${displaySize.sliceWidth}px`,
-                        height: `${displaySize.sliceHeight}px`,
-                        display: 'block',
-                        gridRow: slice.row + 1,
-                        gridColumn: slice.col + 1,
-                        backgroundColor: 'white',
-                        border: '1.5px solid #ffffff',
-                        boxSizing: 'border-box',
-                      }}
+                    <SliceImage
+                      key={`${slice.row}-${slice.col}`}
+                      slice={slice}
+                      displaySize={displaySize}
+                      index={index}
                     />
                   ))}
                 </div>
