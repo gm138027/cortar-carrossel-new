@@ -5,21 +5,8 @@ import { useRouter } from "next/router";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import { useAnalytics } from '../hooks/business/useAnalytics';
-
-// 动态导入ImageSplitterTool，减少初始包大小
-const ImageSplitterTool = dynamic(
-  () => import('../components/Tools/ImageSplitter/ImageSplitterTool'),
-  {
-    loading: () => (
-      <div className="flex justify-center items-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
-      </div>
-    ),
-    ssr: false, // 客户端渲染，避免服务端包含大型组件
-  }
-);
+import ImageSplitterTool from '../components/Tools/ImageSplitter/ImageSplitterTool';
 
 
 const Home: NextPage = () => {
