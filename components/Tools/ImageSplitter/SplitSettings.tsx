@@ -38,7 +38,7 @@ const SplitSettings: React.FC<SplitSettingsProps> = ({
     <div className="space-y-4">
       {/* 快速选择区域 */}
       <div>
-        <h4 className="text-sm font-medium text-black mb-2">{t('quick_presets')}</h4>
+        <h3 className="text-sm font-medium text-black mb-2">{t('quick_presets')}</h3>
         <div className="grid grid-cols-3 gap-2">
           {QUICK_PRESETS.map((preset) => (
             <button
@@ -63,7 +63,7 @@ const SplitSettings: React.FC<SplitSettingsProps> = ({
 
       {/* 自定义设置区域 */}
       <div>
-        <h4 className="text-sm font-medium text-black mb-2">{t('custom_settings')}</h4>
+        <h3 className="text-sm font-medium text-black mb-2">{t('custom_settings')}</h3>
         <div className="space-y-4">
           {/* 行数设置 */}
           <div className="flex items-center justify-between">
