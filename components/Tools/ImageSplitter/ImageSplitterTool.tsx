@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import { useAnalytics } from '../../../hooks/business/useAnalytics';
 import ControlPanel from './ControlPanel';
@@ -28,9 +28,8 @@ const ImageSplitterTool: React.FC = () => {
     downloadSlices: businessDownloadSlices,
   } = useImageSplitterState();
 
-  // 使用图片预览Hook，传入网格配置 - 使用useMemo优化
-  const gridConfig = useMemo(() => ({ rows, columns }), [rows, columns]);
-  const imagePreviewState = useImagePreviewState(gridConfig);
+  // 使用图片预览Hook，传入网格配置
+  const imagePreviewState = useImagePreviewState({ rows, columns });
 
   // 从图片预览状态中获取需要的值 / Get required values from image preview state
   const image = imagePreviewState.originalState.image;
@@ -39,10 +38,9 @@ const ImageSplitterTool: React.FC = () => {
 
   // 拼图状态管理（内部解耦）/ Puzzle state management (internally decoupled)
   const [puzzleMode, setPuzzleMode] = useState(false);
-
-  // 使用useMemo优化拼图数据计算
-  const puzzleSlices = useMemo(() => imagePreviewState.slicesData, [imagePreviewState.slicesData]);
-  const puzzleState = usePuzzle({ slices: puzzleSlices });
+  const puzzleState = usePuzzle({
+    slices: imagePreviewState.slicesData
+  });
 
 
 
