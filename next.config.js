@@ -5,8 +5,50 @@ const { i18n } = require('./next-i18next.config');
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  
+
   i18n,
+
+  // 优化代码分割，减少主线程阻塞时间
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      // 优化客户端代码分割
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          // 将React相关库单独打包
+          react: {
+            name: 'react',
+            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+            chunks: 'all',
+            priority: 20,
+          },
+          // 将大型UI库单独打包
+          ui: {
+            name: 'ui-libs',
+            test: /[\\/]node_modules[\\/](@headlessui|@heroicons|framer-motion)[\\/]/,
+            chunks: 'all',
+            priority: 15,
+          },
+          // 将工具库单独打包
+          utils: {
+            name: 'utils',
+            test: /[\\/]node_modules[\\/](file-saver|react-dropzone|react-use-keypress)[\\/]/,
+            chunks: 'all',
+            priority: 10,
+          },
+          // 默认vendor包
+          vendor: {
+            name: 'vendor',
+            test: /[\\/]node_modules[\\/]/,
+            chunks: 'all',
+            priority: 5,
+            minChunks: 2,
+          },
+        },
+      };
+    }
+    return config;
+  },
 
   async redirects() {
     return [
