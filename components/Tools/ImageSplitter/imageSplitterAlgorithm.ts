@@ -91,7 +91,8 @@ export const sliceImageToData = (
         currentSliceHeight
       );
 
-      const dataUrl = canvas.toDataURL('image/png', 1.0);
+      // 🚀 性能优化：保持原始格式，避免不必要的格式转换
+      const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
       slices.push({
         url: dataUrl,
         width: currentSliceWidth,
@@ -181,8 +182,8 @@ export const sliceImageToDataAsync = async (
             currentSliceHeight
           );
 
-          // 转换为DataURL
-          const dataUrl = canvas.toDataURL('image/png', 1.0);
+          // 🚀 性能优化：保持原始格式，避免不必要的格式转换
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
           slices.push({
             url: dataUrl,
             width: currentSliceWidth,
@@ -215,7 +216,8 @@ export const sliceImageToDataAsync = async (
  */
 export const downloadAllSlices = (slicedImages: SliceData[]): void => {
   slicedImages.forEach((slice, index) => {
-    const fileName = `carousel-${index + 1}.png`;
+    // 🚀 性能优化：使用正确的文件扩展名，保持原始格式
+    const fileName = `carousel-${index + 1}.jpg`;
     saveAs(slice.url, fileName);
   });
 };
