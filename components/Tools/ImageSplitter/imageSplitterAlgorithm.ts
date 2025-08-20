@@ -50,6 +50,9 @@ export const sliceImageToData = (
   const ctx = canvas.getContext('2d');
   if (!ctx) return [];
 
+  // 🛡️ 安全修复：重置Canvas状态，清理之前的内存占用
+  canvas.width = canvas.width; // 标准的Canvas重置方法，触发内部状态清理
+
   const originalWidth = image.width;
   const originalHeight = image.height;
 
@@ -128,6 +131,9 @@ export const sliceImageToDataAsync = async (
 ): Promise<SliceData[]> => {
   const ctx = canvas.getContext('2d');
   if (!ctx) return [];
+
+  // 🛡️ 安全修复：重置Canvas状态，清理之前的内存占用
+  canvas.width = canvas.width; // 标准的Canvas重置方法，触发内部状态清理
 
   const originalWidth = image.width;
   const originalHeight = image.height;

@@ -35,6 +35,9 @@ export const usePuzzle = ({ slices }: UsePuzzleProps) => {
 
   // 初始化拼图切片
   useEffect(() => {
+    // 🛡️ 安全修复：清理之前的拖拽状态，防止状态累积
+    setDragState(null);
+
     // 处理空数据情况
     if (!slices || slices.length === 0) {
       setPuzzleSlices([]);
@@ -53,16 +56,27 @@ export const usePuzzle = ({ slices }: UsePuzzleProps) => {
     setPuzzleSlices(initialSlices);
   }, [slices]);
 
+  // 🛡️ 安全修复：组件卸载时清理待处理的更新，防止内存泄漏
+  useEffect(() => {
+    return () => {
+      if (pendingUpdateRef.current) {
+        clearTimeout(pendingUpdateRef.current);
+        pendingUpdateRef.current = null;
+      }
+    };
+  }, []);
+
   // 交换两个切片的位置（优化版本，使用批量更新）
   const swapSlices = useCallback((fromIndex: number, toIndex: number) => {
     if (fromIndex === toIndex) return;
 
-    // 清除之前的待处理更新
+    // 🛡️ 安全修复：清除之前的待处理更新，防止状态累积
     if (pendingUpdateRef.current) {
       clearTimeout(pendingUpdateRef.current);
+      pendingUpdateRef.current = null;
     }
 
-    // 使用requestAnimationFrame批量处理状态更新
+    // 使用setTimeout批量处理状态更新，减少渲染频率
     pendingUpdateRef.current = setTimeout(() => {
       setPuzzleSlices(prev => {
         // 验证索引有效性

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'next-i18next';
 import { useAnalytics } from '../../../hooks/business/useAnalytics';
 import ControlPanel from './ControlPanel';
 import ImagePreview from './ImagePreview';
@@ -13,7 +12,6 @@ import { usePuzzle } from './Puzzle/usePuzzle';
  * 封装所有业务逻辑，提供完整的图片分割功能
  */
 const ImageSplitterTool: React.FC = () => {
-  const { t } = useTranslation('common');
   const analytics = useAnalytics();
 
   // 使用业务逻辑Hook
@@ -51,15 +49,22 @@ const ImageSplitterTool: React.FC = () => {
     // 2. 已经有分割数据（说明用户之前分割过）
     // 3. 不在处理中（避免重复处理）
     if (image && slicedImages.length > 0 && !isProcessing) {
-      // 🎯 关键修复：立即清除旧的分割数据，避免显示不一致状态
-      // 这样会让显示状态回到'original'，显示原图而不是错误的网格
+      // 🛡️ 安全修复：清理所有相关状态，防止内存累积
       imagePreviewState.slicedState.clearSlicedImages();
+      setPuzzleMode(false); // 重置拼图状态
 
-      // 短暂延迟后重新分割，让用户看到平滑的过渡
-      // 从 旧网格 → 原图 → 新网格，而不是 旧网格 → 错误网格 → 新网格
+      // 🛡️ 安全修复：重置Canvas状态，清理内存占用
+      if (canvasRef.current) {
+        canvasRef.current.width = canvasRef.current.width;
+      }
+
+      // 根据图片大小调整延迟时间，大图片需要更多清理时间
+      const pixels = image.width * image.height;
+      const delay = pixels > 8000000 ? 100 : pixels > 4000000 ? 75 : 50;
+
       const timeoutId = setTimeout(() => {
         sliceImage();
-      }, 50); // 50ms的短暂延迟，提供平滑过渡
+      }, delay);
 
       // 清理函数
       return () => clearTimeout(timeoutId);
@@ -68,11 +73,16 @@ const ImageSplitterTool: React.FC = () => {
 
   // 连接两个Hook的处理函数
   const handleImageUpload = (img: HTMLImageElement) => {
-    // 上传新图片时自动退出拼图模式
+    // 🛡️ 安全修复：新图片上传时完全清理所有状态，防止内存累积
     setPuzzleMode(false);
+    imagePreviewState.slicedState.clearSlicedImages();
+
+    // 🛡️ 安全修复：重置Canvas状态，清理之前图片的内存占用
+    if (canvasRef.current) {
+      canvasRef.current.width = canvasRef.current.width;
+    }
 
     imagePreviewState.originalState.updateImage(img);
-    imagePreviewState.slicedState.clearSlicedImages();
   };
 
   const sliceImage = () => {
