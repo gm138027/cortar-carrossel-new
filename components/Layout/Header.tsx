@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
+import { Bars3Icon } from '@heroicons/react/24/outline';
 import { useNavigation } from '../../hooks/navigation/useNavigation';
+import LanguageDropdown from '../Shared/LanguageDropdown';
 
 interface HeaderProps {
   onLanguageChange: (lang: string) => void;
@@ -15,6 +17,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const { t } = useTranslation('common');
   const { navigateHome, navigateToFaq } = useNavigation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // 处理品牌名称和首页点击
   const handleHomeClick = (e: React.MouseEvent) => {
@@ -26,6 +29,11 @@ const Header: React.FC<HeaderProps> = ({
   const handleFaqClick = (e: React.MouseEvent) => {
     e.preventDefault();
     navigateToFaq();
+  };
+
+  // 处理移动端菜单切换
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -50,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({
           </Link>
         </div>
 
-        {/* 主导航 */}
+        {/* 桌面端导航 */}
         <div className="hidden md:flex items-center space-x-6">
           <Link
             href="/"
@@ -68,29 +76,53 @@ const Header: React.FC<HeaderProps> = ({
           </Link>
         </div>
 
-        {/* 语言切换按钮组 */}
-        <div className="flex space-x-2">
-          {['en', 'zh', 'pt', 'hi', 'ru'].map((locale) => (
-            <button
-              key={locale}
-              onClick={() => onLanguageChange(locale)}
-              className={`px-3 py-1.5 text-sm rounded-full font-medium transition-all duration-200 text-black bg-gray-100 hover:bg-gray-200`}
-            >
-              {locale === 'en' ? 'EN' :
-               locale === 'zh' ? '中' :
-               locale === 'pt' ? 'PT' :
-               locale === 'hi' ? 'HI' : 'RU'}
-            </button>
-          ))}
-        </div>
+        {/* 右侧控件区域 */}
+        <div className="flex items-center space-x-3">
+          {/* 语言下拉菜单 */}
+          <LanguageDropdown
+            currentLanguage={i18nLanguage}
+            onLanguageChange={onLanguageChange}
+          />
 
-        {/* 移动端菜单按钮 */}
-        <button className="md:hidden p-2 rounded-lg hover:bg-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+          {/* 移动端菜单按钮 */}
+          <button
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            onClick={toggleMobileMenu}
+            aria-label={t('mobile_menu')}
+            aria-expanded={isMobileMenuOpen}
+          >
+            <Bars3Icon className="h-6 w-6 text-gray-700" />
+          </button>
+        </div>
       </div>
+
+      {/* 移动端菜单 */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
+          <div className="px-4 py-3 space-y-3">
+            <Link
+              href="/"
+              onClick={(e) => {
+                handleHomeClick(e);
+                setIsMobileMenuOpen(false);
+              }}
+              className="block text-gray-800 hover:text-indigo-600 font-medium transition-colors py-2"
+            >
+              {t('home', { ns: 'common' })}
+            </Link>
+            <Link
+              href="/#faq"
+              onClick={(e) => {
+                handleFaqClick(e);
+                setIsMobileMenuOpen(false);
+              }}
+              className="block text-gray-800 hover:text-indigo-600 font-medium transition-colors py-2"
+            >
+              {t('faq', { ns: 'common' })}
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
