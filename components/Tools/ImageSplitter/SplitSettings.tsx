@@ -71,9 +71,10 @@ const SplitSettings: React.FC<SplitSettingsProps> = ({
               {t('rows')}
             </span>
             <div className="flex items-center bg-gray-100 rounded-full overflow-hidden border border-gray-200">
-              <button 
+              <button
                 className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
                 onClick={() => onRowsChange(Math.max(1, rows - 1))}
+                aria-label={t('decrease_rows')}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                   <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
@@ -82,9 +83,10 @@ const SplitSettings: React.FC<SplitSettingsProps> = ({
               <div className="w-10 h-8 flex items-center justify-center font-medium bg-indigo-100 text-black">
                 {rows}
               </div>
-              <button 
+              <button
                 className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
                 onClick={() => onRowsChange(Math.min(10, rows + 1))}
+                aria-label={t('increase_rows')}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
@@ -99,9 +101,10 @@ const SplitSettings: React.FC<SplitSettingsProps> = ({
               {t('columns')}
             </span>
             <div className="flex items-center bg-gray-100 rounded-full overflow-hidden border border-gray-200">
-              <button 
+              <button
                 className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
                 onClick={() => onColumnsChange(Math.max(1, columns - 1))}
+                aria-label={t('decrease_columns')}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                   <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
@@ -110,9 +113,10 @@ const SplitSettings: React.FC<SplitSettingsProps> = ({
               <div className="w-10 h-8 flex items-center justify-center font-medium bg-indigo-100 text-black">
                 {columns}
               </div>
-              <button 
+              <button
                 className="w-8 h-8 flex items-center justify-center text-white bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 hover:from-indigo-600 hover:via-blue-600 hover:to-purple-600 transition-colors"
                 onClick={() => onColumnsChange(Math.min(10, columns + 1))}
+                aria-label={t('increase_columns')}
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                   <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
