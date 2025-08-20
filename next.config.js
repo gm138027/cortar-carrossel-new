@@ -14,6 +14,8 @@ const nextConfig = {
       // 优化客户端代码分割
       config.optimization.splitChunks = {
         chunks: 'all',
+        maxInitialRequests: 25,
+        maxAsyncRequests: 25,
         cacheGroups: {
           // 将React相关库单独打包
           react: {
@@ -36,6 +38,22 @@ const nextConfig = {
             chunks: 'all',
             priority: 10,
           },
+          // 分割ImageSplitter相关组件
+          imageSplitter: {
+            name: 'image-splitter',
+            test: /[\\/]components[\\/]Tools[\\/]ImageSplitter[\\/]/,
+            chunks: 'all',
+            priority: 8,
+            minSize: 0,
+          },
+          // 分割其他组件
+          components: {
+            name: 'components',
+            test: /[\\/]components[\\/]/,
+            chunks: 'all',
+            priority: 6,
+            minSize: 20000,
+          },
           // 默认vendor包
           vendor: {
             name: 'vendor',
@@ -49,6 +67,8 @@ const nextConfig = {
     }
     return config;
   },
+
+
 
   async redirects() {
     return [
