@@ -17,9 +17,11 @@ const Home: NextPage = () => {
   // 用于记录已初始化的状态，确保翻译正确加载
   useEffect(() => {
     if (i18n.isInitialized) {
-      console.log(`i18n initialized, current language: ${router.locale}`);
-      console.log(`page_title translation: ${t('page_title')}`);
-      console.log(`site_name translation: ${t('site_name')}`);
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`i18n initialized, current language: ${router.locale}`);
+        console.log(`page_title translation: ${t('page_title')}`);
+        console.log(`site_name translation: ${t('site_name')}`);
+      }
     }
   }, [i18n.isInitialized, router.locale, t]);
 

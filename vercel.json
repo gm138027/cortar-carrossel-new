@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm install --save-dev next-sitemap && npm install && npm run build",
+  "buildCommand": "npm install && npm run build",
   "headers": [
     {
       "source": "/(.*)",

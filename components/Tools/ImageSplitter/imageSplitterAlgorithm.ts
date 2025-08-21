@@ -12,7 +12,7 @@ export const calculateColumnWidths = (totalWidth: number, columns: number): numb
     const width = x === columns - 1 
       ? totalWidth - Math.floor(totalWidth / columns) * (columns - 1) 
       : Math.floor(totalWidth / columns);
-    console.log(`列 ${x+1} 宽度: ${width}px`);
+    if (process.env.NODE_ENV === 'development') console.log(`列 ${x+1} 宽度: ${width}px`);
     return width;
   });
 };
@@ -28,7 +28,7 @@ export const calculateRowHeights = (totalHeight: number, rows: number): number[]
     const height = y === rows - 1 
       ? totalHeight - Math.floor(totalHeight / rows) * (rows - 1) 
       : Math.floor(totalHeight / rows);
-    console.log(`行 ${y+1} 高度: ${height}px`);
+    if (process.env.NODE_ENV === 'development') console.log(`行 ${y+1} 高度: ${height}px`);
     return height;
   });
 };
@@ -56,7 +56,7 @@ export const sliceImageToData = (
   const originalWidth = image.width;
   const originalHeight = image.height;
 
-  console.log(`原图尺寸: ${originalWidth}x${originalHeight}, 分割设置: ${rows}行x${columns}列`);
+  if (process.env.NODE_ENV === 'development') console.log(`原图尺寸: ${originalWidth}x${originalHeight}, 分割设置: ${rows}行x${columns}列`);
 
   // 计算每一列的宽度（最后一列可能不同）
   const colWidths = calculateColumnWidths(originalWidth, columns);
@@ -72,7 +72,7 @@ export const sliceImageToData = (
       const currentSliceWidth = colWidths[x];
       const currentSliceHeight = rowHeights[y];
 
-      console.log(`生成切片: 行=${y+1}, 列=${x+1}, 宽=${currentSliceWidth}px, 高=${currentSliceHeight}px, 偏移=(${offsetX},${offsetY})`);
+      if (process.env.NODE_ENV === 'development') console.log(`生成切片: 行=${y+1}, 列=${x+1}, 宽=${currentSliceWidth}px, 高=${currentSliceHeight}px, 偏移=(${offsetX},${offsetY})`);
 
       canvas.width = currentSliceWidth;
       canvas.height = currentSliceHeight;
@@ -112,7 +112,7 @@ export const sliceImageToData = (
     offsetY += rowHeights[y];
   }
 
-  console.log(`总共生成了 ${slices.length} 个切片`);
+  if (process.env.NODE_ENV === 'development') console.log(`总共生成了 ${slices.length} 个切片`);
   return slices;
 };
 
@@ -139,7 +139,7 @@ export const sliceImageToDataAsync = async (
   const originalWidth = image.width;
   const originalHeight = image.height;
 
-  console.log(`异步分割 - 原图尺寸: ${originalWidth}x${originalHeight}, 分割设置: ${rows}行x${columns}列`);
+  if (process.env.NODE_ENV === 'development') console.log(`异步分割 - 原图尺寸: ${originalWidth}x${originalHeight}, 分割设置: ${rows}行x${columns}列`);
 
   // 计算每一列的宽度（最后一列可能不同）
   const colWidths = calculateColumnWidths(originalWidth, columns);
@@ -162,7 +162,7 @@ export const sliceImageToDataAsync = async (
           const currentSliceWidth = colWidths[x];
           const currentSliceHeight = rowHeights[y];
 
-          console.log(`异步生成切片: 行=${y+1}, 列=${x+1}, 宽=${currentSliceWidth}px, 高=${currentSliceHeight}px, 偏移=(${offsetX},${offsetY})`);
+          if (process.env.NODE_ENV === 'development') console.log(`异步生成切片: 行=${y+1}, 列=${x+1}, 宽=${currentSliceWidth}px, 高=${currentSliceHeight}px, 偏移=(${offsetX},${offsetY})`);
 
           // Canvas操作
           canvas.width = currentSliceWidth;
@@ -206,7 +206,7 @@ export const sliceImageToDataAsync = async (
     offsetY += rowHeights[y];
   }
 
-  console.log(`异步分割完成，总共生成了 ${slices.length} 个切片`);
+  if (process.env.NODE_ENV === 'development') console.log(`异步分割完成，总共生成了 ${slices.length} 个切片`);
   return slices;
 };
 

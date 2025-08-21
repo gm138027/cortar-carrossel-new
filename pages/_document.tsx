@@ -30,30 +30,13 @@ class MyDocument extends Document {
           {/* DNS预取和预连接，优化加载速度 */}
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           
-          {/* 更新为网站正确的基本信息 */}
-          <meta
-            name="description"
-            content="Cortar Carrossel - 免费专业轮播图切割工具，适用于Instagram与各大社交媒体平台"
-          />
+          {/* SEO可变内容（title/description/OG/Twitter）请在各页面 <Head> 中设置；此处仅保留全局静态资源 */}
           <meta property="og:site_name" content="cortarcarrossel.com" />
-          <meta
-            property="og:description"
-            content="免费在线工具，轻松创建完美的Instagram轮播图和拼图帖子"
-          />
-          <meta property="og:title" content="Cortar Carrossel - 轮播图切割工具" />
           <meta property="og:type" content="website" />
           <meta property="og:image" content="https://cortarcarrossel.com/og-image.png" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
-          <meta property="og:url" content="https://cortarcarrossel.com" />
-          
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Cortar Carrossel - 轮播图切割工具" />
-          <meta
-            name="twitter:description"
-            content="免费在线工具，轻松创建完美的Instagram轮播图和拼图帖子"
-          />
-          <meta name="twitter:image" content="https://cortarcarrossel.com/og-image.png" />
           
           {/* 安全和兼容性头部 */}
           <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
