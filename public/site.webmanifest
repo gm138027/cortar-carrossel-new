@@ -1,19 +1,32 @@
 {
   "name": "Cortar Carrossel",
   "short_name": "Cortar Carrossel",
+  "description": "Free online image splitting tool for social media carousels",
   "icons": [
     {
-      "src": "/android-chrome-64x64.png",
-      "sizes": "64x64",
+      "src": "/logo/favicon-16x16.png",
+      "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-128x128.png",
-      "sizes": "128x128",
+      "src": "/logo/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo/android-chrome-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
 } 

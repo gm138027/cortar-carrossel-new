@@ -1,0 +1,84 @@
+{
+  "page_title": "Privacy Policy - Cortar Carrossel",
+  "meta_description": "Learn how Cortar Carrossel protects your privacy. Our image splitting tool processes everything locally without uploading any images to servers.",
+  "heading": "Privacy Policy",
+  "last_updated": "Last updated: August 2025",
+  "introduction": {
+    "title": "Introduction",
+    "content": "Cortar Carrossel (\"we\", \"website\", or \"service\") is committed to protecting your privacy. This privacy policy explains how we collect, use, and protect your information when you use our free online image splitting tool."
+  },
+  "data_collection": {
+    "title": "Information Collection",
+    "image_processing": {
+      "subtitle": "Image Processing",
+      "content": "Important note: All images you upload are processed locally in your browser. We do not upload your images to our servers, nor do we store, access, or share your image content. Image splitting is performed entirely on your device."
+    },
+    "analytics": {
+      "subtitle": "Website Analytics",
+      "content": "We use Google Analytics to collect anonymous usage statistics, including: page visits, user geographic location (country/region level), device type, browser information. This data helps us improve website performance and user experience."
+    },
+    "preferences": {
+      "subtitle": "User Preferences",
+      "content": "We store language preferences in your browser to provide you with a personalized multilingual experience."
+    }
+  },
+  "data_use": {
+    "title": "Information Use",
+    "purposes": [
+      "Provide and maintain our image splitting service",
+      "Analyze website usage to improve user experience",
+      "Remember your language preference settings",
+      "Monitor website performance and technical issues"
+    ]
+  },
+  "cookies": {
+    "title": "Cookies and Local Storage",
+    "content": "We use the following types of cookies:",
+    "types": [
+      "Essential Cookies: Ensure proper website functionality",
+      "Analytics Cookies: Google Analytics for statistical analysis",
+      "Preference Cookies: Save your language choices"
+    ],
+    "management": "You can manage cookie preferences through your browser settings, but disabling certain cookies may affect website functionality."
+  },
+  "third_party": {
+    "title": "Third-Party Services",
+    "google_analytics": {
+      "subtitle": "Google Analytics",
+      "content": "We use Google Analytics to collect anonymous usage data. Google's privacy policy applies to data they process."
+    },
+    "vercel": {
+      "subtitle": "Vercel (Hosting Service)",
+      "content": "Our website is hosted on the Vercel platform. Vercel may collect basic server log information."
+    }
+  },
+  "data_security": {
+    "title": "Data Security",
+    "content": "We implement appropriate technical and organizational measures to protect your information. Since image processing is performed entirely locally, your image content remains under your control at all times."
+  },
+  "user_rights": {
+    "title": "Your Rights",
+    "rights": [
+      "Access information we collect about you",
+      "Correct inaccurate personal information",
+      "Delete your personal information",
+      "Restrict information processing",
+      "Data portability",
+      "Object to certain data processing"
+    ],
+    "contact": "To exercise these rights, please contact us using the contact information at the bottom of this page."
+  },
+  "children_privacy": {
+    "title": "Children's Privacy",
+    "content": "Our service is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you discover that a child has provided us with personal information, please contact us and we will immediately delete such information."
+  },
+  "policy_changes": {
+    "title": "Policy Updates",
+    "content": "We may update this privacy policy from time to time. Any changes will be posted on this page, and significant changes will be communicated to users through website notifications."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "content": "If you have any questions or concerns about this privacy policy, please contact us through:",
+    "website": "Website: cortarcarrossel.com"
+  }
+} 

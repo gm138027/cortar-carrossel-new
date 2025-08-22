@@ -1,0 +1,116 @@
+{
+  "page_title": "Terms of Service - Cortar Carrossel",
+  "meta_description": "Learn about Cortar Carrossel's terms of service. We provide free online image splitting tools to help you create perfect social media content.",
+  "heading": "Terms of Service",
+  "last_updated": "Last Updated: August 2025",
+  "introduction": {
+    "title": "Introduction",
+    "content": "Welcome to Cortar Carrossel (\"we,\" \"website,\" or \"service\"). These Terms of Service govern your use of our free online image splitting tool. By using our service, you agree to comply with these terms."
+  },
+  "service_description": {
+    "title": "Service Description",
+    "content": "Cortar Carrossel provides free online image splitting tools to help users create carousel and puzzle content for social media platforms. Our tools run entirely in your browser and do not upload images to servers.",
+    "features": [
+      "Free access to image splitting functionality",
+      "Support for multiple social media platform formats",
+      "Local image processing for privacy protection",
+      "Multi-language interface support"
+    ]
+  },
+  "user_obligations": {
+    "title": "User Obligations",
+    "content": "When using our service, you agree to:",
+    "obligations": [
+      "Comply with all applicable laws and regulations",
+      "Not upload images containing illegal, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, or otherwise objectionable content",
+      "Not upload images that infringe on others' intellectual property rights",
+      "Not upload images containing malware or viruses",
+      "Not attempt to disrupt or interfere with the normal operation of the service",
+      "Not engage in any activities that may harm other users or our systems"
+    ]
+  },
+  "intellectual_property": {
+    "title": "Intellectual Property",
+    "content": "Cortar Carrossel and its content, features, and design are protected by copyright, trademark, and other intellectual property laws. You retain all rights to the images you upload. We do not claim any ownership of your image content.",
+    "rights": [
+      "You retain complete control over your images",
+      "We do not store, copy, or distribute your images",
+      "You may use our tools to process images you have rights to",
+      "Our website design and code are protected by intellectual property laws"
+    ]
+  },
+  "privacy_and_data": {
+    "title": "Privacy and Data",
+    "content": "We value your privacy. All image processing is done locally in your browser, and we do not collect, store, or access your image content. For detailed information on how we protect your privacy, please refer to our Privacy Policy.",
+    "data_practices": [
+      "Images are processed entirely locally",
+      "No personal image content is collected",
+      "Only anonymous usage statistics are collected",
+      "Secure third-party services are used"
+    ]
+  },
+  "service_availability": {
+    "title": "Service Availability",
+    "content": "We strive to maintain high service availability but cannot guarantee that the service will always be available or uninterrupted. We may temporarily interrupt the service for maintenance, updates, or other reasons.",
+    "limitations": [
+      "Service is provided \"as is\"",
+      "No guarantee of completely error-free service",
+      "Service may be temporarily interrupted for maintenance",
+      "Regular backup of important images is recommended"
+    ]
+  },
+  "disclaimer": {
+    "title": "Disclaimer",
+    "content": "To the maximum extent permitted by law, Cortar Carrossel is not liable for any direct, indirect, incidental, special, punitive, or consequential damages arising from the use of our service.",
+    "exclusions": [
+      "Losses due to service interruptions",
+      "Inaccurate image processing results",
+      "Third-party service issues",
+      "User operation errors"
+    ]
+  },
+  "limitation_of_liability": {
+    "title": "Limitation of Liability",
+    "content": "In no event shall our total liability exceed the amount you paid for using our service (since our service is free, this means our liability is zero).",
+    "scope": [
+      "Applies to all types of damages",
+      "Including but not limited to data loss",
+      "Business interruption",
+      "Reputational damage"
+    ]
+  },
+  "indemnification": {
+    "title": "Indemnification",
+    "content": "You agree to indemnify and hold harmless Cortar Carrossel from any claims, damages, liabilities, costs, and expenses arising from your violation of these Terms of Service or use of our service.",
+    "coverage": [
+      "Third-party claims",
+      "Legal fees",
+      "Damage compensation",
+      "Other related costs"
+    ]
+  },
+  "termination": {
+    "title": "Service Termination",
+    "content": "We may terminate or suspend your access to our service at any time, for any reason, with or without notice. You may also stop using our service at any time.",
+    "circumstances": [
+      "Violation of Terms of Service",
+      "Service abuse",
+      "Legal requirements",
+      "Technical issues"
+    ]
+  },
+  "governing_law": {
+    "title": "Governing Law",
+    "content": "These Terms of Service are governed by applicable laws and regulations. Any disputes will be resolved through friendly negotiation. If negotiation fails, disputes will be submitted to the competent court."
+  },
+  "changes_to_terms": {
+    "title": "Changes to Terms",
+    "content": "We may update these Terms of Service from time to time. Any material changes will be notified to users through the website. Continued use of our service constitutes acceptance of the updated terms.",
+    "notification": "We will notify users of any changes to the terms before they take effect through the website. We recommend that you review these terms regularly."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "content": "If you have any questions or concerns about these Terms of Service, please contact us through:",
+    "website": "Website: cortarcarrossel.com"
+  }
+} 

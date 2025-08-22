@@ -1,0 +1,84 @@
+{
+  "page_title": "Política de Privacidade - Cortar Carrossel",
+  "meta_description": "Saiba como o Cortar Carrossel protege sua privacidade. Nossa ferramenta de divisão de imagens processa tudo localmente sem enviar imagens para servidores.",
+  "heading": "Política de Privacidade",
+  "last_updated": "Última atualização: Agosto de 2025",
+  "introduction": {
+    "title": "Introdução",
+    "content": "O Cortar Carrossel (\"nós\", \"site\" ou \"serviço\") está comprometido em proteger sua privacidade. Esta política de privacidade explica como coletamos, usamos e protegemos suas informações quando você usa nossa ferramenta gratuita online de divisão de imagens."
+  },
+  "data_collection": {
+    "title": "Coleta de Informações",
+    "image_processing": {
+      "subtitle": "Processamento de Imagens",
+      "content": "Nota importante: Todas as imagens que você carrega são processadas localmente em seu navegador. Não enviamos suas imagens para nossos servidores, nem armazenamos, acessamos ou compartilhamos o conteúdo de suas imagens. A divisão de imagens é realizada inteiramente em seu dispositivo."
+    },
+    "analytics": {
+      "subtitle": "Analytics do Site",
+      "content": "Usamos o Google Analytics para coletar estatísticas anônimas de uso, incluindo: visitas às páginas, localização geográfica do usuário (nível país/região), tipo de dispositivo, informações do navegador. Esses dados nos ajudam a melhorar a performance do site e a experiência do usuário."
+    },
+    "preferences": {
+      "subtitle": "Preferências do Usuário",
+      "content": "Armazenamos preferências de idioma em seu navegador para oferecer uma experiência multilíngue personalizada."
+    }
+  },
+  "data_use": {
+    "title": "Uso das Informações",
+    "purposes": [
+      "Fornecer e manter nosso serviço de divisão de imagens",
+      "Analisar o uso do site para melhorar a experiência do usuário",
+      "Lembrar suas configurações de preferência de idioma",
+      "Monitorar a performance do site e problemas técnicos"
+    ]
+  },
+  "cookies": {
+    "title": "Cookies e Armazenamento Local",
+    "content": "Usamos os seguintes tipos de cookies:",
+    "types": [
+      "Cookies Essenciais: Garantem o funcionamento adequado do site",
+      "Cookies de Analytics: Google Analytics para análise estatística",
+      "Cookies de Preferência: Salvam suas escolhas de idioma"
+    ],
+    "management": "Você pode gerenciar as preferências de cookies através das configurações do seu navegador, mas desabilitar certos cookies pode afetar a funcionalidade do site."
+  },
+  "third_party": {
+    "title": "Serviços de Terceiros",
+    "google_analytics": {
+      "subtitle": "Google Analytics",
+      "content": "Usamos o Google Analytics para coletar dados anônimos de uso. A política de privacidade do Google se aplica aos dados que eles processam."
+    },
+    "vercel": {
+      "subtitle": "Vercel (Serviço de Hospedagem)",
+      "content": "Nosso site é hospedado na plataforma Vercel. A Vercel pode coletar informações básicas de log do servidor."
+    }
+  },
+  "data_security": {
+    "title": "Segurança dos Dados",
+    "content": "Implementamos medidas técnicas e organizacionais apropriadas para proteger suas informações. Como o processamento de imagens é realizado inteiramente localmente, o conteúdo de suas imagens permanece sob seu controle o tempo todo."
+  },
+  "user_rights": {
+    "title": "Seus Direitos",
+    "rights": [
+      "Acessar informações que coletamos sobre você",
+      "Corrigir informações pessoais imprecisas",
+      "Excluir suas informações pessoais",
+      "Restringir o processamento de informações",
+      "Portabilidade de dados",
+      "Objetar a certo processamento de dados"
+    ],
+    "contact": "Para exercer esses direitos, entre em contato conosco usando as informações de contato no final desta página."
+  },
+  "children_privacy": {
+    "title": "Privacidade de Crianças",
+    "content": "Nosso serviço não é direcionado a crianças menores de 13 anos. Não coletamos intencionalmente informações pessoais de crianças menores de 13 anos. Se você descobrir que uma criança nos forneceu informações pessoais, entre em contato conosco e excluiremos imediatamente essas informações."
+  },
+  "policy_changes": {
+    "title": "Atualizações da Política",
+    "content": "Podemos atualizar esta política de privacidade de tempos em tempos. Quaisquer alterações serão publicadas nesta página, e mudanças significativas serão comunicadas aos usuários através de notificações no site."
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "content": "Se você tiver dúvidas ou preocupações sobre esta política de privacidade, entre em contato conosco através de:",
+    "website": "Site: cortarcarrossel.com"
+  }
+} 

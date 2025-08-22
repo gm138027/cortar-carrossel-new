@@ -435,5 +435,8 @@
   },
   "original_image": "原始图片",
   "uploadImageFirst": "请先上传一张图片开始分割",
-  "preview_area": "预览区域"
+  "preview_area": "预览区域",
+  "privacy_policy": "隐私政策",
+  "terms_of_service": "服务条款",
+  "back_to_home": "返回首页"
 } 

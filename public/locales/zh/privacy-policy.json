@@ -1,0 +1,84 @@
+{
+  "page_title": "隐私政策 - Cortar Carrossel",
+  "meta_description": "了解Cortar Carrossel如何保护您的隐私。我们的图片分割工具完全在本地处理，不上传任何图片到服务器。",
+  "heading": "隐私政策",
+  "last_updated": "最后更新：2025年8月",
+  "introduction": {
+    "title": "简介",
+    "content": "Cortar Carrossel（\"我们\"、\"网站\"或\"服务\"）致力于保护您的隐私。本隐私政策说明了我们如何收集、使用和保护您在使用我们的免费在线图片分割工具时的信息。"
+  },
+  "data_collection": {
+    "title": "信息收集",
+    "image_processing": {
+      "subtitle": "图片处理",
+      "content": "重要说明：您上传的所有图片都在您的浏览器本地处理。我们不会将您的图片上传到我们的服务器，也不会存储、访问或分享您的图片内容。图片分割完全在您的设备上进行。"
+    },
+    "analytics": {
+      "subtitle": "网站分析",
+      "content": "我们使用Google Analytics收集匿名使用统计信息，包括：页面访问量、用户地理位置（国家/地区级别）、设备类型、浏览器信息。这些数据帮助我们改善网站性能和用户体验。"
+    },
+    "preferences": {
+      "subtitle": "用户偏好",
+      "content": "我们在您的浏览器中存储语言偏好，以便为您提供个性化的多语言体验。"
+    }
+  },
+  "data_use": {
+    "title": "信息使用",
+    "purposes": [
+      "提供和维护我们的图片分割服务",
+      "分析网站使用情况以改善用户体验",
+      "记住您的语言偏好设置",
+      "监控网站性能和技术问题"
+    ]
+  },
+  "cookies": {
+    "title": "Cookie和本地存储",
+    "content": "我们使用以下类型的Cookie：",
+    "types": [
+      "必要Cookie：确保网站正常运行",
+      "分析Cookie：Google Analytics用于统计分析",
+      "偏好Cookie：保存您的语言选择"
+    ],
+    "management": "您可以通过浏览器设置管理Cookie偏好，但禁用某些Cookie可能影响网站功能。"
+  },
+  "third_party": {
+    "title": "第三方服务",
+    "google_analytics": {
+      "subtitle": "Google Analytics",
+      "content": "我们使用Google Analytics收集匿名使用数据。Google的隐私政策适用于他们处理的数据。"
+    },
+    "vercel": {
+      "subtitle": "Vercel（托管服务）",
+      "content": "我们的网站托管在Vercel平台上。Vercel可能收集基本的服务器日志信息。"
+    }
+  },
+  "data_security": {
+    "title": "数据安全",
+    "content": "我们采取适当的技术和组织措施保护您的信息。由于图片处理完全在本地进行，您的图片内容始终在您的控制之下。"
+  },
+  "user_rights": {
+    "title": "您的权利",
+    "rights": [
+      "访问我们收集的关于您的信息",
+      "更正不准确的个人信息",
+      "删除您的个人信息",
+      "限制信息处理",
+      "数据可携性",
+      "反对某些数据处理"
+    ],
+    "contact": "如需行使这些权利，请通过本页面底部的联系方式与我们联系。"
+  },
+  "children_privacy": {
+    "title": "儿童隐私",
+    "content": "我们的服务不针对13岁以下儿童。我们不会故意收集13岁以下儿童的个人信息。如果您发现儿童向我们提供了个人信息，请联系我们，我们将立即删除相关信息。"
+  },
+  "policy_changes": {
+    "title": "政策更新",
+    "content": "我们可能会不时更新本隐私政策。任何更改将在此页面发布，重大更改将通过网站通知告知用户。"
+  },
+  "contact": {
+    "title": "联系我们",
+    "content": "如果您对本隐私政策有任何问题或疑虑，请通过以下方式联系我们：",
+    "website": "网站：cortarcarrossel.com"
+  }
+} 

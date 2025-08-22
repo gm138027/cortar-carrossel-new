@@ -45,14 +45,14 @@ const Home: NextPage = () => {
         <meta property="og:url" content={`https://cortarcarrossel.com/${i18n.language !== 'pt' ? i18n.language + '/' : ''}`} />
         <meta property="og:title" content={t('seo.meta_title') as string} />
         <meta property="og:description" content={t('seo.meta_description') as string} />
-        <meta property="og:image" content="https://cortarcarrossel.com/og-image.png" />
+        <meta property="og:image" content="https://cortarcarrossel.com/cortar-carrossel-preview.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`https://cortarcarrossel.com/${i18n.language !== 'pt' ? i18n.language + '/' : ''}`} />
         <meta property="twitter:title" content={t('seo.meta_title') as string} />
         <meta property="twitter:description" content={t('seo.meta_description') as string} />
-        <meta property="twitter:image" content="https://cortarcarrossel.com/og-image.png" />
+        <meta property="twitter:image" content="https://cortarcarrossel.com/cortar-carrossel-preview.png" />
         
         {/* 多语言支持 */}
         <link rel="alternate" hrefLang="pt" href="https://cortarcarrossel.com/" />
@@ -66,8 +66,8 @@ const Home: NextPage = () => {
         <link rel="canonical" href={`https://cortarcarrossel.com/${i18n.language !== 'pt' ? i18n.language + '/' : ''}`} />
         
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/logo.png" />
+        <link rel="icon" href="/logo/favicon.ico" />
+        <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png" />
         
         {/* 结构化数据 - JSON-LD */}
         <script
@@ -88,8 +88,8 @@ const Home: NextPage = () => {
                 "priceCurrency": "USD",
                 "availability": "http://schema.org/InStock"
               },
-              "screenshot": "/logo.png",
-              "image": "/og-image.png",
+              "screenshot": "/logo/android-chrome-192x192.png",
+              "image": "/cortar-carrossel-preview.png",
               "featureList": t('seo.feature_list'),
               "softwareVersion": "1.0",
               "datePublished": "2023-01-01",

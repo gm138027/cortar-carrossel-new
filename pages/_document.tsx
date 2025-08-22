@@ -8,10 +8,12 @@ class MyDocument extends Document {
     return (
       <Html lang={locale}>
         <Head>
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="128x128" href="/android-chrome-128x128.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                  <link rel="icon" href="/logo/favicon.ico" />
+        <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="192x192" href="/logo/android-chrome-192x192.png" />
+        <link rel="apple-touch-icon" sizes="512x512" href="/logo/android-chrome-512x512.png" />
+                  <link rel="icon" type="image/png" sizes="32x32" href="/logo/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo/favicon-16x16.png" />
           <link rel="manifest" href="/site.webmanifest" />
           
           {/* 添加明确的robots指令，确保允许索引 */}
@@ -42,7 +44,7 @@ class MyDocument extends Document {
           />
           <meta property="og:title" content="Cortar Carrossel - 轮播图切割工具" />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="https://cortarcarrossel.com/og-image.png" />
+          <meta property="og:image" content="https://cortarcarrossel.com/cortar-carrossel-preview.png" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta property="og:url" content="https://cortarcarrossel.com" />
@@ -53,7 +55,7 @@ class MyDocument extends Document {
             name="twitter:description"
             content="免费在线工具，轻松创建完美的Instagram轮播图和拼图帖子"
           />
-          <meta name="twitter:image" content="https://cortarcarrossel.com/og-image.png" />
+          <meta name="twitter:image" content="https://cortarcarrossel.com/cortar-carrossel-preview.png" />
           
           {/* 安全和兼容性头部 */}
           <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />

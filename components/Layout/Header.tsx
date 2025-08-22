@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center">
           <div className="h-8 w-8 flex items-center justify-center">
             <Image
-              src="/logo.png"
+              src="/logo/android-chrome-192x192.png"
               alt="Cortar Carrossel Logo"
               width={32}
               height={32}

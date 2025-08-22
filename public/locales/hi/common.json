@@ -445,6 +445,9 @@
     "tool_name": "छवि कैरोसेल कटर",
     "is_simple": "बेहद आसान है:"
   },
+  "privacy_policy": "गोपनीयता नीति",
+  "terms_of_service": "सेवा की शर्तें",
+  "back_to_home": "होम पर वापस जाएं",
   "related_tools": "संबंधित उपकरण",
   "tools": {
     "carousel_infinite": "अनंत कैरोसेल कटर",

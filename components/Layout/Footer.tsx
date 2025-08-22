@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation('common');
@@ -9,16 +10,32 @@ const Footer: React.FC = () => {
     <footer className="w-full p-6 text-center text-gray-500 sm:p-8 relative z-10 border-t border-gray-200 bg-white/80 backdrop-blur-xl mt-auto">
       <div className="max-w-6xl mx-auto">
         {/* Logo和版权部分 */}
-        <div className="flex justify-center items-center mb-6">
+        <div className="flex justify-center items-center mb-4">
           <div className="h-8 w-8 relative mr-2">
             <Image
-              src="/logo.png"
+              src="/logo/android-chrome-192x192.png"
               alt={t('site_name') + ' Logo'}
               fill
               className="object-contain"
             />
           </div>
           <span className="font-light text-black">{t('site_name')} © {new Date().getFullYear()}</span>
+        </div>
+
+        {/* 法律链接部分 */}
+        <div className="mb-6 flex justify-center space-x-6">
+          <Link 
+            href="/privacy-policy" 
+            className="text-sm text-gray-600 hover:text-blue-600 transition-colors underline"
+          >
+            {t('privacy_policy', '隐私政策')}
+          </Link>
+          <Link 
+            href="/terms-of-service" 
+            className="text-sm text-gray-600 hover:text-blue-600 transition-colors underline"
+          >
+            {t('terms_of_service', '服务条款')}
+          </Link>
         </div>
 
         {/* 社交媒体平台部分 */}
