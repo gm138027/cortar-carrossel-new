@@ -5,7 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 
 const ImageSplitterOnline: NextPage = () => {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
 
   return (
     <>
@@ -15,7 +15,16 @@ const ImageSplitterOnline: NextPage = () => {
           name="description"
           content={t("pages.image_splitter.meta_description") as string}
         />
-        <link rel="canonical" href="https://cortarcarrossel.com/image-splitter-online" />
+        {/* Canonical: current language version */} {/* 规范链接：当前语言版本 */}
+        <link rel="canonical" href={`https://cortarcarrossel.com/${i18n.language !== 'pt' ? i18n.language + '/' : ''}image-splitter-online`} />
+
+        {/* Hreflang for multilingual versions */} {/* 多语言版本的 hreflang 指示 */}
+        <link rel="alternate" hrefLang="pt" href="https://cortarcarrossel.com/image-splitter-online" />
+        <link rel="alternate" hrefLang="en" href="https://cortarcarrossel.com/en/image-splitter-online" />
+        <link rel="alternate" hrefLang="zh" href="https://cortarcarrossel.com/zh/image-splitter-online" />
+        <link rel="alternate" hrefLang="hi" href="https://cortarcarrossel.com/hi/image-splitter-online" />
+        <link rel="alternate" hrefLang="ru" href="https://cortarcarrossel.com/ru/image-splitter-online" />
+        <link rel="alternate" hrefLang="x-default" href="https://cortarcarrossel.com/image-splitter-online" />
         
         {/* Schema.org structured data for SEO */}
         <script

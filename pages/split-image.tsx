@@ -5,7 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 
 const SplitImage: NextPage = () => {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
 
   return (
     <>
@@ -16,7 +16,16 @@ const SplitImage: NextPage = () => {
           content={t('split_image.meta_description') as string}
         />
         <meta name="keywords" content={t('split_image.meta_keywords') as string} />
-        <link rel="canonical" href="https://cortarcarrossel.com/split-image" />
+        {/* Canonical: current language version */} {/* 规范链接：当前语言版本 */}
+        <link rel="canonical" href={`https://cortarcarrossel.com/${i18n.language !== 'pt' ? i18n.language + '/' : ''}split-image`} />
+
+        {/* Hreflang for multilingual versions */} {/* 多语言版本的 hreflang 指示 */}
+        <link rel="alternate" hrefLang="pt" href="https://cortarcarrossel.com/split-image" />
+        <link rel="alternate" hrefLang="en" href="https://cortarcarrossel.com/en/split-image" />
+        <link rel="alternate" hrefLang="zh" href="https://cortarcarrossel.com/zh/split-image" />
+        <link rel="alternate" hrefLang="hi" href="https://cortarcarrossel.com/hi/split-image" />
+        <link rel="alternate" hrefLang="ru" href="https://cortarcarrossel.com/ru/split-image" />
+        <link rel="alternate" hrefLang="x-default" href="https://cortarcarrossel.com/split-image" />
         
         {/* Enhanced Schema.org structured data for SEO */}
         <script
