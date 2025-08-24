@@ -46,26 +46,29 @@ const TermsOfService = () => {
         <link rel="alternate" hrefLang="x-default" href={getLocalizedUrl('pt')} />
 
         {/* JSON-LD结构化数据 */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": t('page_title'),
-            "description": t('meta_description'),
-            "url": getLocalizedUrl(currentLocale),
-            "inLanguage": currentLocale,
-            "isPartOf": {
-              "@type": "WebSite",
-              "name": "Cortar Carrossel",
-              "url": "https://cortarcarrossel.com"
-            },
-            "about": {
-              "@type": "Thing",
-              "name": "Terms of Service",
-              "description": "Terms of service for Cortar Carrossel image splitting tool"
-            }
-          })}
-        </script>
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": t('page_title'),
+              "description": t('meta_description'),
+              "url": getLocalizedUrl(currentLocale),
+              "inLanguage": currentLocale,
+              "isPartOf": {
+                "@type": "WebSite",
+                "name": "Cortar Carrossel",
+                "url": "https://cortarcarrossel.com"
+              },
+              "about": {
+                "@type": "Thing",
+                "name": "Terms of Service",
+                "description": "Terms of service for Cortar Carrossel image splitting tool"
+              }
+            })
+          }}
+        />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
