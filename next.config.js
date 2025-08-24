@@ -64,11 +64,11 @@ const nextConfig = {
         destination: '/split-image',
         permanent: true,
       },
-      // 品牌词到流量词的重定向
+      // 品牌词到首页的永久重定向，确保SEO权重传递
       {
         source: '/cortar-carrossel',
         destination: '/',
-        permanent: false,
+        permanent: true,  // 301重定向，传递SEO权重
       }
     ];
   },
