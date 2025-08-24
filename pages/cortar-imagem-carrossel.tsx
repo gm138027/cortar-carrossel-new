@@ -5,7 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 
 const CortarImagemCarrossel: NextPage = () => {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
 
   return (
     <>
@@ -15,7 +15,16 @@ const CortarImagemCarrossel: NextPage = () => {
           name="description"
           content={t("pages.carousel_image.meta_description") as string}
         />
-        <link rel="canonical" href="https://cortarcarrossel.com/cortar-imagem-carrossel" />
+        {/* Canonical: current language version */}
+        <link rel="canonical" href={`https://cortarcarrossel.com/${i18n.language !== 'pt' ? i18n.language + '/' : ''}cortar-imagem-carrossel`} />
+        
+        {/* Hreflang for multilingual versions */}
+        <link rel="alternate" hrefLang="pt" href="https://cortarcarrossel.com/cortar-imagem-carrossel" />
+        <link rel="alternate" hrefLang="en" href="https://cortarcarrossel.com/en/cortar-imagem-carrossel" />
+        <link rel="alternate" hrefLang="zh" href="https://cortarcarrossel.com/zh/cortar-imagem-carrossel" />
+        <link rel="alternate" hrefLang="hi" href="https://cortarcarrossel.com/hi/cortar-imagem-carrossel" />
+        <link rel="alternate" hrefLang="ru" href="https://cortarcarrossel.com/ru/cortar-imagem-carrossel" />
+        <link rel="alternate" hrefLang="x-default" href="https://cortarcarrossel.com/cortar-imagem-carrossel" />
         
         {/* Estrutura de dados Schema.org para SEO */}
         <script

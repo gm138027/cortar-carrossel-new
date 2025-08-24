@@ -5,7 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 
 const DividirImagemCarrossel: NextPage = () => {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
 
   return (
     <>
@@ -15,7 +15,16 @@ const DividirImagemCarrossel: NextPage = () => {
           name="description"
           content={t("pages.divide_carousel.meta_description") as string}
         />
-        <link rel="canonical" href="https://cortarcarrossel.com/dividir-imagem-carrossel" />
+        {/* Canonical: current language version */}
+        <link rel="canonical" href={`https://cortarcarrossel.com/${i18n.language !== 'pt' ? i18n.language + '/' : ''}dividir-imagem-carrossel`} />
+        
+        {/* Hreflang for multilingual versions */}
+        <link rel="alternate" hrefLang="pt" href="https://cortarcarrossel.com/dividir-imagem-carrossel" />
+        <link rel="alternate" hrefLang="en" href="https://cortarcarrossel.com/en/dividir-imagem-carrossel" />
+        <link rel="alternate" hrefLang="zh" href="https://cortarcarrossel.com/zh/dividir-imagem-carrossel" />
+        <link rel="alternate" hrefLang="hi" href="https://cortarcarrossel.com/hi/dividir-imagem-carrossel" />
+        <link rel="alternate" hrefLang="ru" href="https://cortarcarrossel.com/ru/dividir-imagem-carrossel" />
+        <link rel="alternate" hrefLang="x-default" href="https://cortarcarrossel.com/dividir-imagem-carrossel" />
         
         {/* Schema.org structured data for SEO */}
         <script
