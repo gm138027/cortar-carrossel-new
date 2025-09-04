@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import { CONTACT_CONFIG } from '../config/contact';
 
 const TermsOfService = () => {
   const { t } = useTranslation('terms-of-service');
@@ -256,12 +257,31 @@ const TermsOfService = () => {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                 {t('contact.title')}
               </h2>
-              <p className="text-gray-700 mb-2">
+              <p className="text-gray-700 mb-4">
                 {t('contact.content')}
               </p>
-              <p className="text-blue-600 font-medium">
-                {t('contact.website')}
-              </p>
+              <div className="space-y-2">
+                <p className="text-gray-700">
+                  <span className="font-medium">Email:</span>{' '}
+                  <a
+                    href={`mailto:${CONTACT_CONFIG.email}`}
+                    className="text-blue-600 hover:text-blue-800 underline"
+                  >
+                    {CONTACT_CONFIG.email}
+                  </a>
+                </p>
+                <p className="text-gray-700">
+                  <span className="font-medium">Website:</span>{' '}
+                  <a
+                    href={CONTACT_CONFIG.website}
+                    className="text-blue-600 hover:text-blue-800 underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {CONTACT_CONFIG.website}
+                  </a>
+                </p>
+              </div>
             </section>
           </div>
 
