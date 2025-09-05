@@ -31,6 +31,14 @@ class MyDocument extends Document {
           
           {/* DNS预取和预连接，优化加载速度 */}
           <link rel="preconnect" href="https://www.googletagmanager.com" />
+          <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+
+          {/* Google AdSense */}
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9027033456343227"
+            crossOrigin="anonymous"
+          ></script>
           
           {/* 更新为网站正确的基本信息 */}
           <meta
@@ -58,7 +66,7 @@ class MyDocument extends Document {
           <meta name="twitter:image" content="https://cortarcarrossel.com/cortar-carrossel-preview.png" />
           
           {/* 安全和兼容性头部 */}
-          <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+          <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://partner.googleadservices.com https://tpc.googlesyndication.com" />
         </Head>
         <body className="bg-black antialiased">
           <Main />
