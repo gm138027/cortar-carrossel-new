@@ -75,13 +75,18 @@ const nextConfig = {
 
   async rewrites() {
     return [
+      // ads.txt 重写规则 - 将所有ads.txt请求重定向到API路由
+      {
+        source: '/ads.txt',
+        destination: '/api/ads.txt',
+      },
       // URL重写以支持SEO友好的路径
       {
         source: '/split-image-2x2',
         destination: '/split-image?grid=2x2',
       },
       {
-        source: '/split-image-3x3', 
+        source: '/split-image-3x3',
         destination: '/split-image?grid=3x3',
       },
       {
