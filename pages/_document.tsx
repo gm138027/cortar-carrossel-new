@@ -68,7 +68,7 @@ class MyDocument extends Document {
           {/* 安全和兼容性头部 */}
           <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://partner.googleadservices.com https://tpc.googlesyndication.com" />
         </Head>
-        <body className="bg-black antialiased">
+        <body className="bg-gradient-to-br from-[#eef0ff] to-[#ecebfc] antialiased">
           <Main />
           <NextScript />
         </body>
