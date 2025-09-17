@@ -66,7 +66,7 @@ class MyDocument extends Document {
           <meta name="twitter:image" content="https://cortarcarrossel.com/cortar-carrossel-preview.png" />
           
           {/* 安全和兼容性头部 */}
-          <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://partner.googleadservices.com https://tpc.googlesyndication.com https://fundingchoicesmessages.google.com https://googleads.g.doubleclick.net https://static.doubleclick.net https://www.google.com https://static.cloudflareinsights.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; connect-src 'self' https://googleads.g.doubleclick.net https://www.google-analytics.com https://www.googletagmanager.com https://static.cloudflareinsights.com" />
+          <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; font-src 'self' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https: blob:; connect-src 'self' https: data: blob:; frame-src 'self' https:; object-src 'none'; base-uri 'self'" />
         </Head>
         <body className="bg-gradient-to-br from-[#eef0ff] to-[#ecebfc] antialiased">
           <Main />
