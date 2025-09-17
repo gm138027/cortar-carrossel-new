@@ -1,7 +1,7 @@
 import { Dialog } from "@headlessui/react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import useKeypress from "react-use-keypress";
 import type { ImageProps } from "../../utils/core/types";
 import SharedModal from "./SharedModal";
@@ -21,6 +21,25 @@ export default function Modal({
 
   const [direction, setDirection] = useState(0);
   const [curIndex, setCurIndex] = useState(index);
+
+  // 修复aria-hidden问题：确保body不会被完全隐藏
+  useEffect(() => {
+    // 当模态框打开时，移除body上可能的aria-hidden属性
+    const body = document.body;
+    const originalAriaHidden = body.getAttribute('aria-hidden');
+
+    // 如果body被设置为aria-hidden="true"，移除它
+    if (originalAriaHidden === 'true') {
+      body.removeAttribute('aria-hidden');
+    }
+
+    return () => {
+      // 清理时恢复原始状态（如果需要的话）
+      if (originalAriaHidden && originalAriaHidden !== 'true') {
+        body.setAttribute('aria-hidden', originalAriaHidden);
+      }
+    };
+  }, []);
 
   function handleClose() {
     router.push("/", undefined, { shallow: true });

@@ -33,6 +33,21 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
 
+          {/* 字体预加载优化 */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+            as="style"
+          />
+          <noscript>
+            <link
+              href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+              rel="stylesheet"
+            />
+          </noscript>
+
           {/* Google AdSense */}
           <script
             async
@@ -65,8 +80,63 @@ class MyDocument extends Document {
           />
           <meta name="twitter:image" content="https://cortarcarrossel.com/cortar-carrossel-preview.png" />
           
-          {/* 安全和兼容性头部 */}
-          <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; font-src 'self' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https: blob:; connect-src 'self' https: data: blob:; frame-src 'self' https:; object-src 'none'; base-uri 'self'" />
+          {/* 结构化CSP策略 - 基于最小权限原则设计 */}
+          <meta httpEquiv="Content-Security-Policy" content={`
+            upgrade-insecure-requests;
+
+            script-src 'self' 'unsafe-inline' 'unsafe-eval'
+              https://pagead2.googlesyndication.com
+              https://www.googletagmanager.com
+              https://partner.googleadservices.com
+              https://tpc.googlesyndication.com
+              https://fundingchoicesmessages.google.com
+              https://googleads.g.doubleclick.net
+              https://securepubads.g.doubleclick.net
+              https://www.google.com;
+
+            style-src 'self' 'unsafe-inline'
+              https://fonts.googleapis.com
+              https://tagmanager.google.com;
+
+            font-src 'self'
+              https://fonts.gstatic.com;
+
+            img-src 'self' data: blob:
+              https://cortarcarrossel.com
+              https://res.cloudinary.com
+              https://googleads.g.doubleclick.net
+              https://www.google.com
+              https://www.google-analytics.com;
+
+            connect-src 'self'
+              https://res.cloudinary.com
+              https://www.google-analytics.com
+              https://www.googletagmanager.com
+              https://googleads.g.doubleclick.net
+              https://securepubads.g.doubleclick.net
+              https://partner.googleadservices.com
+              https://pagead2.googlesyndication.com
+              https://fundingchoicesmessages.google.com;
+
+            frame-src 'self'
+              https://googleads.g.doubleclick.net
+              https://tpc.googlesyndication.com
+              https://safeframe.googlesyndication.com
+              https://www.google.com;
+
+            worker-src 'self'
+              https://pagead2.googlesyndication.com;
+
+            child-src 'self'
+              https://googleads.g.doubleclick.net
+              https://tpc.googlesyndication.com;
+
+            manifest-src 'self';
+            media-src 'self' data: blob:;
+            object-src 'none';
+            base-uri 'self';
+            form-action 'self';
+          `.replace(/\s+/g, ' ').trim()} />
         </Head>
         <body className="bg-gradient-to-br from-[#eef0ff] to-[#ecebfc] antialiased">
           <Main />
