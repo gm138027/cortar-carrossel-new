@@ -34,7 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ children, showHeaderFooter = true }) =>
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#eef0ff] to-[#ecebfc] font-[Inter,sans-serif] text-black">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-[#eef0ff] to-[#ecebfc] text-black">
       <Header
         onLanguageChange={handleLanguageChange}
         i18nLanguage={i18n.language}
