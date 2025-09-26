@@ -233,7 +233,7 @@ const Home: NextPage = () => {
       <div className="flex-grow flex flex-col relative">
           {/* 主内容部分 */}
           <main className="flex-grow container mx-auto p-4 py-10 relative z-10 flex justify-center">
-            <div style={{width: '90%', maxWidth: '1200px'}} className="mx-auto">
+            <div className="mx-auto w-full max-w-[1020px] xl:max-w-[1060px] 2xl:max-w-[1160px]">
               {/* 添加工具界面标题 - 优化split image关键词 */}
               <h1 className="text-3xl font-bold mb-6 text-center text-gray-900">
                 {t('app_title')}
