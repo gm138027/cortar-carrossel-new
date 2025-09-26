@@ -33,21 +33,6 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://www.googletagmanager.com" />
           <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
 
-          {/* 字体预加载优化 */}
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link
-            rel="preload"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-            as="style"
-          />
-          <noscript>
-            <link
-              href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-              rel="stylesheet"
-            />
-          </noscript>
-
           {/* Google AdSense */}
           <script
             async

@@ -2,16 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 字体优化 */
+/* 语言感知的字体优化 - 最佳性能和渲染 */
 @layer base {
+  /* 默认系统字体 */
   html {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    font-display: swap; /* 优化字体加载 */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   }
 
-  /* 确保fallback字体样式一致 */
+  /* 拉丁字母语言优化（葡萄牙语、英语、俄语） */
+  html[lang="pt"], 
+  html[lang="en"], 
+  html[lang="ru"] {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  }
+
+  /* 中文优化 */
+  html[lang="zh"] {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "SimSun", sans-serif;
+  }
+
+  /* 印地语优化 */
+  html[lang="hi"] {
+    font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans Devanagari', 'Helvetica Neue', sans-serif;
+  }
+
+  /* 确保最佳渲染效果 */
   body {
-    font-feature-settings: 'rlig' 1, 'calt' 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -23,59 +39,26 @@
   }
 }
 
-/* 移动端文字优化 - 解决显示混乱问题 */
+/* 移动端基础优化 - 系统字体原生渲染 */
 @media (max-width: 640px) {
-  /* 基础文字优化 */
-  p, li, div, span {
-    word-break: break-word;
-    line-height: 1.6;
-    letter-spacing: 0.01em;
-    word-spacing: 0.05em;
+  /* 基础文字优化 - 减少人工干预 */
+  p, li {
+    line-height: 1.5;
   }
   
   /* 标题优化 */
   h1, h2, h3, h4 {
-    line-height: 1.3;
-    word-break: break-word;
+    line-height: 1.2;
     margin-bottom: 0.75rem;
-    word-spacing: 0.03em;
   }
   
-  /* 有序列表特殊优化 */
-  ol {
-    padding-left: 1.2rem;
+  /* 列表间距优化 */
+  ol, ul {
+    padding-left: 1.25rem;
   }
   
-  ol li {
-    margin-bottom: 0.75rem;
-    padding-left: 0.5rem;
-    line-height: 1.65;
-    text-align: justify;
-    word-spacing: 0.08em;
-  }
-  
-  /* 无序列表优化 */
-  ul li {
-    margin-bottom: 0.6rem;
-    padding-left: 0.25rem;
-    line-height: 1.6;
-    word-spacing: 0.05em;
-  }
-  
-  /* 特殊文字内容优化 */
-  .prose p, 
-  [class*="text-"],
-  .bg-purple-100 p,
-  .bg-purple-100 li {
-    word-spacing: 0.08em;
-    text-align: left;
-    hyphens: auto;
-  }
-  
-  /* 括号内容优化 */
-  .text-gray-600,
-  .text-sm {
-    word-spacing: 0.03em;
-    letter-spacing: 0.005em;
+  ol li, ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
   }
 }
