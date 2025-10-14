@@ -84,54 +84,66 @@ body.side-rail-active {
   overflow-x: hidden;
 }
 
-body.side-rail-left-active .app-shell {
+body.side-rail-left-active .app-shell,
+.app-shell.side-rail-left-active {
   padding-left: var(--side-rail-space-single);
 }
 
-body.side-rail-right-active .app-shell {
+body.side-rail-right-active .app-shell,
+.app-shell.side-rail-right-active {
   padding-right: var(--side-rail-space-single);
 }
 
-body.side-rail-left-active.side-rail-right-active .app-shell {
+body.side-rail-left-active.side-rail-right-active .app-shell,
+.app-shell.side-rail-left-active.side-rail-right-active {
   padding-left: var(--side-rail-space-double);
   padding-right: var(--side-rail-space-double);
 }
 
 @media (max-width: 1400px) {
-  body.side-rail-left-active .app-shell {
-    padding-left: clamp(200px, 20vw, 260px);
-  }
+body.side-rail-left-active .app-shell,
+.app-shell.side-rail-left-active {
+  padding-left: clamp(200px, 20vw, 260px);
+}
 
-  body.side-rail-right-active .app-shell {
-    padding-right: clamp(200px, 20vw, 260px);
-  }
+body.side-rail-right-active .app-shell,
+.app-shell.side-rail-right-active {
+  padding-right: clamp(200px, 20vw, 260px);
+}
 
-  body.side-rail-left-active.side-rail-right-active .app-shell {
-    padding-left: clamp(180px, 18vw, 240px);
-    padding-right: clamp(180px, 18vw, 240px);
-  }
+body.side-rail-left-active.side-rail-right-active .app-shell,
+.app-shell.side-rail-left-active.side-rail-right-active {
+  padding-left: clamp(180px, 18vw, 240px);
+  padding-right: clamp(180px, 18vw, 240px);
+}
 }
 
 @media (max-width: 1280px) {
-  body.side-rail-left-active .app-shell {
-    padding-left: 160px;
-  }
+body.side-rail-left-active .app-shell,
+.app-shell.side-rail-left-active {
+  padding-left: 160px;
+}
 
-  body.side-rail-right-active .app-shell {
-    padding-right: 160px;
-  }
+body.side-rail-right-active .app-shell,
+.app-shell.side-rail-right-active {
+  padding-right: 160px;
+}
 
-  body.side-rail-left-active.side-rail-right-active .app-shell {
-    padding-left: 150px;
-    padding-right: 150px;
-  }
+body.side-rail-left-active.side-rail-right-active .app-shell,
+.app-shell.side-rail-left-active.side-rail-right-active {
+  padding-left: 150px;
+  padding-right: 150px;
+}
 }
 
 @media (max-width: 1100px) {
-  body.side-rail-left-active .app-shell,
-  body.side-rail-right-active .app-shell,
-  body.side-rail-left-active.side-rail-right-active .app-shell {
-    padding-left: 0;
-    padding-right: 0;
-  }
+body.side-rail-left-active .app-shell,
+body.side-rail-right-active .app-shell,
+body.side-rail-left-active.side-rail-right-active .app-shell,
+.app-shell.side-rail-left-active,
+.app-shell.side-rail-right-active,
+.app-shell.side-rail-left-active.side-rail-right-active {
+  padding-left: 0;
+  padding-right: 0;
+}
 }
