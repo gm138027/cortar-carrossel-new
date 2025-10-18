@@ -39,7 +39,7 @@ function useSideRailObserver() {
       if (!resizeObservers.has(ad) && typeof ResizeObserver !== 'undefined') {
         const observer = new ResizeObserver((entries) => {
           entries.forEach((entry) => {
-            if (entry.contentRect.height > 0) {
+            if (entry.contentRect.height > 0 && entry.target instanceof HTMLElement) {
               entry.target.style.minHeight = `${entry.contentRect.height}px`;
             }
           });
