@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 字体优化 - 兼容性优先 */
+/* 字体优化 - 兼容性优�?*/
 @layer base {
   html {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   }
 
-  /* 确保最佳渲染效果 */
+  /* 确保最佳渲染效�?*/
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -21,7 +21,7 @@
   }
 }
 
-/* 移动端文字优化 - 针对性修复 */
+/* 移动端文字优�?- 针对性修�?*/
 @media (max-width: 640px) {
   /* 基础文字优化 */
   p, li, div {
@@ -46,7 +46,7 @@
     padding-left: 0.25rem;
   }
   
-  /* 文字间距微调 - 最小干预 */
+  /* 文字间距微调 - 最小干�?*/
   p {
     text-align: left;
   }
@@ -65,7 +65,7 @@
     word-break: break-word !important;
   }
   
-  /* 覆盖prose容器的强制对齐 */
+  /* 覆盖prose容器的强制对�?*/
   .prose {
     text-align: left !important;
   }
@@ -86,6 +86,81 @@
 ins.adsbygoogle[data-anchor-status] {
   min-height: auto !important;
   height: auto !important;
+}
+
+.manual-fixed-banner {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  display: none;
+  padding: 8px 0;
+  background: linear-gradient(180deg, rgba(238, 240, 255, 0.95), rgba(236, 235, 252, 0.95));
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.manual-fixed-banner--bottom {
+  bottom: 0;
+}
+
+.manual-fixed-banner--top {
+  top: 0;
+}
+
+.manual-fixed-banner .adsbygoogle {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media (min-width: 1024px) {
+  .manual-fixed-banner--bottom {
+    display: block;
+  }
+}
+
+.manual-fixed-banner--top {
+  display: block;
+  padding-top: env(safe-area-inset-top, 0);
+}
+
+.manual-fixed-banner--top .adsbygoogle {
+  max-width: none;
+}
+.manual-sidebar-ad {
+  position: fixed;
+  top: 120px;
+  width: 300px;
+  z-index: 40;
+}
+
+.manual-sidebar-ad--left {
+  left: 24px;
+}
+
+.manual-sidebar-ad--right {
+  right: 24px;
+}
+
+@media (max-width: 1600px) {
+  .manual-sidebar-ad--left {
+    left: 12px;
+  }
+
+  .manual-sidebar-ad--right {
+    right: 12px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .manual-sidebar-ad {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-shell {
+    padding-bottom: 120px;
+  }
 }
 
 :root {
@@ -164,3 +239,4 @@ body.side-rail-left-active.side-rail-right-active .app-shell,
   padding-right: 0;
 }
 }
+
