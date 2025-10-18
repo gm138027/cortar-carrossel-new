@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   const { t } = useTranslation('common');
 
   return (
-    <footer className="w-full p-6 text-center text-gray-500 sm:p-8 relative z-10 border-t border-gray-200 bg-white/80 backdrop-blur-xl mt-auto">
+    <footer className="w-full p-6 text-center text-gray-500 sm:p-8 relative z-10 border-t border-gray-200 bg-white shadow-sm mt-auto">
       <div className="max-w-6xl mx-auto">
         {/* Logo和版权部分 */}
         <div className="flex justify-center items-center mb-4">
