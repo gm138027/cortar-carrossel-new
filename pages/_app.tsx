@@ -29,6 +29,17 @@ function useSideRailObserver() {
     const resizeObservers = new Map<HTMLElement, ResizeObserver>();
 
     const prepareAdSlot = (ad: HTMLElement) => {
+      if (ad.dataset.anchorStatus) {
+        const existingObserver = resizeObservers.get(ad);
+        if (existingObserver) {
+          existingObserver.disconnect();
+          resizeObservers.delete(ad);
+        }
+        ad.style.minHeight = '';
+        ad.style.height = '';
+        return;
+      }
+
       ad.style.display = 'block';
       if (!ad.style.minHeight) {
         ad.style.minHeight = '280px';

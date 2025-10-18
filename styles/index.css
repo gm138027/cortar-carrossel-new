@@ -71,7 +71,7 @@
   }
 }
 
-ins.adsbygoogle {
+ins.adsbygoogle:not([data-anchor-status]) {
   display: block !important;
   width: 100% !important;
   min-height: 280px;
@@ -79,8 +79,13 @@ ins.adsbygoogle {
   contain: layout size;
 }
 
-ins.adsbygoogle[data-ad-status="filled"] {
+ins.adsbygoogle[data-ad-status="filled"]:not([data-anchor-status]) {
   min-height: auto;
+}
+
+ins.adsbygoogle[data-anchor-status] {
+  min-height: auto !important;
+  height: auto !important;
 }
 
 :root {
