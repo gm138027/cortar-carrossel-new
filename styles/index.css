@@ -71,6 +71,18 @@
   }
 }
 
+ins.adsbygoogle {
+  display: block !important;
+  width: 100% !important;
+  min-height: 280px;
+  transition: none !important;
+  contain: layout size;
+}
+
+ins.adsbygoogle[data-ad-status="filled"] {
+  min-height: auto;
+}
+
 :root {
   --side-rail-space-single: clamp(240px, 22vw, 340px);
   --side-rail-space-double: clamp(200px, 18vw, 300px);

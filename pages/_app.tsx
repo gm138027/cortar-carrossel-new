@@ -12,10 +12,42 @@ function useSideRailObserver() {
     const body = document.body;
     if (!body) return;
 
+    const isDesktopLike =
+      window.innerWidth >= 1280 &&
+      (!window.matchMedia || !window.matchMedia('(pointer: coarse)').matches);
+
+    if (!isDesktopLike) {
+      body.classList.remove('side-rail-active', 'side-rail-left-active', 'side-rail-right-active');
+      return;
+    }
+
     const CLASS_ACTIVE = 'side-rail-active';
     const CLASS_LEFT = 'side-rail-left-active';
     const CLASS_RIGHT = 'side-rail-right-active';
     const MIN_WIDTH = 200; // ignore tiny inline ads
+
+    const resizeObservers = new Map<HTMLElement, ResizeObserver>();
+
+    const prepareAdSlot = (ad: HTMLElement) => {
+      ad.style.display = 'block';
+      if (!ad.style.minHeight) {
+        ad.style.minHeight = '280px';
+      }
+      ad.style.width = '100%';
+      ad.style.transition = 'none';
+
+      if (!resizeObservers.has(ad) && typeof ResizeObserver !== 'undefined') {
+        const observer = new ResizeObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.contentRect.height > 0) {
+              entry.target.style.minHeight = `${entry.contentRect.height}px`;
+            }
+          });
+        });
+        observer.observe(ad);
+        resizeObservers.set(ad, observer);
+      }
+    };
 
     const getRailInfo = () => {
       const ads = Array.from(document.querySelectorAll('ins.adsbygoogle')) as HTMLElement[];
@@ -24,6 +56,8 @@ function useSideRailObserver() {
 
       ads.forEach((ad) => {
         if (!ad) return;
+
+        prepareAdSlot(ad);
 
         const rect = ad.getBoundingClientRect();
         if (rect.width < MIN_WIDTH || rect.height < 100) return;
@@ -89,6 +123,8 @@ function useSideRailObserver() {
     window.addEventListener('resize', resizeHandler);
 
     return () => {
+      resizeObservers.forEach((observer) => observer.disconnect());
+      resizeObservers.clear();
       observer.disconnect();
       window.removeEventListener('resize', resizeHandler);
       body.classList.remove(CLASS_ACTIVE, CLASS_LEFT, CLASS_RIGHT);

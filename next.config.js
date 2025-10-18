@@ -8,8 +8,8 @@ const nextConfig = {
   i18n,
 
   // 简化代码分割，回到成功配置
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
+  webpack: (config, { isServer, dev }) => {
+    if (!isServer && !dev && config.optimization?.splitChunks) {
       config.optimization.splitChunks = {
         chunks: 'all',
         maxInitialRequests: 6,  // 回到简单配置
