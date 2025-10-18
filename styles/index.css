@@ -1,14 +1,14 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 字体优化 - 兼容性优�?*/
+/* 字体优化 - 兼容性优�?*/
 @layer base {
   html {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   }
 
-  /* 确保最佳渲染效�?*/
+  /* 确保最佳渲染效�?*/
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -21,7 +21,7 @@
   }
 }
 
-/* 移动端文字优�?- 针对性修�?*/
+/* 移动端文字优�?- 针对性修�?*/
 @media (max-width: 640px) {
   /* 基础文字优化 */
   p, li, div {
@@ -46,7 +46,7 @@
     padding-left: 0.25rem;
   }
   
-  /* 文字间距微调 - 最小干�?*/
+  /* 文字间距微调 - 最小干�?*/
   p {
     text-align: left;
   }
@@ -65,7 +65,7 @@
     word-break: break-word !important;
   }
   
-  /* 覆盖prose容器的强制对�?*/
+  /* 覆盖prose容器的强制对�?*/
   .prose {
     text-align: left !important;
   }
@@ -94,9 +94,9 @@ ins.adsbygoogle[data-anchor-status] {
   width: 100%;
   z-index: 50;
   display: none;
-  padding: 8px 0;
-  background: linear-gradient(180deg, rgba(238, 240, 255, 0.95), rgba(236, 235, 252, 0.95));
-  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
+  padding: 16px 0;
+  background: #ffffff;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
 .manual-fixed-banner--bottom {
@@ -105,6 +105,8 @@ ins.adsbygoogle[data-anchor-status] {
 
 .manual-fixed-banner--top {
   top: 0;
+  display: none;
+  padding-top: env(safe-area-inset-top, 0);
 }
 
 .manual-fixed-banner .adsbygoogle {
@@ -116,11 +118,24 @@ ins.adsbygoogle[data-anchor-status] {
   .manual-fixed-banner--bottom {
     display: block;
   }
+
+  .manual-fixed-banner--top {
+    display: none;
+  }
+
+  .app-shell {
+    padding-bottom: 120px;
+  }
 }
 
-.manual-fixed-banner--top {
-  display: block;
-  padding-top: env(safe-area-inset-top, 0);
+@media (max-width: 1023px) {
+  .manual-fixed-banner--top {
+    display: block;
+  }
+
+  .app-shell {
+    padding-top: 72px;
+  }
 }
 
 .manual-fixed-banner--top .adsbygoogle {
