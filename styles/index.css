@@ -71,7 +71,7 @@
   }
 }
 
-ins.adsbygoogle:not([data-anchor-status]) {
+.app-shell ins.adsbygoogle:not([data-anchor-status]) {
   display: block !important;
   width: 100% !important;
   min-height: 280px;
@@ -79,7 +79,7 @@ ins.adsbygoogle:not([data-anchor-status]) {
   contain: layout size;
 }
 
-ins.adsbygoogle[data-ad-status="filled"]:not([data-anchor-status]) {
+.app-shell ins.adsbygoogle[data-ad-status="filled"]:not([data-anchor-status]) {
   min-height: auto;
 }
 

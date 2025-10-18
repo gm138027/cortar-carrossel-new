@@ -60,6 +60,8 @@ function useSideRailObserver() {
       }
     };
 
+    const layoutRoot = document.querySelector('.app-shell');
+
     const getRailInfo = () => {
       const ads = Array.from(document.querySelectorAll('ins.adsbygoogle')) as HTMLElement[];
       let hasLeft = false;
@@ -105,6 +107,13 @@ function useSideRailObserver() {
     };
 
     const updateClasses = () => {
+      const ads = Array.from(document.querySelectorAll('ins.adsbygoogle')) as HTMLElement[];
+      const managedAds = layoutRoot
+        ? ads.filter((ad) => layoutRoot.contains(ad))
+        : [];
+
+      managedAds.forEach(prepareAdSlot);
+
       const railInfo = getRailInfo();
       if (!railInfo) {
         body.classList.remove(CLASS_ACTIVE, CLASS_LEFT, CLASS_RIGHT);
