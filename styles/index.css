@@ -88,59 +88,6 @@ ins.adsbygoogle[data-anchor-status] {
   height: auto !important;
 }
 
-.manual-fixed-banner {
-  position: fixed;
-  left: 0;
-  width: 100%;
-  z-index: 50;
-  display: none;
-  padding: 16px 0;
-  background: #ffffff;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-}
-
-.manual-fixed-banner--bottom {
-  bottom: 0;
-}
-
-.manual-fixed-banner--top {
-  top: 0;
-  display: none;
-  padding-top: env(safe-area-inset-top, 0);
-}
-
-.manual-fixed-banner .adsbygoogle {
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-@media (min-width: 1024px) {
-  .manual-fixed-banner--bottom {
-    display: block;
-  }
-
-  .manual-fixed-banner--top {
-    display: none;
-  }
-
-  .app-shell {
-    padding-bottom: 120px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .manual-fixed-banner--top {
-    display: block;
-  }
-
-  .app-shell {
-    padding-top: 72px;
-  }
-}
-
-.manual-fixed-banner--top .adsbygoogle {
-  max-width: none;
-}
 .manual-sidebar-ad {
   position: fixed;
   top: 120px;
@@ -169,12 +116,6 @@ ins.adsbygoogle[data-anchor-status] {
 @media (max-width: 1400px) {
   .manual-sidebar-ad {
     display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  .app-shell {
-    padding-bottom: 120px;
   }
 }
 

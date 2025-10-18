@@ -5,7 +5,6 @@ import { useAnalytics } from '../../hooks/business/useAnalytics';
 import Header from './Header';
 import Footer from './Footer';
 import SidebarAd from '../Ads/SidebarAd';
-import FixedBannerAd from '../Ads/FixedBannerAd';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -50,8 +49,6 @@ const Layout: React.FC<LayoutProps> = ({ children, showHeaderFooter = true }) =>
       <Footer />
       <SidebarAd adSlot="5358460462" position="left" />
       <SidebarAd adSlot="9134888094" position="right" />
-      <FixedBannerAd adSlot="9454839336" position="bottom" />
-      <FixedBannerAd adSlot="3819369271" position="top" />
     </div>
   );
 };
