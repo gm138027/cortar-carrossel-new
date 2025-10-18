@@ -17,6 +17,9 @@ interface GoogleAdProps {
 
 const AD_CLIENT = 'ca-pub-9027033456343227';
 
+const MAX_RETRY = 5
+const RETRY_DELAY = 250
+
 const GoogleAd: React.FC<GoogleAdProps> = ({
   adSlot,
   className = '',
@@ -27,6 +30,7 @@ const GoogleAd: React.FC<GoogleAdProps> = ({
 }) => {
   const adRef = useRef<HTMLModElement | null>(null);
   const [initialized, setInitialized] = useState(false);
+  const [retryCount, setRetryCount] = useState(0);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -36,6 +40,17 @@ const GoogleAd: React.FC<GoogleAdProps> = ({
       return;
     }
 
+    const width = adElement.offsetWidth || adElement.clientWidth;
+    if (width === 0) {
+      if (retryCount >= MAX_RETRY) {
+        return;
+      }
+      const timer = window.setTimeout(() => {
+        setRetryCount((count) => count + 1);
+      }, RETRY_DELAY);
+      return () => window.clearTimeout(timer);
+    }
+
     try {
       window.adsbygoogle = window.adsbygoogle || [];
       window.adsbygoogle.push({});
@@ -43,7 +58,7 @@ const GoogleAd: React.FC<GoogleAdProps> = ({
     } catch (error) {
       console.error('Failed to load Google AdSense slot', error);
     }
-  }, [initialized]);
+  }, [initialized, retryCount]);
 
   return (
     <ins
