@@ -1,5 +1,6 @@
 import { useState, useRef, useMemo, useEffect, startTransition } from 'react';
 import { calculateImageDisplaySize, type ImageDisplaySize } from '../../../utils/image/displaySizeCalculator';
+import type { SliceData } from './types';
 
 // 原始图片状态管理
 const useOriginalImageState = () => {
@@ -24,19 +25,7 @@ const useOriginalImageState = () => {
 
 // 分割图片状态管理
 const useSlicedImageState = () => {
-  const [slicedImages, setSlicedImages] = useState<Array<{
-    url: string;
-    width: number;
-    height: number;
-    row: number;
-    col: number;
-    position?: { x: number; y: number };
-    originalX?: number;
-    originalY?: number;
-    gridPosition: { row: number; col: number };
-    zIndex?: number;
-    highlighted?: boolean;
-  }>>([]);
+  const [slicedImages, setSlicedImages] = useState<SliceData[]>([]);
   
   const [showGridPreview, setShowGridPreview] = useState(false);
 
