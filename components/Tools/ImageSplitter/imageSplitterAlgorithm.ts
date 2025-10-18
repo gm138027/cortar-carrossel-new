@@ -1,6 +1,28 @@
 import { saveAs } from 'file-saver';
 import type { SliceData } from './types';
 
+const JPEG_QUALITY = 0.95;
+
+const canvasToBlob = (
+  canvas: HTMLCanvasElement,
+  type: string,
+  quality?: number
+): Promise<Blob> => {
+  return new Promise((resolve, reject) => {
+    canvas.toBlob((blob) => {
+      if (blob) {
+        resolve(blob);
+      } else {
+        reject(new Error('canvas toBlob returned null'));
+      }
+    }, type, quality);
+  });
+};
+
+const yieldToMain = async () => {
+  await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+};
+
 /**
  * 计算列宽度数组
  * @param totalWidth 总宽度
@@ -92,7 +114,7 @@ export const sliceImageToData = (
       );
 
       // 🚀 性能优化：保持原始格式，避免不必要的格式转换
-      const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
+      const dataUrl = canvas.toDataURL('image/jpeg', JPEG_QUALITY);
       slices.push({
         url: dataUrl,
         width: currentSliceWidth,
@@ -182,26 +204,51 @@ export const sliceImageToDataAsync = async (
             currentSliceHeight
           );
 
-          // 🚀 性能优化：保持原始格式，避免不必要的格式转换
-          const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
-          slices.push({
-            url: dataUrl,
-            width: currentSliceWidth,
-            height: currentSliceHeight,
-            row: y,
-            col: x,
-            originalX: offsetX,
-            originalY: offsetY,
-            gridPosition: {
-              row: y,
-              col: x
+          const scheduleBlob = async () => {
+            try {
+              const blob = await canvasToBlob(canvas, 'image/jpeg', JPEG_QUALITY);
+              const objectUrl = URL.createObjectURL(blob);
+              slices.push({
+                url: objectUrl,
+                width: currentSliceWidth,
+                height: currentSliceHeight,
+                row: y,
+                col: x,
+                originalX: offsetX,
+                originalY: offsetY,
+                gridPosition: {
+                  row: y,
+                  col: x
+                },
+                blob,
+                objectUrl
+              });
+            } catch (blobError) {
+              console.error('canvas toBlob failed, fallback toDataURL', blobError);
+              const dataUrl = canvas.toDataURL('image/jpeg', JPEG_QUALITY);
+              slices.push({
+                url: dataUrl,
+                width: currentSliceWidth,
+                height: currentSliceHeight,
+                row: y,
+                col: x,
+                originalX: offsetX,
+                originalY: offsetY,
+                gridPosition: {
+                  row: y,
+                  col: x
+                }
+              });
+            } finally {
+              offsetX += currentSliceWidth;
+              resolve();
             }
-          });
+          };
 
-          offsetX += currentSliceWidth;
-          resolve();
+          scheduleBlob();
         });
       });
+      await yieldToMain();
     }
     offsetY += rowHeights[y];
   }
@@ -216,8 +263,11 @@ export const sliceImageToDataAsync = async (
  */
 export const downloadAllSlices = (slicedImages: SliceData[]): void => {
   slicedImages.forEach((slice, index) => {
-    // 🚀 性能优化：使用正确的文件扩展名，保持原始格式
     const fileName = `carousel-${index + 1}.jpg`;
-    saveAs(slice.url, fileName);
+    if (slice.blob) {
+      saveAs(slice.blob, fileName);
+    } else {
+      saveAs(slice.url, fileName);
+    }
   });
 };

@@ -41,21 +41,39 @@ const useSlicedImageState = () => {
   const [showGridPreview, setShowGridPreview] = useState(false);
 
   const updateSlicedImages = (slices: typeof slicedImages) => {
-    // 🚀 性能优化：使用startTransition降低渲染优先级
+    // Performance optimisation: use startTransition to lower priority
     startTransition(() => {
-      setSlicedImages(slices);
+      setSlicedImages((previous) => {
+        if (previous.length) {
+          previous.forEach((slice) => {
+            if (slice.objectUrl) {
+              URL.revokeObjectURL(slice.objectUrl);
+            }
+          });
+        }
+        return slices;
+      });
     });
   };
 
   const setGridPreview = (show: boolean) => {
-    // 🚀 性能优化：使用startTransition降低渲染优先级
+    // Performance optimisation: use startTransition to lower priority
     startTransition(() => {
       setShowGridPreview(show);
     });
   };
 
   const clearSlicedImages = () => {
-    setSlicedImages([]);
+    setSlicedImages((previous) => {
+      if (previous.length) {
+        previous.forEach((slice) => {
+          if (slice.objectUrl) {
+            URL.revokeObjectURL(slice.objectUrl);
+          }
+        });
+      }
+      return [];
+    });
     setShowGridPreview(false);
   };
 
