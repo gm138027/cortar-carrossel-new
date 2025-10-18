@@ -25,7 +25,7 @@ const GoogleAd: React.FC<GoogleAdProps> = ({
   fullWidthResponsive = true,
   layoutKey,
 }) => {
-  const adRef = useRef<HTMLElement | null>(null);
+  const adRef = useRef<HTMLModElement | null>(null);
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const GoogleAd: React.FC<GoogleAdProps> = ({
 
   return (
     <ins
-      ref={adRef as React.RefObject<HTMLElement>}
+      ref={adRef}
       className={`adsbygoogle ${className}`}
       style={{ display: 'block', ...style }}
       data-ad-client={AD_CLIENT}
