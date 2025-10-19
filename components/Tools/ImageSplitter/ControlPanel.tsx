@@ -15,7 +15,7 @@ interface ControlPanelProps {
   onColumnsChange: (newColumns: number) => void;
   onSliceImage: () => void;
   onDownloadSlices: () => void;
-  onImageUpload: (image: HTMLImageElement) => void;
+  onImageUpload: (image: HTMLImageElement, file: File) => void;
   // 拼图控制props（通过props传递，保持解耦）
   puzzleMode?: boolean;
   onTogglePuzzleMode?: () => void;

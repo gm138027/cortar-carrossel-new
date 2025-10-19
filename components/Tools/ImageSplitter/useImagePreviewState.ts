@@ -28,6 +28,7 @@ const useSlicedImageState = () => {
   const [slicedImages, setSlicedImages] = useState<SliceData[]>([]);
   
   const [showGridPreview, setShowGridPreview] = useState(false);
+  const cleanupQueueRef = useRef<string[]>([]);
 
   const updateSlicedImages = (slices: typeof slicedImages) => {
     // Performance optimisation: use startTransition to lower priority
@@ -36,7 +37,7 @@ const useSlicedImageState = () => {
         if (previous.length) {
           previous.forEach((slice) => {
             if (slice.objectUrl) {
-              URL.revokeObjectURL(slice.objectUrl);
+              cleanupQueueRef.current.push(slice.objectUrl);
             }
           });
         }
@@ -57,7 +58,7 @@ const useSlicedImageState = () => {
       if (previous.length) {
         previous.forEach((slice) => {
           if (slice.objectUrl) {
-            URL.revokeObjectURL(slice.objectUrl);
+            cleanupQueueRef.current.push(slice.objectUrl);
           }
         });
       }
@@ -65,6 +66,15 @@ const useSlicedImageState = () => {
     });
     setShowGridPreview(false);
   };
+
+  useEffect(() => {
+    if (cleanupQueueRef.current.length) {
+      cleanupQueueRef.current.forEach((url) => {
+        URL.revokeObjectURL(url);
+      });
+      cleanupQueueRef.current = [];
+    }
+  }, [slicedImages]);
 
   return {
     slicedImages,

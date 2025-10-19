@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next';
 import { useAnalytics } from '../../../hooks/business/useAnalytics';
 
 interface ImageUploaderProps {
-  onImageUpload: (image: HTMLImageElement) => void;
+  onImageUpload: (image: HTMLImageElement, file: File) => void;
 }
 
 const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageUpload }) => {
@@ -28,7 +28,7 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageUpload }) => {
       reader.onload = function(e) {
         const img = new window.Image();
         img.onload = function() {
-          onImageUpload(img);
+          onImageUpload(img, file);
         };
         img.src = e.target?.result as string;
       };

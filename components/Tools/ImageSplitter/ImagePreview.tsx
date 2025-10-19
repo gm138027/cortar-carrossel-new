@@ -1,8 +1,8 @@
-import React, { memo, useMemo } from 'react';
+﻿import React, { memo, useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
 import type { ImageDisplaySize } from '../../../utils/image/displaySizeCalculator';
 
-// 🚀 性能优化：高性能切片组件
+// ?? 性能优化：高性能切片组件
 const SliceImage = memo<{
   slice: {
     url: string;
@@ -24,15 +24,15 @@ const SliceImage = memo<{
     border: '1.5px solid #ffffff',
     boxSizing: 'border-box' as const,
     willChange: 'auto' as const,
-    transform: 'translateZ(0)',
+    
   }), [displaySize.sliceWidth, displaySize.sliceHeight, slice.row, slice.col]);
 
   return (
     <img
       src={slice.url}
       alt={`Slice ${index + 1}`}
-      loading="eager"
-      decoding="sync"
+      loading="lazy"
+      decoding="async"
       style={style}
     />
   );
@@ -125,7 +125,7 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
               backgroundColor: '#ffffff',
               width: '100%',
               height: '500px',
-              overflow: 'hidden', // 🔧 修复：改为hidden避免滚动条闪现
+              overflow: 'hidden', // ?? 修复：改为hidden避免滚动条闪现
               borderColor: displayState !== 'empty' ? '#6366f1' : '#d1d5db'
             }}
           >
@@ -161,7 +161,7 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
                     gridTemplateRows: `repeat(${currentGridConfig?.rows || gridConfig.rows}, 1fr)`,
                     backgroundColor: '#ffffff',
                     willChange: 'contents',
-                    transform: 'translateZ(0)',
+                    
                     contain: 'layout style paint',
                   }}
                 >
@@ -261,3 +261,5 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
 };
 
 export default memo(ImagePreview);
+
+
