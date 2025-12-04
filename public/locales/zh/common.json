@@ -1,9 +1,9 @@
 {
   "title": "在线图片分割 | 免费图片分割工具",
-  "subtitle": "无需注册，无水印。",
+  "subtitle": "无需注册的在线轮播切割工具：上传图片，选择行数和列数（2x2、3x3、无限），即可下载可直接发布的切片。",
   "site_name": "图片分割工具 - Cortar Carrossel",
   "page_title": "在线免费图片分割 | Instagram和社交媒体图片分割器",
-  "app_title": "Cortar Carrossel：在线免费分割图片，用于社交媒体轮播和Instagram网格制作",
+  "app_title": "Cortar Carrossel – 免费分割图片，适用于 Instagram 和无限轮播",
   "upload": "上传图片",
   "settings": "控制面板",
   "rows": "行数",
@@ -439,4 +439,4 @@
   "privacy_policy": "隐私政策",
   "terms_of_service": "服务条款",
   "back_to_home": "返回首页"
-} 
+}
