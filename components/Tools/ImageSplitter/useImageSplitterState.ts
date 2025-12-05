@@ -8,6 +8,7 @@ import { useAnalytics } from "../../../hooks/business/useAnalytics";
 import {
   sliceImageToDataAsync,
   downloadAllSlices,
+  downloadSingleSlice,
   DEFAULT_JPEG_QUALITY,
 } from "./imageSplitterAlgorithm";
 
@@ -400,13 +401,33 @@ export const useImageSplitterState = () => {
   );
 
   const downloadSlices = useCallback(
-    (slicedImages: SliceData[] = []) => {
+    async (slicedImages: SliceData[] = []) => {
       analytics.trackDownload({
         slice_count: slicedImages.length,
         download_type: "batch",
       });
 
-      downloadAllSlices(slicedImages);
+      try {
+        await downloadAllSlices(slicedImages);
+      } catch (error) {
+        console.error("Slice download failed", error);
+      }
+    },
+    [analytics]
+  );
+
+  const downloadSlice = useCallback(
+    async (slice: SliceData, index: number) => {
+      analytics.trackDownload({
+        slice_count: 1,
+        download_type: "single",
+      });
+
+      try {
+        await downloadSingleSlice(slice, index);
+      } catch (error) {
+        console.error("Single slice download failed", error);
+      }
     },
     [analytics]
   );
@@ -459,6 +480,7 @@ export const useImageSplitterState = () => {
     handleColumnsChange,
     sliceImage,
     downloadSlices,
+    downloadSlice,
   };
 };
 

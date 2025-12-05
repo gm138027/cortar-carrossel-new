@@ -19,6 +19,7 @@ const ImageSplitterTool: React.FC = () => {
     handleColumnsChange,
     sliceImage: businessSliceImage,
     downloadSlices: businessDownloadSlices,
+    downloadSlice: businessDownloadSlice,
     handleImageUpload: stateHandleImageUpload,
   } = useImageSplitterState();
 
@@ -142,7 +143,11 @@ const ImageSplitterTool: React.FC = () => {
 
   const downloadSlices = () => {
     const slices = imagePreviewState.slicedState.slicedImages;
-    businessDownloadSlices(slices);
+    void businessDownloadSlices(slices);
+  };
+
+  const handleSingleSliceDownload = (slice: SliceData, index: number) => {
+    void businessDownloadSlice(slice, index);
   };
 
   const togglePuzzleMode = () => {
@@ -199,6 +204,8 @@ const ImageSplitterTool: React.FC = () => {
           onPuzzleDragOver={puzzleMode ? puzzleState.handleDragOver : undefined}
           onPuzzleDragEnd={puzzleMode ? puzzleState.handleDragEnd : undefined}
           onPuzzleDrop={puzzleMode ? puzzleState.handleDrop : undefined}
+          enableSingleDownload={!puzzleMode}
+          onSingleSliceDownload={handleSingleSliceDownload}
         />
       </div>
     </>

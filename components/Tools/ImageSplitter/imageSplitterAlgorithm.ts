@@ -1,4 +1,5 @@
 ﻿import { saveAs } from "file-saver";
+import JSZip from "jszip";
 import type { SliceData } from "./types";
 import { calculateColumnWidths, calculateRowHeights } from "./gridMath";
 
@@ -188,13 +189,57 @@ export const sliceImageToDataAsync = async (
   return slices;
 };
 
-export const downloadAllSlices = (slicedImages: SliceData[]): void => {
-  slicedImages.forEach((slice, index) => {
-    const fileName = `carousel-${index + 1}.jpg`;
-    if (slice.blob) {
-      saveAs(slice.blob, fileName);
-    } else {
-      saveAs(slice.url, fileName);
+const sliceToBlob = async (slice: SliceData): Promise<Blob | null> => {
+  if (slice.blob) {
+    return slice.blob;
+  }
+
+  try {
+    const response = await fetch(slice.url);
+    if (!response.ok) {
+      throw new Error(`slice-fetch-failed-${response.status}`);
     }
-  });
+    return await response.blob();
+  } catch (error) {
+    console.error("Failed to resolve slice blob", error);
+    return null;
+  }
+};
+
+export const downloadAllSlices = async (
+  slicedImages: SliceData[]
+): Promise<void> => {
+  if (!slicedImages.length) {
+    return;
+  }
+
+  const zip = new JSZip();
+
+  await Promise.all(
+    slicedImages.map(async (slice, index) => {
+      const blob = await sliceToBlob(slice);
+      if (!blob) {
+        return;
+      }
+
+      const fileName = `carousel-${index + 1}.jpg`;
+      zip.file(fileName, blob);
+    })
+  );
+
+  const archive = await zip.generateAsync({ type: "blob" });
+  saveAs(archive, "cortar-carrossel.zip");
+};
+
+export const downloadSingleSlice = async (
+  slice: SliceData,
+  index: number
+): Promise<void> => {
+  const blob = await sliceToBlob(slice);
+  if (!blob) {
+    return;
+  }
+
+  const fileName = `carousel-${index + 1}.jpg`;
+  saveAs(blob, fileName);
 };

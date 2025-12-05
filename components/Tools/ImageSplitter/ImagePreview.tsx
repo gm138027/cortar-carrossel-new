@@ -1,40 +1,73 @@
-﻿import React, { memo, useMemo } from 'react';
+import React, { memo, useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
 import type { ImageDisplaySize } from '../../../utils/image/displaySizeCalculator';
+import type { SliceData } from './types';
 
 // ?? 性能优化：高性能切片组件
 const SliceImage = memo<{
-  slice: {
-    url: string;
-    width: number;
-    height: number;
-    row: number;
-    col: number;
-  };
+  slice: SliceData;
   displaySize: ImageDisplaySize;
   index: number;
-}>(({ slice, displaySize, index }) => {
-  const style = useMemo(() => ({
-    width: `${displaySize.sliceWidth}px`,
-    height: `${displaySize.sliceHeight}px`,
-    display: 'block' as const,
-    gridRow: slice.row + 1,
-    gridColumn: slice.col + 1,
-    backgroundColor: 'white',
-    border: '1.5px solid #ffffff',
-    boxSizing: 'border-box' as const,
-    willChange: 'auto' as const,
-    
-  }), [displaySize.sliceWidth, displaySize.sliceHeight, slice.row, slice.col]);
+  showDownloadButton?: boolean;
+  onDownload?: (slice: SliceData, index: number) => void;
+  downloadLabel?: string;
+}>(({ slice, displaySize, index, showDownloadButton = false, onDownload, downloadLabel }) => {
+  const containerStyle = useMemo(
+    () => ({
+      width: `${displaySize.sliceWidth}px`,
+      height: `${displaySize.sliceHeight}px`,
+      gridRow: slice.row + 1,
+      gridColumn: slice.col + 1,
+      backgroundColor: 'white',
+      border: '1.5px solid #ffffff',
+      boxSizing: 'border-box' as const,
+      willChange: 'auto' as const,
+      position: 'relative' as const,
+      overflow: 'hidden' as const,
+    }),
+    [displaySize.sliceWidth, displaySize.sliceHeight, slice.row, slice.col]
+  );
+
+  const handleDownloadClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
+    onDownload?.(slice, index);
+  };
 
   return (
-    <img
-      src={slice.url}
-      alt={`Slice ${index + 1}`}
-      loading="lazy"
-      decoding="async"
-      style={style}
-    />
+    <div style={containerStyle} className="group">
+      <img
+        src={slice.url}
+        alt={`Slice ${index + 1}`}
+        loading="lazy"
+        decoding="async"
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'block',
+        }}
+      />
+      {showDownloadButton && (
+        <button
+          type="button"
+          onClick={handleDownloadClick}
+          aria-label={downloadLabel || 'Download slice'}
+          className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity duration-150 flex items-center justify-center w-6 h-6"
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+            padding: 0,
+          }}
+        >
+          <img
+            src="/icons/download.svg"
+            alt=""
+            className="w-4 h-4 pointer-events-none"
+            aria-hidden="true"
+          />
+        </button>
+      )}
+    </div>
   );
 });
 
@@ -45,16 +78,7 @@ interface ImagePreviewProps {
     width: number;
     height: number;
   };
-  slicesData?: Array<{
-    url: string;
-    width: number;
-    height: number;
-    row: number;
-    col: number;
-    position?: { x: number; y: number };
-    zIndex?: number;
-    highlighted?: boolean;
-  }>;
+  slicesData?: SliceData[];
   gridConfig?: {
     rows: number;
     columns: number;
@@ -85,6 +109,8 @@ interface ImagePreviewProps {
   onPuzzleDrop?: (e: React.DragEvent, targetIndex: number) => void;
 
 
+  enableSingleDownload?: boolean;
+  onSingleSliceDownload?: (slice: SliceData, index: number) => void;
 }
 
 const ImagePreview: React.FC<ImagePreviewProps> = ({
@@ -101,7 +127,9 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
   onPuzzleDragStart,
   onPuzzleDragOver,
   onPuzzleDragEnd,
-  onPuzzleDrop
+  onPuzzleDrop,
+  enableSingleDownload = false,
+  onSingleSliceDownload
 }) => {
   const { t } = useTranslation('common');
 
@@ -171,6 +199,9 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({
                       slice={slice}
                       displaySize={displaySize}
                       index={index}
+                      showDownloadButton={enableSingleDownload}
+                      onDownload={onSingleSliceDownload}
+                      downloadLabel={t('download')}
                     />
                   ))}
                 </div>
