@@ -39,7 +39,7 @@
   "split_tool_desc_short": "Ferramenta premium de divisor de imagem",
   "instagram_tool_desc": "Divida imagens para carrosséis do Instagram",
   "advanced_features_desc": "Recursos avançados de divisão em grade",
-  "coming_soon": "Em Breve", 
+  "coming_soon": "Em Breve",
   "image_grid_maker": "Criador de Grade de Imagem",
   "tools": {
     "carousel_infinite": "Cortar Carrossel Infinito",
@@ -275,7 +275,7 @@
     "feature_list": "Divisão de Imagens, Personalização de Grade, Criação de Carrossel, Modo Quebra-cabeça, Suporte Multi-plataforma",
     "faq": {
       "what_is": "O que é o Cortar Carrossel?",
-      "what_is_answer": "O Cortar Carrossel é uma ferramenta online gratuita que permite dividir imagens em múltiplas partes para criar posts de carrossel para Instagram, Facebook, TikTok e outras redes sociais.",
+      "what_is_answer": "O Cortar Carrossel é uma ferramenta online gratuita para cortar carrossel Instagram, recortar posts e dividir imagem em carrossel infinito sem baixar nada. Basta enviar a foto, escolher linhas e colunas nas configurações 2×2, 3×3 ou 4×5 e baixar as partes prontas para publicar no feed, stories, reels, TikTok e outras redes sociais.",
       "how_to_use": "Como usar o Cortar Carrossel?",
       "how_to_use_answer": "É simples! Basta fazer upload da sua imagem, escolher o número de linhas e colunas para dividir, e baixar as imagens cortadas prontas para postar. Não é necessário registro.",
       "is_free": "O Cortar Carrossel é gratuito?",
@@ -447,4 +447,4 @@
   "privacy_policy": "Política de Privacidade",
   "terms_of_service": "Termos de Serviço",
   "back_to_home": "Voltar ao Início"
-} 
+}
