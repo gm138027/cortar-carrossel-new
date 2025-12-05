@@ -241,10 +241,10 @@
     }
   },
   "steps": {
-    "step1": "Carregue sua imagem (suporta formatos JPG, PNG, GIF e WEBP)",
-    "step2": "Escolha o número de linhas e colunas para dividir sua imagem",
-    "step3": "Visualize o resultado e faça ajustes se necessário",
-    "step4": "Baixe todas as imagens cortadas prontas para postar"
+    "step1": "Carregue a imagem direto do seu dispositivo (computador ou celular), sem baixar nenhum app.",
+    "step2": "Escolha o número de linhas e colunas para dividir a imagem em 2, 3 ou mais partes iguais, criando grades 2×2, 3×3 ou 4×5 conforme o carrossel desejado.",
+    "step3": "Verifique a pré-visualização para garantir a divisão ideal para carrossel infinito, sequências de post ou Facebook post splitter.",
+    "step4": "Baixe todas as partes de uma só vez e publique em carrosséis, stories, reels ou outros posts sem esforço."
   },
   "dropzone": "Arraste e solte sua imagem aqui, ou clique para selecionar",
   "processing": "Processando...",
@@ -303,14 +303,14 @@
     },
     "why_choose": "Por que escolher o Cortar Carrossel?",
     "benefits": {
-      "free": "Ferramenta 100% online e gratuita",
-      "custom_grid": "Divisão personalizada com controle de linhas e colunas",
-      "puzzle_mode": "Modo quebra-cabeça interativo para designs criativos",
-      "compatible": "Compatível com Instagram, Facebook, TikTok e outras plataformas",
-      "no_registration": "Sem cadastro, sem instalação, sem complicações"
+      "free": "Cortes precisos para qualquer carrossel – divida imagens nas configurações 2×2, 3×3 ou 4×5 para carrossel Instagram e carrossel infinito mantendo toda a qualidade.",
+      "custom_grid": "Fluxo rápido e sem download – tudo acontece no navegador com suporte a Web Worker; você corta e baixa as partes em segundos, sem instalar nada.",
+      "puzzle_mode": "Compatível com todos os formatos de conteúdo – gere arquivos prontos para publicar no feed, stories, reels, TikTok, Facebook e outras redes sociais.",
+      "compatible": "Privacidade garantida – as imagens não saem do seu dispositivo, tornando o Cortar Carrossel seguro mesmo para conteúdos profissionais.",
+      "no_registration": "Site sempre disponível e sem cadastro – use direto no navegador, com seleção rápida (1×3, 2×3, 3×3) e download em lote, ideal para quem busca um site para cortar carrossel."
     },
     "how_works": "Como usar o Cortar Carrossel",
-    "using_tool": "Usar nossa ferramenta de",
+    "using_tool": "Usar nossa ferramenta para cortar imagem carrossel é extremamente simples:",
     "tool_name": "cortar imagem carrossel",
     "is_simple": "é extremamente simples:"
   },
