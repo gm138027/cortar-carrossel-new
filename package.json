@@ -21,6 +21,7 @@
           "i18next": "^22.4.15",
           "imagemin": "^8.0.1",
           "imagemin-jpegtran": "^7.0.0",
+          "jszip": "3.10.1",
           "next": "15.3.2",
           "next-i18next": "^13.2.2",
           "postcss": "^8.4.18",

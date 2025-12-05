@@ -38,6 +38,15 @@
   "split_tools_description": "Split images online with our professional image splitter tools. Whether you need to split image into grids for Instagram carousels, create social media content, or design puzzle posts, our free image splitter provides high-quality results. Split image 2x2, 3x3, or custom sizes - perfect for all your creative projects.",
   "split_tool_desc_short": "Premium image splitter tool",
   "instagram_tool_desc": "Split images for Instagram carousels",
+  "common_uses": {
+    "title": "Common uses for Cortar Carrossel",
+    "items": [
+      "Share travel or daily panoramas — cut a wide photo into 2×3 or 3×3 parts so each slide looks clear on Instagram or other social feeds.",
+      "Build a 3×3 grid wall — split your favorite picture into nine squares to refresh your profile or highlight a special moment.",
+      "Print large posters with an A4 printer — slice the artwork into 3×3 or 4×4 sheets, print at home and tape them together for room, classroom or party decor.",
+      "Send one layout to multiple screens — divide the visual into several segments and show each piece on a different TV or projector."
+    ]
+  },
   "advanced_features_desc": "Advanced grid splitting features",
   "coming_soon": "Coming Soon",
   "image_grid_maker": "Image Grid Maker",

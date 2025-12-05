@@ -13,6 +13,7 @@ const Home: NextPage = () => {
   const router = useRouter();
   const { t, i18n } = useTranslation('common');
   const analytics = useAnalytics();
+  const commonUses = t('common_uses.items', { returnObjects: true }) as string[];
 
   // 用于记录已初始化的状态，确保翻译正确加载
   useEffect(() => {
@@ -256,15 +257,6 @@ const Home: NextPage = () => {
                 <p className="mb-4">
                   {t('seo.faq.what_is_answer')}
                 </p>
-                
-                <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">{t('seo.why_choose')}</h2>
-                <ul className="list-disc pl-6 mb-6 space-y-2">
-                  <li>{t('seo.benefits.free')}</li>
-                  <li>{t('seo.benefits.custom_grid')}</li>
-                  <li>{t('seo.benefits.puzzle_mode')}</li>
-                  <li>{t('seo.benefits.compatible')}</li>
-                  <li>{t('seo.benefits.no_registration')}</li>
-                </ul>
 
                 <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">{t('seo.how_works')}</h2>
                 <p className="mb-4">
@@ -276,6 +268,26 @@ const Home: NextPage = () => {
                   <li>{t('steps.step3')}</li>
                   <li>{t('steps.step4')}</li>
                 </ol>
+
+                <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">{t('seo.why_choose')}</h2>
+                <ul className="list-disc pl-6 mb-6 space-y-2">
+                  <li>{t('seo.benefits.free')}</li>
+                  <li>{t('seo.benefits.custom_grid')}</li>
+                  <li>{t('seo.benefits.puzzle_mode')}</li>
+                  <li>{t('seo.benefits.compatible')}</li>
+                  <li>{t('seo.benefits.no_registration')}</li>
+                </ul>
+
+                {commonUses?.length ? (
+                  <>
+                    <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-800">{t('common_uses.title')}</h2>
+                    <ul className="list-disc pl-6 mb-6 space-y-2">
+                      {commonUses.map((item, index) => (
+                        <li key={`common-use-${index}`}>{item}</li>
+                      ))}
+                    </ul>
+                  </>
+                ) : null}
 
                 <h2 id="faq" className="text-2xl font-bold mt-8 mb-4 text-gray-800">{t('faq')}</h2>
                 

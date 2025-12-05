@@ -38,6 +38,15 @@
   "split_tools_description": "Divida imagens online com nossas ferramentas profissionais de divisor de imagens. Se você precisa dividir imagem em grades para carrosséis do Instagram, criar conteúdo de redes sociais ou desenhar posts de quebra-cabeça, nosso divisor de imagens gratuito oferece resultados de alta qualidade. Divida imagem 2x2, 3x3 ou tamanhos personalizados - perfeito para todos os seus projetos criativos.",
   "split_tool_desc_short": "Ferramenta premium de divisor de imagem",
   "instagram_tool_desc": "Divida imagens para carrosséis do Instagram",
+  "common_uses": {
+    "title": "Usos comuns do Cortar Carrossel",
+    "items": [
+      "Compartilhar viagem ou dia a dia em carrosséis — pegue uma foto panorâmica do celular, corte em 2×3 ou 3×3 e poste no Instagram sem que a imagem fique esmagada.",
+      "Montar um mural 3×3 no perfil — escolha sua foto preferida, divida em 9 quadradinhos e dê um visual diferente para o feed.",
+      "Imprimir cartazes grandes usando folhas A4 — corte a arte em 3×3 ou 4×4, imprima em casa e monte um pôster grande para eventos, quarto ou sala de aula.",
+      "Dividir conteúdo para mais de uma tela — quando precisar mostrar o mesmo layout em duas ou mais TVs/projetores, separe a imagem em partes e envie cada pedaço para uma tela."
+    ]
+  },
   "advanced_features_desc": "Recursos avançados de divisão em grade",
   "coming_soon": "Em Breve",
   "image_grid_maker": "Criador de Grade de Imagem",
@@ -302,6 +311,7 @@
       "mobile_use_answer": "Sim! O Cortar Carrossel é totalmente responsivo e funciona em smartphones e tablets. A interface se adapta para oferecer uma boa experiência em telas de todos os tamanhos."
     },
     "why_choose": "Por que escolher o Cortar Carrossel?",
+    "common_uses": "Usos comuns do Cortar Carrossel",
     "benefits": {
       "free": "Cortes precisos para qualquer carrossel – divida imagens nas configurações 2×2, 3×3 ou 4×5 para carrossel Instagram e carrossel infinito mantendo toda a qualidade.",
       "custom_grid": "Fluxo rápido e sem download – tudo acontece no navegador com suporte a Web Worker; você corta e baixa as partes em segundos, sem instalar nada.",
