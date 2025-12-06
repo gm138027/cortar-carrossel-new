@@ -122,30 +122,6 @@ const Home: NextPage = () => {
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": t('seo.faq.what_is'),
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": t('seo.faq.what_is_answer')
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": t('seo.faq.how_to_use'),
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": t('seo.faq.how_to_use_answer')
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": t('seo.faq.is_free'),
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": t('seo.faq.is_free_answer')
-                  }
-                },
-                {
-                  "@type": "Question",
                   "name": t('seo.faq.which_platforms'),
                   "acceptedAnswer": {
                     "@type": "Answer",
