@@ -1,0 +1,57 @@
+{
+  "pages": {
+    "divide_carousel": {
+      "title": "Dividir e Cortar Imagem Carrossel | Ferramenta Gratuita",
+      "meta_description": "Cortar imagem carrossel online e grátis. Divida suas fotos em partes iguais para criar carrosséis impressionantes.",
+      "h1": "Cortar Imagem Carrossel",
+      "subtitle": "Divida Imagens para Seu Carrossel",
+      "description": "Precisa cortar imagem para carrossel? Nossa ferramenta permite dividir fotos em várias partes para criar carrosséis perfeitos para redes sociais, sites e apresentações.",
+      "how_to_title": "Tutorial: Como Cortar Imagem para Carrossel",
+      "how_to_steps": {
+        "step1": "Carregue sua imagem através do nosso uploader simples",
+        "step2": "Escolha quantas partes você quer dividir (linhas e colunas)",
+        "step3": "Visualize o resultado em tempo real",
+        "step4": "Faça o download das imagens cortadas"
+      },
+      "try_now": "Dividir Minha Imagem",
+      "benefits_title": "Benefícios de Cortar Imagem para Carrossel",
+      "benefits": {
+        "engagement": {
+          "title": "Mais Engajamento",
+          "text": "Carrosséis com imagens bem cortadas geram mais interações nas redes sociais."
+        },
+        "storytelling": {
+          "title": "Narrativa Visual",
+          "text": "Crie histórias visuais sequenciais que prendem a atenção do seu público."
+        },
+        "reach": {
+          "title": "Maior Alcance",
+          "text": "Posts de carrossel geralmente alcançam mais pessoas nas redes sociais."
+        },
+        "creativity": {
+          "title": "Criatividade Sem Limites",
+          "text": "Expresse sua criatividade com composições visuais inovadoras através de imagens divididas."
+        }
+      },
+      "platforms_title": "Onde Usar Imagens Cortadas para Carrossel",
+      "platforms": {
+        "instagram": {
+          "title": "Instagram",
+          "text": "Perfeito para criar posts de carrossel no Instagram que contam uma história completa."
+        },
+        "facebook": {
+          "title": "Facebook",
+          "text": "Aumente o engajamento com carrosséis de imagens cortadas profissionalmente."
+        },
+        "linkedin": {
+          "title": "LinkedIn",
+          "text": "Destaque seu conteúdo profissional com carrosséis impactantes para sua rede."
+        },
+        "twitter": {
+          "title": "Twitter",
+          "text": "Crie threads visuais com imagens divididas que se complementam."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "split_image": {
+    "page_title": "Ferramenta grátis para dividir imagens online e cortar carrossel",
+    "meta_description": "Corte carrossel 1×3, 2×3, 3×3 ou grades personalizadas com o nosso divisor gratuito direto no navegador. Divida imagens sem cadastro/registo nem marca d'água e baixe em ZIP ou fatias individuais.",
+    "meta_keywords": "cortar carrossel, cortar carrossel infinito, dividir imagem 3x3, dividir carrossel instagram, image splitter grátis",
+    "hero": {
+      "title": "Ferramenta grátis para dividir imagens online",
+      "title_free": "",
+      "subtitle": "Ferramenta gratuita para cortar carrossel, dividir imagem 3×3 e gerar grades personalizadas direto no navegador. Sem cadastro ou registo, sem upload para servidores e com downloads individuais ou ZIP.",
+      "feature_1": "✓ Sem cadastro ou registo, cartão ou limites",
+      "feature_2": "✓ 1×3, 2×3, 3×3, 4×5 e combinações customizadas",
+      "feature_3": "✓ Downloads individuais ou em ZIP",
+      "cta": "Começar a dividir agora →",
+      "secondary_note_before": "Para cortar carrossel completo com todos os recursos,",
+      "secondary_note_link": "acesse o Cortar Carrossel",
+      "secondary_note_after": " e continue o fluxo no painel principal."
+    },
+    "how_to": {
+      "title": "Como dividir em 1×3, 2×3 ou 3×3",
+      "step1_title": "Enviar imagem",
+      "step1_desc": "Arraste o arquivo ou clique para selecionar um JPG/PNG/WebP (até ~20 MB, conforme o navegador).",
+      "step2_title": "Definir linhas e colunas",
+      "step2_desc": "Use presets como 1×3, 2×3, 3×3, 4×3, 5×3 ou informe valores personalizados para layouts horizontais/verticais.",
+      "step3_title": "Pré-visualizar e baixar",
+      "step3_desc": "Confira o preview automático e, quando estiver satisfeito, gere um ZIP gratuito ou baixe cada fatia separadamente."
+    },
+    "sizes": {
+      "title": "Divisor confiável para quem só quer cortar rápido",
+      "description": "Usando o Cortar Carrossel você envia a imagem, ajusta linhas e colunas, pré-visualiza e baixa em poucos segundos, quantas vezes quiser. Não pedimos login, e-mail, cadastro ou registo; não há cobranças ocultas — perfeito para quem só quer dividir fotos rapidamente antes de seguir para o painel principal."
+    },
+    "benefits": {
+      "title": "Recursos pensados para dividir imagem online grátis",
+      "instant_title": "Sem cadastro nem cartão",
+      "instant_desc": "Funciona direto no navegador, sem formulários ou “testes” que pedem cadastro/registo ou cartão.",
+      "private_title": "Processamento local e sem marca d'água",
+      "private_desc": "Nenhum arquivo sai do seu dispositivo. Cada fatia mantém o formato original e sai limpa.",
+      "quality_title": "ZIP + download individual",
+      "quality_desc": "Baixe o carrossel completo ou apenas a parte que deseja ajustar.",
+      "devices_title": "Grades flexíveis em qualquer dispositivo",
+      "devices_desc": "Crie 4×1, 4×3, 5×3, 6×3 ou qualquer combinação no computador ou celular."
+    },
+    "use_cases": {
+      "title": "Aplicações práticas do divisor gratuito",
+      "carousel_title": "Grids rápidos para redes sociais",
+      "carousel_desc": "Divida imagens em 1×3, 2×3, 3×3 em segundos e, depois, publique todas as fatias pela home do Cortar Carrossel.",
+      "puzzle_title": "Sequências 1×3 ou 2×3 para carrossel infinito",
+      "puzzle_desc": "Monte sequências para carrossel infinito, Reels ou Stories em formato horizontal/vertical sem depender de aplicativos pagos.",
+      "education_title": "Impressões e painéis educativos",
+      "education_desc": "Gere 3×4 ou 4×4 e imprima em A4 para escolas, workshops ou exposições.",
+      "creative_title": "Moodboards e sliders de site",
+      "creative_desc": "Cortes 4×1 ou 5×3 ajudam a montar vitrines digitais, apresentações ou PDFs interativos.",
+      "igridmaker_title": "Para grids perfeitos no Instagram",
+      "igridmaker_desc": "Se você precisa dividir um grid perfeito para o Instagram, use o <a class=\"text-blue-600 underline\" href=\"https://igridmaker.com\" target=\"_blank\" rel=\"noopener\">igridmaker.com</a>. O Instagram atualizou o perfil em 2025 e, conforme a região/dispositivo, o recorte pode variar, embora o formato 4:5 ainda seja padrão. O igridmaker.com foi feito especificamente para essa mudança: é gratuito, tem algoritmos precisos e reserva margens seguras para que o feed não deforme após o corte automático, mantendo um layout contínuo."
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "q1": "Preciso me cadastrar ou informar cartão?",
+      "a1": "Não. É 100% gratuito e sem login — abra o site e comece.",
+      "q2": "Existe limite diário ou marca d'água?",
+      "a2": "Não há limites e nenhuma fatia recebe logotipos.",
+      "q3": "Posso baixar apenas uma parte?",
+      "a3": "Sim. Além do ZIP completo, cada miniatura possui um botão de download individual.",
+      "q4": "Quais formatos são aceitos?",
+      "a4": "JPG, PNG e WebP de até ~20 MB (ou mais, conforme a memória disponível). Todo o corte acontece localmente, sem upload.",
+      "q5": "Funciona para Stories, Reels ou sliders?",
+      "a5": "Sim, basta escolher linhas/colunas compatíveis com o layout desejado, incluindo carrossel infinito, Stories, Reels ou sliders.",
+      "q6": "É seguro usar com arquivos de clientes?",
+      "a6": "Sim, pois nada sai do dispositivo. Ainda assim, mantenha backups se trabalhar com imagens muito grandes."
+    },
+    "final_cta": {
+      "title": "Pronto para dividir suas imagens?",
+      "subtitle": "Use este splitter gratuito agora e, quando quiser os recursos completos do Cortar Carrossel, volte para a página principal e continue o fluxo.",
+      "button": "Começar a dividir agora →"
+    }
+  }
+}

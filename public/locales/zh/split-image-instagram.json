@@ -1,0 +1,60 @@
+{
+  "split_image_instagram": {
+    "page_title": "Instagram图片分割 | 免费Instagram轮播制作器和图片分割器",
+    "meta_description": "为Instagram轮播和拼图帖子分割图片。免费工具，将图片分割成完美适用于Instagram的2x2、3x3网格。轻松创建引人入胜的轮播帖子和拼图动态。",
+    "meta_keywords": "Instagram图片分割, Instagram轮播制作器, Instagram图片分割, Instagram拼图帖子, 社交媒体图片分割, Instagram网格制作器",
+    "hero": {
+      "title": "为",
+      "title_instagram": "Instagram",
+      "subtitle": "免费工具，为Instagram轮播和拼图帖子分割图片。创建引人入胜的社交媒体内容，获得更多点赞和分享。",
+      "feature_1": "📸 完美适用于Instagram",
+      "feature_2": "🧩 拼图帖子",
+      "feature_3": "📱 1080x1080完美尺寸",
+      "cta": "为Instagram分割图片 →"
+    },
+    "features": {
+      "title": "Instagram图片分割功能",
+      "carousel_title": "📸 Instagram轮播",
+      "carousel_desc": "将图片分割成完美的轮播帖子。上传一张图片，获得Instagram轮播的多个幻灯片。",
+      "puzzle_title": "🧩 拼图帖子",
+      "puzzle_desc": "创建惊艳的拼图网格帖子。分割成3x3并按逆序发布，获得令人惊叹的个人资料布局。",
+      "sizing_title": "📐 完美尺寸",
+      "sizing_desc": "自动调整为Instagram的1080x1080格式。无需担心图片尺寸。"
+    },
+    "guide": {
+      "title": "如何创建Instagram轮播帖子",
+      "step1_title": "上传您的图片",
+      "step1_desc": "选择一张讲述故事的高质量图片。横向图片最适合轮播帖子。",
+      "step2_title": "选择分割布局",
+      "step2_desc": "根据您的内容策略选择2x2（4张图片）、2x3（6张图片）或3x3（9张图片）。",
+      "step3_title": "下载分割图片",
+      "step3_desc": "获取所有准备上传的分割图片。每片都完美适用于Instagram尺寸。",
+      "step4_title": "发布到Instagram",
+      "step4_desc": "按顺序将所有图片上传到Instagram。您的观众可以滑动查看完整故事！"
+    },
+    "tips": {
+      "title": "使用分割图片提升Instagram成长的技巧",
+      "engagement_title": "🚀 增加参与度",
+      "engagement_desc": "Instagram轮播帖子比单张图片获得3倍更多的参与度。用户会花更多时间查看您的内容。",
+      "reach_title": "📈 提升触达率",
+      "reach_desc": "分割图片创造期待感。粉丝会滑动查看完整图片，增加在您帖子上的停留时间。",
+      "storytelling_title": "🎯 讲述故事",
+      "storytelling_desc": "使用轮播分割创建分步教程、前后揭示或产品展示。",
+      "puzzle_title": "🧩 拼图动态",
+      "puzzle_desc": "通过按逆序发布拼图片段在您的个人资料上创建惊艳的网格布局。"
+    },
+    "best_practices": {
+      "title": "Instagram轮播最佳实践",
+      "quality": "使用高质量图片：Instagram算法偏爱清晰明亮的图片",
+      "impact": "从冲击力开始：让您的第一张图片引人注目以鼓励滑动",
+      "cta": "包含行动号召：在标题中告诉粉丝滑动查看更多",
+      "consistency": "保持一致性：在所有分割图片中保持相同的视觉风格",
+      "hashtags": "使用相关标签：包含#carousel #splitimage #instagram技巧"
+    },
+    "final_cta": {
+      "title": "准备提升您的Instagram了吗？",
+      "subtitle": "加入数千名Instagram创作者，使用我们免费的图片分割器创建病毒式轮播内容。",
+      "button": "开始创建Instagram轮播 →"
+    }
+  }
+}

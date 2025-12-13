@@ -1,0 +1,53 @@
+{
+  "pages": {
+    "carousel_image": {
+      "title": "Cortar Imagem Carrossel | Editor de Imagens Online",
+      "meta_description": "Ferramenta especializada para cortar imagem carrossel. Divida fotos para criar carrosséis perfeitos para seu site ou apresentação.",
+      "h1": "Cortar Imagem Carrossel",
+      "tool_title": "Ferramenta para Cortar Imagens de Carrossel",
+      "tool_description": "Nossa ferramenta online gratuita permite cortar imagens com precisão para uso em carrosséis de websites, apresentações e galerias de fotos. Divida uma única imagem em várias partes iguais com apenas alguns cliques.",
+      "how_to_title": "Como Cortar uma Imagem para Carrossel",
+      "how_to_steps": {
+        "step1": "Selecione e faça upload da sua imagem",
+        "step2": "Defina o número de divisões horizontais e verticais",
+        "step3": "Ajuste as configurações de acordo com sua necessidade",
+        "step4": "Baixe as imagens cortadas individualmente ou em conjunto"
+      },
+      "try_now": "Cortar Minha Imagem Agora",
+      "applications_title": "Aplicações para Imagens Cortadas em Carrossel",
+      "applications": {
+        "websites": {
+          "title": "Sites e E-commerce",
+          "text": "Crie carrosséis atrativos para destaque de produtos ou serviços no seu site."
+        },
+        "social_media": {
+          "title": "Redes Sociais",
+          "text": "Divida imagens para criar posts deslizantes no Instagram, Facebook e outras plataformas."
+        },
+        "presentations": {
+          "title": "Apresentações Profissionais",
+          "text": "Melhore suas apresentações com imagens sequenciais cortadas perfeitamente."
+        }
+      },
+      "why_use_title": "Por que Usar Nossa Ferramenta para Cortar Imagem Carrossel?",
+      "benefits": {
+        "easy": {
+          "title": "Fácil de Usar",
+          "text": "Interface intuitiva que não requer conhecimentos técnicos avançados."
+        },
+        "professional": {
+          "title": "Resultado Profissional",
+          "text": "Cortes precisos que garantem um carrossel com transições perfeitas."
+        },
+        "online": {
+          "title": "Totalmente Online",
+          "text": "Sem necessidade de instalar software - funciona no seu navegador."
+        },
+        "free": {
+          "title": "Gratuito",
+          "text": "Acesso completo à ferramenta para cortar imagem carrossel sem custos."
+        }
+      }
+    }
+  }
+}

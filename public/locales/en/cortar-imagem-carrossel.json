@@ -1,0 +1,53 @@
+{
+  "pages": {
+    "carousel_image": {
+      "title": "Carousel Image Cutter | Online Image Editor",
+      "meta_description": "Specialized tool for cutting carousel images. Split photos to create perfect carousels for your website or presentation.",
+      "h1": "Carousel Image Cutter",
+      "tool_title": "Tool for Cutting Carousel Images",
+      "tool_description": "Our free online tool allows you to precisely cut images for use in website carousels, presentations, and photo galleries. Split a single image into multiple equal parts with just a few clicks.",
+      "how_to_title": "How to Cut an Image for Carousel",
+      "how_to_steps": {
+        "step1": "Select and upload your image",
+        "step2": "Define the number of horizontal and vertical divisions",
+        "step3": "Adjust settings according to your needs",
+        "step4": "Download the cut images individually or as a set"
+      },
+      "try_now": "Cut My Image Now",
+      "applications_title": "Applications for Cut Carousel Images",
+      "applications": {
+        "websites": {
+          "title": "Websites and E-commerce",
+          "text": "Create attractive carousels to highlight products or services on your website."
+        },
+        "social_media": {
+          "title": "Social Media",
+          "text": "Split images to create sliding posts on Instagram, Facebook, and other platforms."
+        },
+        "presentations": {
+          "title": "Professional Presentations",
+          "text": "Enhance your presentations with perfectly cut sequential images."
+        }
+      },
+      "why_use_title": "Why Use Our Carousel Image Cutting Tool?",
+      "benefits": {
+        "easy": {
+          "title": "Easy to Use",
+          "text": "Intuitive interface that doesn't require advanced technical knowledge."
+        },
+        "professional": {
+          "title": "Professional Results",
+          "text": "Precise cuts that ensure a carousel with perfect transitions."
+        },
+        "online": {
+          "title": "Completely Online",
+          "text": "No need to install software - works in your browser."
+        },
+        "free": {
+          "title": "Free",
+          "text": "Complete access to the carousel image cutting tool at no cost."
+        }
+      }
+    }
+  }
+}

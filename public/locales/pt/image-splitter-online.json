@@ -1,0 +1,57 @@
+{
+  "pages": {
+    "image_splitter": {
+      "title": "Ferramenta grátis para dividir imagens online | Cortar Carrossel",
+      "meta_description": "Procura um site para dividir imagem online grátis? Abra o Cortar Carrossel no navegador, envie a foto e gere cortes 1×3, 2×3, 3×3 ou grades personalizadas em segundos, sem cadastro, sem cartão e sem marcas d'água.",
+      "h1": "Ferramenta grátis para dividir imagens online",
+      "tool_title": "Procurando um divisor gratuito confiável?",
+      "tool_description": "Com o Cortar Carrossel você envia a imagem, define linhas/colunas, pré-visualiza e baixa em poucos segundos — uso ilimitado e zero cobrança escondida. Não pedimos login, e-mail ou cartão, o que é perfeito para quem só quer dividir fotos em partes iguais rapidamente. O download continua gratuito todas as vezes: basta clicar em “Dividir Imagem” para receber um ZIP com todas as fatias.",
+      "how_to_title": "Como dividir em 1×3, 2×3 ou 3×3",
+      "how_to_steps": {
+        "step1": "Arraste um JPG, PNG ou WebP (até ~20 MB) ou clique para escolher o arquivo.",
+        "step2": "Selecione os presets 1×3, 2×3, 3×3, 4×3, 5×3 ou informe linhas/colunas personalizadas para carrosséis mais longos.",
+        "step3": "Use o preview para mover e dar zoom antes de cortar, garantindo textos e rostos centralizados.",
+        "step4": "Clique em “Dividir Imagem” para gerar um ZIP gratuito; se quiser apenas uma fatia, use o ícone de download individual em cada miniatura. Todo o corte acontece localmente no navegador, preservando sua privacidade."
+      },
+      "try_now": "Dividir minha imagem agora",
+      "features_title": "Recursos pensados para quem quer dividir imagem online grátis",
+      "features": {
+        "grid": {
+          "title": "Sem cadastro ou cartão",
+          "text": "Recuse “testes grátis” que pedem cartão antes do download. Aqui você abre no navegador e começa na hora."
+        },
+        "quality": {
+          "title": "Sem marca d'água e sem limite diário",
+          "text": "Divida quantas imagens quiser, mantendo a mesma qualidade e formato do arquivo original."
+        },
+        "preview": {
+          "title": "ZIP + download individual",
+          "text": "Corrija apenas um slide sem refazer tudo, ou salve todas as partes de uma vez em um arquivo ZIP gratuito."
+        },
+        "puzzle": {
+          "title": "Grades pré-definidas e personalizadas",
+          "text": "Além de 1×3/2×3/3×3, crie 4×1, 4×3, 5×3 ou qualquer combinação para sites, apresentações, puzzles ou impressão, em desktop ou celular."
+        }
+      },
+      "why_use_title": "Aplicações práticas do divisor gratuito",
+      "benefits": {
+        "no_install": {
+          "title": "Instagram 2025 (formato 4:5)",
+          "text": "O Instagram ajustou o corte do perfil em 2025 e o resultado varia conforme região/dispositivo, mas o padrão segue 4:5. Gere as fatias no Cortar Carrossel e use o igridmaker.com para criar grids 4:5 com margens de segurança extras, evitando deformações após o upload."
+        },
+        "privacy": {
+          "title": "Carrossel e Reels sem pagar apps",
+          "text": "Monte sequências 1×3 ou 2×3 para carrossel infinito, Reels ou Stories explicativos sem depender de ferramentas pagas."
+        },
+        "free": {
+          "title": "Impressão e mosaicos",
+          "text": "Divida em 3×4 ou 4×4, imprima em folhas A4 e monte painéis grandes ou materiais educacionais sem comprar softwares caros."
+        },
+        "compatible": {
+          "title": "Puzzles, moodboards e slides",
+          "text": "Use 5×3 ou 6×3 para puzzles e moodboards, ou corte um banner 4×1 e publique em landing pages e PDFs interativos."
+        }
+      }
+    }
+  }
+}

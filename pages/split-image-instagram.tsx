@@ -5,7 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 
 const SplitImageInstagram: NextPage = () => {
-  const { t, i18n } = useTranslation("common");
+  const { t, i18n } = useTranslation("split-image-instagram");
 
   return (
     <>
@@ -220,7 +220,7 @@ const SplitImageInstagram: NextPage = () => {
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, ["common", "split-image-instagram"])),
     },
   };
 }

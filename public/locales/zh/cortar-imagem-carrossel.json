@@ -1,0 +1,53 @@
+{
+  "pages": {
+    "carousel_image": {
+      "title": "轮播图片切割 | 在线图片编辑器",
+      "meta_description": "专业轮播图片切割工具。分割照片创建完美的网站或演示轮播。",
+      "h1": "轮播图片切割",
+      "tool_title": "轮播图片切割工具",
+      "tool_description": "我们的免费在线工具可以精确切割图片，用于网站轮播、演示和照片画廊。只需几次点击就能将单张图片分割成多个等份。",
+      "how_to_title": "如何为轮播切割图片",
+      "how_to_steps": {
+        "step1": "选择并上传您的图片",
+        "step2": "设置水平和垂直分割数量",
+        "step3": "根据需要调整配置",
+        "step4": "单独或批量下载切割后的图片"
+      },
+      "try_now": "立即切割我的图片",
+      "applications_title": "轮播切割图片的应用场景",
+      "applications": {
+        "websites": {
+          "title": "网站和电商",
+          "text": "为网站创建吸引人的产品或服务展示轮播。"
+        },
+        "social_media": {
+          "title": "社交媒体",
+          "text": "分割图片为Instagram、Facebook等平台创建滑动帖子。"
+        },
+        "presentations": {
+          "title": "专业演示",
+          "text": "用完美切割的连续图片改善演示效果。"
+        }
+      },
+      "why_use_title": "为什么选择我们的轮播图片切割工具？",
+      "benefits": {
+        "easy": {
+          "title": "易于使用",
+          "text": "直观界面，无需高级技术知识。"
+        },
+        "professional": {
+          "title": "专业效果",
+          "text": "精确切割确保轮播过渡完美。"
+        },
+        "online": {
+          "title": "完全在线",
+          "text": "无需安装软件 - 在浏览器中运行。"
+        },
+        "free": {
+          "title": "免费使用",
+          "text": "完全免费使用轮播图片切割工具。"
+        }
+      }
+    }
+  }
+}

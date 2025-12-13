@@ -5,7 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 
 const SplitImage: NextPage = () => {
-  const { t, i18n } = useTranslation("common");
+  const { t, i18n } = useTranslation("split-image");
 
   return (
     <>
@@ -131,80 +131,36 @@ const SplitImage: NextPage = () => {
           <Link href="/" className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
             {t('split_image.hero.cta')}
           </Link>
+          <p className="mt-4 text-base text-gray-500">
+            {t('split_image.hero.secondary_note_before')}{" "}
+            <Link href="/" className="text-blue-600 underline">
+              {t('split_image.hero.secondary_note_link')}
+            </Link>
+            {t('split_image.hero.secondary_note_after')}
+          </p>
         </div>
 
         {/* How to Split Image Section */}
         <section className="max-w-4xl w-full mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">{t('split_image.how_to.title')}</h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 font-bold text-lg">1</span>
+          <div className="grid md:grid-cols-3 gap-6">
+            {['step1', 'step2', 'step3'].map((step, index) => (
+              <div key={step} className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-blue-600 font-bold text-lg">{index + 1}</span>
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{t(`split_image.how_to.${step}_title`)}</h3>
+                <p className="text-gray-600">{t(`split_image.how_to.${step}_desc`)}</p>
               </div>
-              <h3 className="text-lg font-semibold mb-2">{t('split_image.how_to.step1_title')}</h3>
-              <p className="text-gray-600">{t('split_image.how_to.step1_desc')}</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 font-bold text-lg">2</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">{t('split_image.how_to.step2_title')}</h3>
-              <p className="text-gray-600">{t('split_image.how_to.step2_desc')}</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 font-bold text-lg">3</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">{t('split_image.how_to.step3_title')}</h3>
-              <p className="text-gray-600">{t('split_image.how_to.step3_desc')}</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue-600 font-bold text-lg">4</span>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">{t('split_image.how_to.step4_title')}</h3>
-              <p className="text-gray-600">{t('split_image.how_to.step4_desc')}</p>
-            </div>
+            ))}
           </div>
         </section>
 
-        {/* Popular Split Image Sizes */}
+        {/* Why Cortar Carrossel section (textual introduction) */}
         <section className="max-w-4xl w-full mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">{t('split_image.sizes.title')}</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-blue-600">{t('split_image.sizes.size_2x2')}</h3>
-              <p className="text-gray-600 mb-4">{t('split_image.sizes.size_2x2_desc')}</p>
-              <div className="grid grid-cols-2 gap-1 w-16 h-16 mx-auto">
-                <div className="bg-blue-200 rounded"></div>
-                <div className="bg-blue-300 rounded"></div>
-                <div className="bg-blue-400 rounded"></div>
-                <div className="bg-blue-500 rounded"></div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-green-600">{t('split_image.sizes.size_3x3')}</h3>
-              <p className="text-gray-600 mb-4">{t('split_image.sizes.size_3x3_desc')}</p>
-              <div className="grid grid-cols-3 gap-1 w-16 h-16 mx-auto">
-                {[...Array(9)].map((_, i) => (
-                  <div key={i} className="bg-green-300 rounded" style={{backgroundColor: `hsl(120, 50%, ${60 + i * 3}%)`}}></div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-purple-600">{t('split_image.sizes.size_custom')}</h3>
-              <p className="text-gray-600 mb-4">{t('split_image.sizes.size_custom_desc')}</p>
-              <div className="grid grid-cols-4 gap-1 w-16 h-16 mx-auto">
-                {[...Array(12)].map((_, i) => (
-                  <div key={i} className="bg-purple-300 rounded" style={{backgroundColor: `hsl(270, 50%, ${60 + i * 2}%)`}}></div>
-                ))}
-              </div>
-            </div>
+          <div className="bg-white p-8 rounded-2xl shadow-md text-lg text-gray-700 leading-relaxed">
+            <p>{t('split_image.sizes.description')}</p>
           </div>
         </section>
 
@@ -238,24 +194,18 @@ const SplitImage: NextPage = () => {
         <section className="max-w-4xl w-full mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">{t('split_image.use_cases.title')}</h2>
           <div className="space-y-6">
+            {['carousel', 'puzzle', 'education', 'creative'].map((key) => (
+              <div key={key} className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-3">{t(`split_image.use_cases.${key}_title`)}</h3>
+                <p className="text-gray-600">{t(`split_image.use_cases.${key}_desc`)}</p>
+              </div>
+            ))}
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3">{t('split_image.use_cases.carousel_title')}</h3>
-              <p className="text-gray-600">{t('split_image.use_cases.carousel_desc')}</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3">{t('split_image.use_cases.puzzle_title')}</h3>
-              <p className="text-gray-600">{t('split_image.use_cases.puzzle_desc')}</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3">{t('split_image.use_cases.education_title')}</h3>
-              <p className="text-gray-600">{t('split_image.use_cases.education_desc')}</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3">{t('split_image.use_cases.creative_title')}</h3>
-              <p className="text-gray-600">{t('split_image.use_cases.creative_desc')}</p>
+              <h3 className="text-xl font-semibold mb-3">{t('split_image.use_cases.igridmaker_title')}</h3>
+              <p
+                className="text-gray-600"
+                dangerouslySetInnerHTML={{ __html: t('split_image.use_cases.igridmaker_desc') }}
+              />
             </div>
           </div>
         </section>
@@ -264,25 +214,12 @@ const SplitImage: NextPage = () => {
         <section className="max-w-4xl w-full mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">{t('split_image.faq.title')}</h2>
           <div className="space-y-4">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold mb-2">{t('split_image.faq.q1')}</h3>
-              <p className="text-gray-600">{t('split_image.faq.a1')}</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold mb-2">{t('split_image.faq.q2')}</h3>
-              <p className="text-gray-600">{t('split_image.faq.a2')}</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold mb-2">{t('split_image.faq.q3')}</h3>
-              <p className="text-gray-600">{t('split_image.faq.a3')}</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold mb-2">{t('split_image.faq.q4')}</h3>
-              <p className="text-gray-600">{t('split_image.faq.a4')}</p>
-            </div>
+            {['q1', 'q2', 'q3', 'q4', 'q5', 'q6'].map((key) => (
+              <div key={key} className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-lg font-semibold mb-2">{t(`split_image.faq.${key}`)}</h3>
+                <p className="text-gray-600">{t(`split_image.faq.a${key.slice(1)}`)}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -304,7 +241,7 @@ const SplitImage: NextPage = () => {
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, ["common", "split-image"])),
     },
   };
 }

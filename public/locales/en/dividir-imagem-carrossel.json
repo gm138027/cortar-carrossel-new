@@ -1,0 +1,57 @@
+{
+  "pages": {
+    "divide_carousel": {
+      "title": "Divide and Cut Carousel Images | Free Tool",
+      "meta_description": "Cut carousel images online for free. Split your photos into equal parts to create stunning carousels.",
+      "h1": "Carousel Image Cutter",
+      "subtitle": "Divide Images for Your Carousel",
+      "description": "Need to cut images for carousel? Our tool allows you to split photos into multiple parts to create perfect carousels for social media, websites, and presentations.",
+      "how_to_title": "Tutorial: How to Cut Images for Carousel",
+      "how_to_steps": {
+        "step1": "Upload your image through our simple uploader",
+        "step2": "Choose how many parts you want to divide (rows and columns)",
+        "step3": "View the result in real-time",
+        "step4": "Download the cut images"
+      },
+      "try_now": "Divide My Image",
+      "benefits_title": "Benefits of Cutting Images for Carousel",
+      "benefits": {
+        "engagement": {
+          "title": "More Engagement",
+          "text": "Carousels with well-cut images generate more interactions on social media."
+        },
+        "storytelling": {
+          "title": "Visual Storytelling",
+          "text": "Create sequential visual stories that capture your audience's attention."
+        },
+        "reach": {
+          "title": "Greater Reach",
+          "text": "Carousel posts typically reach more people on social media."
+        },
+        "creativity": {
+          "title": "Unlimited Creativity",
+          "text": "Express your creativity with innovative visual compositions through divided images."
+        }
+      },
+      "platforms_title": "Where to Use Cut Carousel Images",
+      "platforms": {
+        "instagram": {
+          "title": "Instagram",
+          "text": "Perfect for creating Instagram carousel posts that tell a complete story."
+        },
+        "facebook": {
+          "title": "Facebook",
+          "text": "Increase engagement with professionally cut image carousels."
+        },
+        "linkedin": {
+          "title": "LinkedIn",
+          "text": "Highlight your professional content with impactful carousels for your network."
+        },
+        "twitter": {
+          "title": "Twitter",
+          "text": "Create visual threads with complementary divided images."
+        }
+      }
+    }
+  }
+}

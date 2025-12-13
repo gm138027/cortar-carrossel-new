@@ -5,7 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 
 const DividirImagemCarrossel: NextPage = () => {
-  const { t, i18n } = useTranslation("common");
+  const { t, i18n } = useTranslation("dividir-imagem-carrossel");
 
   return (
     <>
@@ -123,7 +123,7 @@ const DividirImagemCarrossel: NextPage = () => {
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, ["common", "dividir-imagem-carrossel"])),
     },
   };
 }

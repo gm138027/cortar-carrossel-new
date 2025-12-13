@@ -1,0 +1,57 @@
+{
+  "pages": {
+    "image_splitter": {
+      "title": "ImageSplitter Online | Split Images for Free",
+      "meta_description": "Free online ImageSplitter tool. Easily split images into a grid or custom sections for carousels, social media, and more.",
+      "h1": "ImageSplitter Online",
+      "tool_title": "Free Online Image Splitting Tool",
+      "tool_description": "Our ImageSplitter online tool allows you to easily divide any image into multiple equal parts. Perfect for creating image carousels, social media galleries, puzzles, or grid layouts.",
+      "how_to_title": "How to Split Your Image Online",
+      "how_to_steps": {
+        "step1": "Upload your image using our simple uploader",
+        "step2": "Select how many rows and columns you want to split your image into",
+        "step3": "Preview the results with our real-time preview feature",
+        "step4": "Download all slices as individual images or as a zip package"
+      },
+      "try_now": "Try ImageSplitter Now",
+      "features_title": "Features of Our ImageSplitter Online",
+      "features": {
+        "grid": {
+          "title": "Custom Grid Splitting",
+          "text": "Split your image into any grid size you need, from 2x2 to much larger grids."
+        },
+        "quality": {
+          "title": "High Quality Output",
+          "text": "Maintain the original image quality in all your split sections."
+        },
+        "preview": {
+          "title": "Real-time Preview",
+          "text": "See how your split image will look before downloading."
+        },
+        "puzzle": {
+          "title": "Puzzle Mode",
+          "text": "Create interactive puzzles with our special puzzle feature."
+        }
+      },
+      "why_use_title": "Why Choose Our ImageSplitter Online Tool?",
+      "benefits": {
+        "no_install": {
+          "title": "No Installation Required",
+          "text": "Our ImageSplitter works directly in your browser - no software installation needed."
+        },
+        "privacy": {
+          "title": "Privacy Protected",
+          "text": "Your images are processed locally on your device and never uploaded to our servers."
+        },
+        "free": {
+          "title": "Free to Use",
+          "text": "Our ImageSplitter online tool is completely free with no hidden costs or premium features."
+        },
+        "compatible": {
+          "title": "Works with All Image Types",
+          "text": "Compatible with JPG, PNG, WebP, and other common image formats."
+        }
+      }
+    }
+  }
+}

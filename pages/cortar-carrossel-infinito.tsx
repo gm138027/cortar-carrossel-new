@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const CortarCarrosselInfinito: NextPage = () => {
-  const { t, i18n } = useTranslation("common");
+  const { t, i18n } = useTranslation("cortar-carrossel-infinito");
 
   return (
     <>
@@ -102,7 +102,7 @@ const CortarCarrosselInfinito: NextPage = () => {
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, ["common", "cortar-carrossel-infinito"])),
     },
   };
 }

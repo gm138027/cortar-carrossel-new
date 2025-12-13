@@ -1,0 +1,38 @@
+{
+  "pages": {
+    "infinite_carousel": {
+      "title": "Cortar Carrossel Infinito | Ferramenta Online Gratuita",
+      "meta_description": "Ferramenta gratuita para cortar carrossel infinito. Divida suas imagens facilmente para criar efeitos perfeitos de carrossel rotativo.",
+      "h1": "Cortar Carrossel Infinito",
+      "what_is_title": "O que é um Carrossel Infinito?",
+      "what_is_text": "Um carrossel infinito é uma apresentação de imagens que roda continuamente, criando uma experiência visual sem interrupções. Nossa ferramenta permite cortar imagens precisamente para criar este efeito profissional.",
+      "how_to_title": "Como Usar Nossa Ferramenta de Cortar Carrossel",
+      "how_to_steps": {
+        "step1": "Faça upload da sua imagem usando nosso seletor de arquivos",
+        "step2": "Escolha o número de linhas e colunas para dividir sua imagem",
+        "step3": "Utilize o modo de visualização para verificar o resultado",
+        "step4": "Baixe suas imagens cortadas para usar em seu carrossel"
+      },
+      "try_now": "Experimentar Agora",
+      "advantages_title": "Vantagens do Carrossel Infinito",
+      "advantages": {
+        "engagement": {
+          "title": "Engajamento Visual",
+          "text": "Carrosséis infinitos capturam a atenção dos visitantes por mais tempo, aumentando o engajamento."
+        },
+        "professional": {
+          "title": "Apresentação Profissional",
+          "text": "Crie apresentações de produtos ou portfólios com aparência profissional."
+        },
+        "continuous": {
+          "title": "Experiência Contínua",
+          "text": "Ofereça uma experiência visual contínua sem interrupções abruptas."
+        },
+        "control": {
+          "title": "Controle Total",
+          "text": "Nossa ferramenta de cortar carrossel infinito oferece controle total sobre o resultado final."
+        }
+      }
+    }
+  }
+}

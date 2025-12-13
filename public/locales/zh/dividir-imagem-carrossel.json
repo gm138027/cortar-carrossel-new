@@ -1,0 +1,57 @@
+{
+  "pages": {
+    "divide_carousel": {
+      "title": "分割轮播图片 | 免费工具",
+      "meta_description": "免费在线轮播图片分割。将照片分割成等份创建精美轮播。",
+      "h1": "轮播图片分割",
+      "subtitle": "为轮播分割图片",
+      "description": "需要为轮播分割图片？我们的工具可以将照片分割成多个部分，为社交媒体、网站和演示创建完美轮播。",
+      "how_to_title": "教程：如何为轮播切割图片",
+      "how_to_steps": {
+        "step1": "通过简单上传器加载图片",
+        "step2": "选择要分割的部分数量（行和列）",
+        "step3": "实时预览结果",
+        "step4": "下载切割后的图片"
+      },
+      "try_now": "分割我的图片",
+      "benefits_title": "轮播图片切割的好处",
+      "benefits": {
+        "engagement": {
+          "title": "更多互动",
+          "text": "精心切割的轮播图片在社交媒体上产生更多互动。"
+        },
+        "storytelling": {
+          "title": "视觉叙事",
+          "text": "创建吸引观众注意的连续视觉故事。"
+        },
+        "reach": {
+          "title": "更大触达",
+          "text": "轮播帖子通常在社交媒体上触达更多人群。"
+        },
+        "creativity": {
+          "title": "无限创意",
+          "text": "通过分割图片创新视觉构图，表达创意。"
+        }
+      },
+      "platforms_title": "轮播切割图片的使用平台",
+      "platforms": {
+        "instagram": {
+          "title": "Instagram",
+          "text": "完美创建讲述完整故事的Instagram轮播帖子。"
+        },
+        "facebook": {
+          "title": "Facebook",
+          "text": "用专业切割的轮播图片提高互动率。"
+        },
+        "linkedin": {
+          "title": "LinkedIn",
+          "text": "用有影响力的轮播突出您的专业内容。"
+        },
+        "twitter": {
+          "title": "Twitter",
+          "text": "创建互补分割图片的视觉推文串。"
+        }
+      }
+    }
+  }
+}

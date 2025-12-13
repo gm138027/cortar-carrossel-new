@@ -1,0 +1,38 @@
+{
+  "pages": {
+    "infinite_carousel": {
+      "title": "Infinite Carousel Cutter | Free Online Tool",
+      "meta_description": "Free tool to cut infinite carousel images. Easily divide your images to create perfect rotating carousel effects.",
+      "h1": "Infinite Carousel Cutter",
+      "what_is_title": "What is an Infinite Carousel?",
+      "what_is_text": "An infinite carousel is an image presentation that continuously rotates, creating a seamless visual experience. Our tool allows you to precisely cut images to create this professional effect.",
+      "how_to_title": "How to Use Our Carousel Cutting Tool",
+      "how_to_steps": {
+        "step1": "Upload your image using our file selector",
+        "step2": "Choose the number of rows and columns to divide your image",
+        "step3": "Use the preview mode to check the result",
+        "step4": "Download your cut images to use in your carousel"
+      },
+      "try_now": "Try It Now",
+      "advantages_title": "Advantages of Infinite Carousel",
+      "advantages": {
+        "engagement": {
+          "title": "Visual Engagement",
+          "text": "Infinite carousels capture visitors' attention for longer, increasing engagement."
+        },
+        "professional": {
+          "title": "Professional Presentation",
+          "text": "Create professional-looking product presentations or portfolios."
+        },
+        "continuous": {
+          "title": "Seamless Experience",
+          "text": "Offer a continuous visual experience without abrupt interruptions."
+        },
+        "control": {
+          "title": "Complete Control",
+          "text": "Our infinite carousel cutting tool gives you complete control over the final result."
+        }
+      }
+    }
+  }
+}

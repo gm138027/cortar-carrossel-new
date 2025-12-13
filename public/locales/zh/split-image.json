@@ -1,0 +1,76 @@
+{
+  "split_image": {
+    "page_title": "免费在线图像分割与轮播切割工具",
+    "meta_description": "使用免费浏览器工具，将图片切成 1×3、2×3、3×3 或自定义网格。无需注册、无水印，可单张或压缩包下载。",
+    "meta_keywords": "免费图像分割, 在线切割轮播, 3x3 切图, Instagram 轮播切割, 图像拆分工具",
+    "hero": {
+      "title": "免费在线图像分割工具",
+      "title_free": "",
+      "subtitle": "专为切割轮播和 3×3 网格而生，直接在浏览器运行，不上传服务器，所有切片都保持原始质量。",
+      "feature_1": "✓ 无需注册或银行卡，使用次数不限",
+      "feature_2": "✓ 支持 1×3、2×3、3×3、4×5 及自定义布局",
+      "feature_3": "✓ 单张或压缩包下载",
+      "cta": "立即开始分割 →",
+      "secondary_note_before": "需要完整的轮播切割体验？",
+      "secondary_note_link": "访问 Cortar Carrossel",
+      "secondary_note_after": "，在主控制台继续所有操作。"
+    },
+    "how_to": {
+      "title": "如何分割成 1×3、2×3 或 3×3",
+      "step1_title": "上传图片",
+      "step1_desc": "拖放 JPG/PNG/WebP（约 20 MB，以浏览器为准），或点击选择。",
+      "step2_title": "设置行列",
+      "step2_desc": "使用 1×3、2×3、3×3、4×3、5×3 等预设，或自定义行列数，适配横向/纵向轮播。",
+      "step3_title": "预览并下载",
+      "step3_desc": "查看自动预览，满意后即可生成免费压缩包，也可以逐张下载。"
+    },
+    "sizes": {
+      "title": "对只想快速切割的用户来说，这是可靠的分割器",
+      "description": "在 Cortar Carrossel 中，上传→设置行列→预览→下载，全程只需几秒。无需登录、邮箱或银行卡，没有任何隐藏费用，非常适合先快速切图再进入主站控制台继续操作。"
+    },
+    "benefits": {
+      "title": "为日常轮播切割准备的功能",
+      "instant_title": "无需注册/银行卡",
+      "instant_desc": "直接在浏览器运行，不需要填写表单或所谓“免费试用”。",
+      "private_title": "本地处理，无水印",
+      "private_desc": "文件始终保留在你的设备中，每张切片都保持原始格式且无标识。",
+      "quality_title": "ZIP + 单张下载",
+      "quality_desc": "可一次性下载全部切片，也能单独获取某一张方便调整。",
+      "devices_title": "灵活网格，电脑/手机通用",
+      "devices_desc": "无论 4×1、4×3、5×3、6×3 还是自定义组合，电脑和手机都能稳定运行。"
+    },
+    "use_cases": {
+      "title": "免费分割工具的常见用途",
+      "carousel_title": "快速生成社交媒体网格",
+      "carousel_desc": "几秒内切出 1×3、2×3、3×3，然后回到 Cortar Carrossel 主页发布所有切片。",
+      "puzzle_title": "1×3 或 2×3 的无限轮播",
+      "puzzle_desc": "无需付费 App，也能制作横向或纵向的无限轮播、Reels、Stories。",
+      "education_title": "打印与教学展板",
+      "education_desc": "生成 3×4、4×4 网格后打印成 A4，用于学校、工作坊或展览。",
+      "creative_title": "Moodboard 与网站滑块",
+      "creative_desc": "4×1 或 5×3 切图可制作数字陈列、演示或交互式 PDF。",
+      "igridmaker_title": "如何打造完美的 Instagram 网格",
+      "igridmaker_desc": "如果要创建完美的 Instagram 网格，请使用 <a class=\"text-blue-600 underline\" href=\"https://igridmaker.com\" target=\"_blank\" rel=\"noopener\">igridmaker.com</a>。Instagram 于 2025 年更新了个人首页，不同地区/设备的裁剪略有差异，但 4:5 仍是主流。igridmaker.com 专为这次变化设计：免费、算法精准，会为每张切片预留安全边距，防止上传后因二次裁剪而变形，保持主页连续。"
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": "需要注册或填写银行卡吗？",
+      "a1": "不需要。完全免费，无需登录。",
+      "q2": "有每日限制或水印吗？",
+      "a2": "没有限制，输出切片也不会添加标识。",
+      "q3": "可以只下载其中一张吗？",
+      "a3": "可以。除了压缩包，每个缩略图都有单独的下载按钮。",
+      "q4": "支持哪些格式？",
+      "a4": "支持 JPG/PNG/WebP，约 20 MB（或更多，取决于可用内存），全部在本地处理。",
+      "q5": "能用于 Stories、Reels 或网站滑块吗？",
+      "a5": "可以，选择合适的行列即可，包括无限轮播、Stories、Reels 和滑块。",
+      "q6": "处理客户素材安全吗？",
+      "a6": "安全，文件始终保留在你的设备中。若文件很大，建议提前备份。"
+    },
+    "final_cta": {
+      "title": "准备好切割你的图片了吗？",
+      "subtitle": "先用这个免费分割工具快速完成切片，若需要完整功能，随时回到 Cortar Carrossel 主页继续。",
+      "button": "立即开始分割 →"
+    }
+  }
+}

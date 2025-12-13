@@ -1,0 +1,76 @@
+{
+  "split_image": {
+    "page_title": "Free online tool to split images and cut carousels",
+    "meta_description": "Split carousels in 1×3, 2×3, 3×3 or custom grids with our free browser-based image splitter. No sign-up, no watermark, download every slice individually or as a ZIP.",
+    "meta_keywords": "split image online, free image splitter, cut carousel, 3x3 grid maker, instagram carousel splitter",
+    "hero": {
+      "title": "Free tool to split images online",
+      "title_free": "",
+      "subtitle": "Browser-based tool to cut carousels, split 3×3 grids or create any layout in seconds. No accounts, no uploads to servers and every slice stays watermark-free.",
+      "feature_1": "✓ No account, card or limits",
+      "feature_2": "✓ 1×3, 2×3, 3×3, 4×5 and custom layouts",
+      "feature_3": "✓ Individual files or ZIP download",
+      "cta": "Start splitting now →",
+      "secondary_note_before": "Need the full carousel workflow?",
+      "secondary_note_link": "Go to Cortar Carrossel",
+      "secondary_note_after": " to keep working inside the main dashboard."
+    },
+    "how_to": {
+      "title": "How to split into 1×3, 2×3 or 3×3",
+      "step1_title": "Upload the image",
+      "step1_desc": "Drag a JPG, PNG or WebP (up to ~20 MB depending on the browser) or click to select it.",
+      "step2_title": "Set rows and columns",
+      "step2_desc": "Use presets such as 1×3, 2×3, 3×3, 4×3, 5×3 or type your own numbers for horizontal/vertical carousels.",
+      "step3_title": "Preview and download",
+      "step3_desc": "Check the automatic preview and, when it looks right, export a free ZIP or download each slice separately."
+    },
+    "sizes": {
+      "title": "A reliable splitter for people who just need to cut fast",
+      "description": "With Cortar Carrossel you upload, adjust rows/columns, preview and download in seconds as many times as you like. No login, email, sign-up or card required — perfect for quickly splitting photos before moving to the main dashboard."
+    },
+    "benefits": {
+      "title": "Features designed for everyday carousel slicing",
+      "instant_title": "No account or card",
+      "instant_desc": "Runs directly in the browser, no forms or \"free trials\" asking for billing details.",
+      "private_title": "Local processing, no watermark",
+      "private_desc": "Files never leave your device. Each slice keeps the original format and stays clean.",
+      "quality_title": "ZIP + single download",
+      "quality_desc": "Download the full carousel or just the slice you want to tweak.",
+      "devices_title": "Flexible grids on any device",
+      "devices_desc": "Create 4×1, 4×3, 5×3, 6×3 or any combo on desktop or mobile."
+    },
+    "use_cases": {
+      "title": "Practical ways to use the free splitter",
+      "carousel_title": "Quick grids for social media",
+      "carousel_desc": "Split images into 1×3, 2×3, 3×3 in seconds and then publish every slice from the Cortar Carrossel home.",
+      "puzzle_title": "1×3 or 2×3 sequences for infinite carousels",
+      "puzzle_desc": "Build infinite carousels, Reels or Stories in horizontal/vertical layouts without paid apps.",
+      "education_title": "Prints and educational panels",
+      "education_desc": "Generate 3×4 or 4×4 grids and print on A4 sheets for schools, workshops or exhibits.",
+      "creative_title": "Moodboards and site sliders",
+      "creative_desc": "4×1 or 5×3 cuts help build digital showcases, presentations or interactive PDFs.",
+      "igridmaker_title": "How to build the perfect Instagram grid",
+      "igridmaker_desc": "If you need a flawless Instagram grid, use <a class=\"text-blue-600 underline\" href=\"https://igridmaker.com\" target=\"_blank\" rel=\"noopener\">igridmaker.com</a>. Instagram updated the profile feed in 2025 and crops may vary by region/device even though 4:5 is still the standard. igridmaker.com was built for this change: it is free, relies on precise algorithms and keeps safe margins so the feed stays seamless after Instagram's automatic crop."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "Do I need to register or provide a card?",
+      "a1": "No. It's 100% free with no login — open the site and start cutting.",
+      "q2": "Is there any limit or watermark?",
+      "a2": "There are no daily limits and slices never receive a logo.",
+      "q3": "Can I download just one slice?",
+      "a3": "Yes. Besides the ZIP, every thumbnail has its own download button.",
+      "q4": "Which formats are supported?",
+      "a4": "JPG, PNG and WebP up to ~20 MB (or more, depending on available memory). Everything is processed locally.",
+      "q5": "Does it work for Stories, Reels or sliders?",
+      "a5": "Yes. Choose rows/columns that match the layout you need, including infinite carousels, Stories, Reels or site sliders.",
+      "q6": "Is it safe for client work?",
+      "a6": "Yes, because files never leave your device. Still, keep backups if you're working with very large images."
+    },
+    "final_cta": {
+      "title": "Ready to split your images?",
+      "subtitle": "Use this free splitter now and, when you need the full Cortar Carrossel experience, head back to the main page and continue the workflow.",
+      "button": "Start splitting now →"
+    }
+  }
+}
